@@ -14,6 +14,7 @@ ROVER Workspaces is in development. These notes describe development builds, not
 - Select Paddle as the first hosted checkout/licensing provider for planning, with Lemon Squeezy retained as fallback; no payment account is connected.
 - Add a provider-neutral entitlement ledger core with signed-event verification, duplicate protection, stale-event handling, and gifted grant support.
 - Add account-bound short-lived activation tokens with separate browser, device, and ROVER profile metadata.
+- Require grant issuer, reason, ID, and optional expiration for auditable non-payment Pro access.
 - Add a local setting for retaining 5–50 revisions per workspace.
 - Add card-level organization previews for duplicate URLs, empty groups, and trimmed group names before local changes are saved.
 - Add selective opening of groups and tabs from an older workspace revision without replacing the current saved workspace.
