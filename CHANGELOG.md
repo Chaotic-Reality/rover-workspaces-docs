@@ -4,6 +4,7 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Add lifecycle coverage for purchase, renewal, past-due, cancellation, refund, chargeback, and expiration events.
 - Add a local entitlement state model for Free, 15-day Trial, Pro Local, Pro Sync, and Expired without connecting payment or cloud services.
 - Show local entitlement status, offer the 15-day trial, and enforce the two-workspace Free creation limit without blocking exports or existing data.
 - Add local Custom Templates with named project placeholders, resolved previews, and apply/save controls.
