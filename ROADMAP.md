@@ -28,6 +28,7 @@ These items make the local product ready for a public release and prepare paid f
 
 - [x] Select a hosted checkout/licensing provider for implementation planning: Paddle is the first choice, with Lemon Squeezy as fallback and Stripe as a later comparison; no account is connected.
 - [ ] Connect the tested entitlement ledger core to a hosted Worker/D1 endpoint driven by signed purchase, renewal, cancellation, refund, and chargeback events.
+- [x] Define and test the provider-neutral Worker/D1 adapter contract without deploying paid infrastructure.
 - [x] Test the provider-event status transitions and idempotent/stale handling in the local ledger core.
 - [x] Build and test the provider-neutral entitlement ledger core with signature verification, idempotency, stale-event protection, and auditable grants.
 - [x] Keep the license tied to the purchaser account, not a browser, device, browser profile, or ROVER sync profile.
