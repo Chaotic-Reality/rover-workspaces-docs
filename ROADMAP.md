@@ -33,7 +33,8 @@ These items make the local product ready for a public release and prepare paid f
 - [x] Build and test the provider-neutral entitlement ledger core with signature verification, idempotency, stale-event protection, and auditable grants.
 - [x] Keep the license tied to the purchaser account, not a browser, device, browser profile, or ROVER sync profile.
 - [x] Support auditable gifted, promotional, support, and pilot Pro grants with optional expiration and no payment event required.
-- [ ] Support activation across Chrome and Edge with a short-lived signed entitlement and documented offline grace.
+- [x] Define and test account-bound activation across Chrome and Edge with a short-lived signed entitlement and documented offline grace.
+- [ ] Connect browser activation to hosted account sign-in and token issuance.
 - [x] Build and test the short offline-grace policy for a previously verified entitlement.
 - [ ] Test trial expiry, renewal, failed payment, cancellation, refund, chargeback, account recovery, duplicate webhooks, and provider outages.
 - [ ] Do not place payment secrets, provider credentials, or authoritative paid flags in extension code.
