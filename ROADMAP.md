@@ -58,7 +58,7 @@ Implement one provider at a time so users own the storage and ROVER's initial op
 - [ ] Add visible connect, disconnect, reauthorize, backup, restore, and delete controls.
 - [x] Define and test provider connection, reauthorization, and disconnect state without deleting local workspace data.
 - [x] Render safe provider status and disabled backup controls before provider registration is approved.
-- [ ] Encrypt backup payloads before upload and never sync cookies, passwords, authentication sessions, or general browser history.
+- [x] Encrypt backup payloads before upload and never sync cookies, passwords, authentication sessions, or general browser history; key recovery remains separate.
 - [x] Define and test the client-side AES-GCM backup envelope; keep key storage/recovery and upload wiring separate.
 - [ ] Test provider rate limits, revoked access, expired tokens, partial failures, and interrupted uploads.
 - [x] Define and test provider failure classification and bounded retry behavior for rate limits, authorization expiry, outages, and interrupted uploads.
