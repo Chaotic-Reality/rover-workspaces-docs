@@ -40,6 +40,21 @@ No provider credentials or client secrets belong in the extension bundle. The
 provider registrations, callback URLs, and Worker secrets will be configured
 before hosted sign-in is enabled.
 
+## Manual setup checklist
+
+When hosted sign-in is ready to configure:
+
+- Create a Google Cloud project, enable the required identity APIs, configure
+  the OAuth consent screen, and create a client ID.
+- Create a Microsoft Entra app registration and select the supported account
+  types for consumer and work/school sign-in.
+- Register the staging and production callback URLs exactly as configured by
+  the Worker and extension identity flow.
+- Record the client IDs in staging configuration; keep client secrets and
+  signing keys in Wrangler secrets.
+- Test account creation, Google/Microsoft account linking, sign-out, revoked
+  sessions, and a second Chrome profile before enabling hosted activation.
+
 ## Setup references
 
 - [Chrome `browser.identity` API](https://developer.chrome.com/docs/extensions/reference/api/identity)

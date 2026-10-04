@@ -17,6 +17,8 @@ ROVER Workspaces is in development. These notes describe development builds, not
   provider secrets in the extension.
 - Select Google and Microsoft as the supported ROVER sign-in providers; OAuth
   registrations and hosted callbacks remain pending.
+- Add tested Google/Microsoft OIDC claim normalization with audience, nonce,
+  issuer, and time validation; provider credentials remain unconfigured.
 - Add a local named-profile store with stable IDs and explicit create, rename,
   and delete behavior; browser and account identity remain separate.
 - Add explicit browser-profile mappings that use opaque installation IDs and
