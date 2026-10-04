@@ -14,6 +14,7 @@ ROVER Workspaces is in development. These notes describe development builds, not
 - Add a tested OAuth 2.0 PKCE helper with S256 challenges, state validation, account switching, and token revocation.
 - Add a tested local backup-connection boundary for provider switching, reauthorization, and token cleanup.
 - Add a versioned AES-GCM-256 backup envelope with round-trip and wrong-key tests.
+- Add bounded provider retry and failure classification tests for backup reliability.
 - Add a local entitlement state model for Free, 15-day Trial, Pro Local, Pro Sync, and Expired without connecting payment or cloud services.
 - Show local entitlement status, offer the 15-day trial, and enforce the two-workspace Free creation limit without blocking exports or existing data.
 - Add local Custom Templates with named project placeholders, resolved previews, and apply/save controls.
