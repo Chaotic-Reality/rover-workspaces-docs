@@ -19,6 +19,8 @@ ROVER Workspaces is in development. These notes describe development builds, not
   registrations and hosted callbacks remain pending.
 - Add tested Google/Microsoft OIDC claim normalization with audience, nonce,
   issuer, and time validation; provider credentials remain unconfigured.
+- Add a tested provider-code exchange boundary that resolves an account and
+  issues a short-lived ROVER session without connecting live callbacks.
 - Add a local named-profile store with stable IDs and explicit create, rename,
   and delete behavior; browser and account identity remain separate.
 - Add explicit browser-profile mappings that use opaque installation IDs and
