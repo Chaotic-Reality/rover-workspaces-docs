@@ -4,6 +4,9 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Deploy the local encrypted-manifest and durable-queue Worker/D1 contract to a
+  free Cloudflare staging Worker for development testing; hosted activation,
+  key recovery, R2 storage, and production sync remain disabled.
 - Add a local named-profile store with stable IDs and explicit create, rename,
   and delete behavior; browser and account identity remain separate.
 - Add explicit browser-profile mappings that use opaque installation IDs and
