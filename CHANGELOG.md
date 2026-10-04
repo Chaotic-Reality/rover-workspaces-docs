@@ -13,6 +13,7 @@ ROVER Workspaces is in development. These notes describe development builds, not
 - Add a tested OneDrive application-folder adapter contract with minimum Graph scope and injectable transport.
 - Add a tested OAuth 2.0 PKCE helper with S256 challenges, state validation, account switching, and token revocation.
 - Add a tested local backup-connection boundary for provider switching, reauthorization, and token cleanup.
+- Add visible, safely disabled cloud backup controls with provider status in Appearance & settings.
 - Add a versioned AES-GCM-256 backup envelope with round-trip and wrong-key tests.
 - Add bounded provider retry and failure classification tests for backup reliability.
 - Add a local entitlement state model for Free, 15-day Trial, Pro Local, Pro Sync, and Expired without connecting payment or cloud services.
