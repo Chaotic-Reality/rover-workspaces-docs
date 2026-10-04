@@ -12,6 +12,9 @@ ROVER Workspaces is in development. These notes describe development builds, not
   billing-provider credentials and hosted browser activation remain disabled.
 - Add and smoke-test a protected staging-only activation-token route backed by
   the D1 entitlement ledger; hosted account sign-in remains disabled.
+- Add a tested provider-neutral account-session contract so a future hosted
+  identity adapter can issue short-lived sessions without putting identity
+  provider secrets in the extension.
 - Add a local named-profile store with stable IDs and explicit create, rename,
   and delete behavior; browser and account identity remain separate.
 - Add explicit browser-profile mappings that use opaque installation IDs and
