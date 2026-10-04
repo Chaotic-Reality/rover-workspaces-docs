@@ -47,6 +47,7 @@ Implement one provider at a time so users own the storage and ROVER's initial op
 - [ ] Add Google Drive backup using the hidden `appDataFolder` and minimum required permissions.
 - [x] Define and test the Google Drive `appDataFolder` adapter contract without connecting credentials or uploading user data.
 - [ ] Add OneDrive backup using the dedicated application folder and minimum Microsoft Graph permissions.
+- [x] Define and test the OneDrive application-folder adapter contract without connecting credentials or uploading user data.
 - [ ] Use OAuth 2.0 authorization code flow with PKCE, `S256`, state validation, account switching, token revocation, and no client secrets in the extension.
 - [ ] Add visible connect, disconnect, reauthorize, backup, restore, and delete controls.
 - [ ] Encrypt backup payloads before upload and never sync cookies, passwords, authentication sessions, or general browser history.
