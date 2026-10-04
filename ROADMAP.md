@@ -65,7 +65,7 @@ Implement one provider at a time so users own the storage and ROVER's initial op
 - [x] Keep purchaser identity, ROVER profile, browser profile, device, and provider account as separate records.
 - [x] Add local profile switching and linked-device management with unlinking that preserves local data.
 - [x] Add conflict previews and explicit cloud deletion without deleting local data.
-- [ ] Support opt-in cross-browser/device sync without matching profiles by display name or email.
+- [x] Support opt-in cross-browser/device sync without matching profiles by display name or email.
 
 ## Priority 6 — ROVER-hosted sync and later capabilities
 

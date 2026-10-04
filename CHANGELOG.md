@@ -14,6 +14,8 @@ ROVER Workspaces is in development. These notes describe development builds, not
   only the link and preserves local workspace data.
 - Add metadata-only conflict previews and an explicit cloud-deletion request
   contract that guarantees local data preservation.
+- Add an opt-in sync-consent contract tied to explicit profile, device, and
+  browser-mapping IDs, with revocation and no email or display-name matching.
 - Add lifecycle coverage for purchase, renewal, past-due, cancellation, refund, chargeback, and expiration events.
 - Add a tested, provider-neutral Worker/D1 entitlement adapter contract for signed webhooks and account lookup.
 - Add cross-browser activation coverage proving Chrome and Edge can share one account-bound entitlement token.
