@@ -4,6 +4,8 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Add a local named-profile store with stable IDs and explicit create, rename,
+  and delete behavior; browser and account identity remain separate.
 - Add lifecycle coverage for purchase, renewal, past-due, cancellation, refund, chargeback, and expiration events.
 - Add a tested, provider-neutral Worker/D1 entitlement adapter contract for signed webhooks and account lookup.
 - Add cross-browser activation coverage proving Chrome and Edge can share one account-bound entitlement token.
