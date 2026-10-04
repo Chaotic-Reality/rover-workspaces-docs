@@ -18,6 +18,8 @@ ROVER Workspaces is in development. These notes describe development builds, not
   browser-mapping IDs, with revocation and no email or display-name matching.
 - Document the Cloudflare Workers, D1, and R2 hosted-sync evaluation; no
   account, deployment, bucket, or paid service is connected.
+- Add tested local sync-policy boundaries for encrypted-object quotas,
+  retention tombstones, bounded offline operations, and key-recovery metadata.
 - Add lifecycle coverage for purchase, renewal, past-due, cancellation, refund, chargeback, and expiration events.
 - Add a tested, provider-neutral Worker/D1 entitlement adapter contract for signed webhooks and account lookup.
 - Add cross-browser activation coverage proving Chrome and Edge can share one account-bound entitlement token.

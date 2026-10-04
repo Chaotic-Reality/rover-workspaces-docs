@@ -70,7 +70,8 @@ Implement one provider at a time so users own the storage and ROVER's initial op
 ## Priority 6 — ROVER-hosted sync and later capabilities
 
 - [x] Evaluate Cloudflare Workers, D1, and R2 for encrypted ROVER-hosted sync only after provider backup demand is validated.
-- [ ] Add client-side encryption, quotas, retention, key recovery, tombstones, and offline queues before hosted sync launches.
+- [x] Define and test client-side encryption, quotas, retention, key recovery, tombstones, and offline-queue policy boundaries.
+- [ ] Wire those policies into hosted sync with key recovery and durable queues before launch.
 - [ ] Evaluate team workspaces, shared templates, and administration after individual Pro usage is validated.
 - [ ] Evaluate sponsorship only as clearly labeled, non-personalized content; do not use browsing activity, workspace contents, or survey answers for targeting.
 - [ ] Add other Chromium browsers only when customer demand justifies the maintenance cost.
