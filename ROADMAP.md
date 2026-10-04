@@ -36,6 +36,7 @@ These items make the local product ready for a public release and prepare paid f
 - [x] Define and test account-bound activation across Chrome and Edge with a short-lived signed entitlement and documented offline grace.
 - [x] Deploy and smoke-test a staging-only token issuance contract against the free Worker/D1 ledger; it remains fixed to the staging account.
 - [x] Define and test a provider-neutral account-session contract for a future hosted identity adapter; no identity provider is connected.
+- [x] Select Google and Microsoft sign-in as the supported ROVER identity providers; registrations and credentials remain pending.
 - [ ] Connect browser activation to hosted account sign-in and token issuance.
 - [x] Build and test the short offline-grace policy for a previously verified entitlement.
 - [x] Test trial expiry, renewal, failed payment, cancellation, refund, chargeback, account recovery, duplicate webhooks, and provider outages in local simulation and adapter tests.
