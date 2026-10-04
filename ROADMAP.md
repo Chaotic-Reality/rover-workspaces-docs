@@ -34,6 +34,7 @@ These items make the local product ready for a public release and prepare paid f
 - [x] Keep the license tied to the purchaser account, not a browser, device, browser profile, or ROVER sync profile.
 - [x] Support auditable gifted, promotional, support, and pilot Pro grants with optional expiration and no payment event required.
 - [x] Define and test account-bound activation across Chrome and Edge with a short-lived signed entitlement and documented offline grace.
+- [x] Deploy and smoke-test a staging-only token issuance contract against the free Worker/D1 ledger; it remains fixed to the staging account.
 - [ ] Connect browser activation to hosted account sign-in and token issuance.
 - [x] Build and test the short offline-grace policy for a previously verified entitlement.
 - [x] Test trial expiry, renewal, failed payment, cancellation, refund, chargeback, account recovery, duplicate webhooks, and provider outages in local simulation and adapter tests.
