@@ -62,7 +62,7 @@ Implement one provider at a time so users own the storage and ROVER's initial op
 
 - [x] Add user-named profiles such as Personal, Work, Scouts, and Client projects.
 - [x] Let users explicitly map Chrome Work, Edge Work, and other browser installations to a selected ROVER profile.
-- [ ] Keep purchaser identity, ROVER profile, browser profile, device, and provider account as separate records.
+- [x] Keep purchaser identity, ROVER profile, browser profile, device, and provider account as separate records.
 - [ ] Add profile switching, linked-device management, conflict previews, unlinking, and cloud deletion without deleting local data.
 - [ ] Support opt-in cross-browser/device sync without matching profiles by display name or email.
 
