@@ -10,6 +10,8 @@ ROVER Workspaces is in development. These notes describe development builds, not
   never infer a ROVER profile from a label or email.
 - Add a portability identity-binding contract that keeps purchaser, ROVER
   profile, browser mapping, device, and provider account references separate.
+- Add local active-profile switching and linked-device records; unlinking removes
+  only the link and preserves local workspace data.
 - Add lifecycle coverage for purchase, renewal, past-due, cancellation, refund, chargeback, and expiration events.
 - Add a tested, provider-neutral Worker/D1 entitlement adapter contract for signed webhooks and account lookup.
 - Add cross-browser activation coverage proving Chrome and Edge can share one account-bound entitlement token.
