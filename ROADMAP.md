@@ -68,6 +68,7 @@ Implement one provider at a time so users own the storage and ROVER's initial op
 - [x] Add local profile switching and linked-device management with unlinking that preserves local data.
 - [x] Add conflict previews and explicit cloud deletion without deleting local data.
 - [x] Support opt-in cross-browser/device sync without matching profiles by display name or email.
+- [ ] Retrieve, clone, or merge selected workspaces from another linked browser profile while preserving the source by default.
 
 ## Priority 6 — ROVER-hosted sync and later capabilities
 
