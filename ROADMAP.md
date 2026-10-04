@@ -51,6 +51,7 @@ Implement one provider at a time so users own the storage and ROVER's initial op
 - [ ] Use OAuth 2.0 authorization code flow with PKCE, `S256`, state validation, account switching, token revocation, and no client secrets in the extension.
 - [x] Define and test the provider-neutral PKCE/state/revocation contract without registering provider credentials.
 - [ ] Add visible connect, disconnect, reauthorize, backup, restore, and delete controls.
+- [x] Define and test provider connection, reauthorization, and disconnect state without deleting local workspace data.
 - [ ] Encrypt backup payloads before upload and never sync cookies, passwords, authentication sessions, or general browser history.
 - [ ] Test provider rate limits, revoked access, expired tokens, partial failures, and interrupted uploads.
 
