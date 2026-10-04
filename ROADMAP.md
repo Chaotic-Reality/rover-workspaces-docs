@@ -38,7 +38,7 @@ These items make the local product ready for a public release and prepare paid f
 - [x] Build and test the short offline-grace policy for a previously verified entitlement.
 - [x] Test trial expiry, renewal, failed payment, cancellation, refund, chargeback, account recovery, duplicate webhooks, and provider outages in local simulation and adapter tests.
 - [ ] Re-run the lifecycle matrix against a hosted provider sandbox after billing and Worker deployment are approved.
-- [ ] Do not place payment secrets, provider credentials, or authoritative paid flags in extension code.
+- [x] Verify releases do not place payment secrets, provider credentials, webhook handlers, or authoritative paid flags in extension code.
 
 ## Priority 4 — user-owned backups
 

@@ -8,6 +8,7 @@ ROVER Workspaces is in development. These notes describe development builds, not
 - Add a tested, provider-neutral Worker/D1 entitlement adapter contract for signed webhooks and account lookup.
 - Add cross-browser activation coverage proving Chrome and Edge can share one account-bound entitlement token.
 - Complete the local licensing lifecycle matrix, including trial expiry, payment state changes, recovery, duplicate delivery, and offline provider outage behavior.
+- Add a release-boundary scan that rejects server-only billing and ledger terms from the extension bundle.
 - Add a local entitlement state model for Free, 15-day Trial, Pro Local, Pro Sync, and Expired without connecting payment or cloud services.
 - Show local entitlement status, offer the 15-day trial, and enforce the two-workspace Free creation limit without blocking exports or existing data.
 - Add local Custom Templates with named project placeholders, resolved previews, and apply/save controls.
