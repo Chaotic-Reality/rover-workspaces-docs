@@ -26,6 +26,9 @@ ROVER Workspaces is in development. These notes describe development builds, not
   recovery remain pending.
 - Add tested provider-specific Google Drive and OneDrive PKCE authorization
   configuration with narrow app-data and app-folder scopes.
+- Add provider backup control hooks for connect, reauthorize, disconnect,
+  backup, restore, and delete while keeping them safely disabled until OAuth
+  registration and account consent are configured.
 - Add a local named-profile store with stable IDs and explicit create, rename,
   and delete behavior; browser and account identity remain separate.
 - Add explicit browser-profile mappings that use opaque installation IDs and
