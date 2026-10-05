@@ -51,6 +51,8 @@ ROVER Workspaces is in development. These notes describe development builds, not
   startup continues into stored workspace and appearance loading.
 - Add the first free-tier beta product site with product, how-it-works,
   privacy, plans, and support pages at the Cloudflare Pages/Workers URL.
+- Add a non-deployed administration portal shell and Access-first hosting
+  boundary for future entitlement, provider, health, and support views.
 - Verify the 0.3.5 release package manifest, permissions, dependency notices,
   ZIP inventory, and file checksums with the local release checks; installed
   Chrome and Edge review remains required before store submission.

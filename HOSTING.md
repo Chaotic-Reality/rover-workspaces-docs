@@ -12,4 +12,6 @@ Cloudflare Pages can deploy from GitHub and create preview deployments for branc
 
 The first static beta site is live at [rover-workspaces-beta.tech-e40.workers.dev](https://rover-workspaces-beta.tech-e40.workers.dev). It is deployed from the `site/` directory with the free Cloudflare Pages/Workers path. Future updates from this repository can use `npx wrangler deploy` from the docs repository; custom domains can be attached later without changing the site content.
 
+The future admin console is kept separately in `admin/` and is not deployed with the public site. It must be placed behind a Cloudflare Access allow policy before any admin route or data view is published. See [ADMIN_PORTAL.md](ADMIN_PORTAL.md).
+
 See the private repository's hosting plan for implementation details and the manual Cloudflare setup steps. Keep payment secrets, workspace exports, and administrator credentials out of this public repository.

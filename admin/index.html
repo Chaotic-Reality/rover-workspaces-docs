@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ROVER administration</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Private operations</p>
+          <h1>ROVER administration</h1>
+          <p class="muted">
+            This console is a design shell. It must be protected by Cloudflare
+            Access before any deployment.
+          </p>
+        </div>
+        <span class="badge">STAGING</span>
+      </header>
+      <section class="notice">
+        <strong>Access required</strong>
+        <p>
+          No account, entitlement, provider, or support data is loaded in this
+          page. Live controls will be added only behind an allow policy for the
+          owner account.
+        </p>
+      </section>
+      <section class="grid" aria-label="Administration areas">
+        <article class="card">
+          <h2>Service health</h2>
+          <p class="metric">Staging Worker</p>
+          <span class="status">Not connected</span>
+          <p class="muted">
+            Read-only health and deployment version will appear here.
+          </p>
+        </article>
+        <article class="card">
+          <h2>Entitlements</h2>
+          <p class="metric">No live records</p>
+          <span class="status">Pending identity</span>
+          <p class="muted">
+            Account-bound Pro grants, gifts, and revocations will be audited
+            here.
+          </p>
+        </article>
+        <article class="card">
+          <h2>Provider connections</h2>
+          <p class="metric">No live providers</p>
+          <span class="status">Pending consent</span>
+          <p class="muted">
+            Google Drive and OneDrive connections remain user-controlled.
+          </p>
+        </article>
+        <article class="card">
+          <h2>Support queue</h2>
+          <p class="metric">No live queue</p>
+          <span class="status">Not connected</span>
+          <p class="muted">
+            Support tooling will use restricted records and retention limits.
+          </p>
+        </article>
+      </section>
+      <footer>
+        <a href="../">Back to the beta site</a
+        ><span
+          >Never place payment secrets or workspace exports in this
+          console.</span
+        >
+      </footer>
+    </main>
+  </body>
+</html>
