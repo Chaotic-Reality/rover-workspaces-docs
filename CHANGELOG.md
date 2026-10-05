@@ -45,6 +45,8 @@ ROVER Workspaces is in development. These notes describe development builds, not
   the single heading for that section.
 - Remove the duplicate uppercase Collections label for the same single-heading
   accordion treatment.
+- Remove the standalone Prioritized roadmap sidebar link; the roadmap remains
+  available from the About page.
 - Verify the 0.3.5 release package manifest, permissions, dependency notices,
   ZIP inventory, and file checksums with the local release checks; installed
   Chrome and Edge review remains required before store submission.
