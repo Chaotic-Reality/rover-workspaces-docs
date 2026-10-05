@@ -37,6 +37,8 @@ ROVER Workspaces is in development. These notes describe development builds, not
   section header instead of leaving the buttons visible.
 - Start Collections and Quick Actions collapsed; opening either section still
   closes the other, while both may remain closed.
+- In compact mode, remove the duplicate uppercase Quick Actions label so the
+  arrow button is the single section heading.
 - Verify the 0.3.5 release package manifest, permissions, dependency notices,
   ZIP inventory, and file checksums with the local release checks; installed
   Chrome and Edge review remains required before store submission.
