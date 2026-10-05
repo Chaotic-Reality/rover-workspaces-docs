@@ -47,6 +47,8 @@ ROVER Workspaces is in development. These notes describe development builds, not
   accordion treatment.
 - Remove the standalone Prioritized roadmap sidebar link; the roadmap remains
   available from the About page.
+- Remove the stale icon-decoration reference left by that link removal so
+  startup continues into stored workspace and appearance loading.
 - Verify the 0.3.5 release package manifest, permissions, dependency notices,
   ZIP inventory, and file checksums with the local release checks; installed
   Chrome and Edge review remains required before store submission.
