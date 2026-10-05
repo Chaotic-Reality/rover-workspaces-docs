@@ -33,6 +33,8 @@ ROVER Workspaces is in development. These notes describe development builds, not
 - Add a compact short-viewport sidebar mode that tightens navigation spacing,
   keeps the footer anchored, and scrolls the middle navigation before links can
   overlap.
+- Fix the collapsed Quick Actions state so every action link hides with its
+  section header instead of leaving the buttons visible.
 - Verify the 0.3.5 release package manifest, permissions, dependency notices,
   ZIP inventory, and file checksums with the local release checks; installed
   Chrome and Edge review remains required before store submission.
