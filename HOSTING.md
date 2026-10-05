@@ -10,4 +10,6 @@ The recommended low-cost setup is Cloudflare for DNS, static hosting, and the fu
 
 Cloudflare Pages can deploy from GitHub and create preview deployments for branches and pull requests. Cloudflare Workers and D1 provide a low-cost path for the future entitlement ledger, but no account service or paid checkout is connected yet.
 
+The first static beta site is live at [rover-workspaces-beta.tech-e40.workers.dev](https://rover-workspaces-beta.tech-e40.workers.dev). It is deployed from the `site/` directory with the free Cloudflare Pages/Workers path. Future updates from this repository can use `npx wrangler deploy` from the docs repository; custom domains can be attached later without changing the site content.
+
 See the private repository's hosting plan for implementation details and the manual Cloudflare setup steps. Keep payment secrets, workspace exports, and administrator credentials out of this public repository.

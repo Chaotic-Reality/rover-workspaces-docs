@@ -2,6 +2,8 @@
 
 Save, organize, and restore browser workspaces with groups and tabs arranged the way you work.
 
+[Visit the ROVER beta product site](https://rover-workspaces-beta.tech-e40.workers.dev) for the overview, beginner guide, privacy boundary, and current plan notes.
+
 ROVER Workspaces is in development for Microsoft Edge and Google Chrome. Store availability has not been announced. This repository contains public product documentation; application source and development history remain private.
 
 ## Documentation
