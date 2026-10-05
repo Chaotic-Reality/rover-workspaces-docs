@@ -49,6 +49,8 @@ ROVER Workspaces is in development. These notes describe development builds, not
   available from the About page.
 - Remove the stale icon-decoration reference left by that link removal so
   startup continues into stored workspace and appearance loading.
+- Add the first free-tier beta product site with product, how-it-works,
+  privacy, plans, and support pages at the Cloudflare Pages/Workers URL.
 - Verify the 0.3.5 release package manifest, permissions, dependency notices,
   ZIP inventory, and file checksums with the local release checks; installed
   Chrome and Edge review remains required before store submission.
