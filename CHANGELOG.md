@@ -30,6 +30,9 @@ ROVER Workspaces is in development. These notes describe development builds, not
 - Add mutually exclusive Collections and Quick Actions accordion sections with
   triangle indicators across viewports; the outer sidebar no longer adds a
   second scrollbar, while long collection lists retain their own scroll area.
+- Verify the 0.3.5 release package manifest, permissions, dependency notices,
+  ZIP inventory, and file checksums with the local release checks; installed
+  Chrome and Edge review remains required before store submission.
 - Add a tested provider-code exchange boundary that resolves an account and
   issues a short-lived ROVER session without connecting live callbacks.
 - Connect browser activation to a verified hosted account session so Chrome and

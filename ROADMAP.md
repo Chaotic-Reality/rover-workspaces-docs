@@ -9,7 +9,8 @@ These items make the local product ready for a public release and prepare paid f
 - [ ] Complete live Chrome and Edge acceptance for the current release candidate, including upgrade, restore, import/export, responsive layout, icons, and conflict scenarios.
 - [x] Resolve responsive sidebar overflow and overlap with mutually exclusive Collections and Quick Actions sections plus an independently scrolling collection list; installed-browser acceptance remains a release gate.
 - [ ] Verify final extension icon appearance in installed Chrome and Edge and capture store listing screenshots.
-- [ ] Recheck permissions, privacy disclosures, dependency notices, reviewer steps, and package checksums against the release candidate.
+- [x] Verify the release package manifest, permissions, dependency notices, ZIP inventory, and file checksums with the local package checks.
+- [ ] Recheck permissions, privacy disclosures, reviewer steps, and final package evidence against the beta/release candidate in installed Chrome and Edge.
 - [ ] Validate demand for version history, Custom Templates, organization rules, workspace combining, and opt-in sync with a small pilot.
 - [x] Implement local entitlement simulation: `free`, `trial`, `pro-local`, `pro-sync`, and `expired`.
 - [x] Add a 15-day full-feature trial with clear start/end dates and no account requirement until activation.

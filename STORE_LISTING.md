@@ -1,6 +1,6 @@
 # Store listing preparation
 
-Draft for ROVER Workspaces 0.3.4, prepared September 30, 2026. This is preparation material, not an announcement or a submitted listing. Validate the final candidate in installed Chrome and Edge before using this copy. Check each store's current form requirements when submitting.
+Draft for ROVER Workspaces 0.3.5, prepared October 5, 2026. This is preparation material, not an announcement or a submitted listing. Validate the final candidate in installed Chrome and Edge before using this copy. Check each store's current form requirements when submitting.
 
 ## Product name and short description
 
