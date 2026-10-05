@@ -35,6 +35,8 @@ ROVER Workspaces is in development. These notes describe development builds, not
   overlap.
 - Fix the collapsed Quick Actions state so every action link hides with its
   section header instead of leaving the buttons visible.
+- Start Collections and Quick Actions collapsed; opening either section still
+  closes the other, while both may remain closed.
 - Verify the 0.3.5 release package manifest, permissions, dependency notices,
   ZIP inventory, and file checksums with the local release checks; installed
   Chrome and Edge review remains required before store submission.
