@@ -39,6 +39,8 @@ ROVER Workspaces is in development. These notes describe development builds, not
   closes the other, while both may remain closed.
 - In compact mode, remove the duplicate uppercase Quick Actions label so the
   arrow button is the single section heading.
+- Use one compact-sidebar scrollbar for longer collection lists instead of
+  nesting a collection scrollbar inside the navigation scrollbar.
 - Verify the 0.3.5 release package manifest, permissions, dependency notices,
   ZIP inventory, and file checksums with the local release checks; installed
   Chrome and Edge review remains required before store submission.
