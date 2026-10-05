@@ -40,6 +40,8 @@ ROVER Workspaces is in development. These notes describe development builds, not
   profile, browser mapping, device, and provider account references separate.
 - Add local active-profile switching and linked-device records; unlinking removes
   only the link and preserves local workspace data.
+- Add a profile-to-profile transfer planner with safe copy defaults, explicit
+  replace/merge destinations, previewable results, and source preservation.
 - Add metadata-only conflict previews and an explicit cloud-deletion request
   contract that guarantees local data preservation.
 - Add an opt-in sync-consent contract tied to explicit profile, device, and
