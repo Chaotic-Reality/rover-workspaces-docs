@@ -7,6 +7,7 @@ This roadmap lists planned work only. Completed work is recorded in the [change 
 These items make the local product ready for a public release and prepare paid features without connecting a payment provider yet.
 
 - [ ] Complete live Chrome and Edge acceptance for the current release candidate, including upgrade, restore, import/export, responsive layout, icons, and conflict scenarios.
+- [ ] Resolve responsive sidebar overflow and overlap at supported desktop and narrow viewports before beta packaging.
 - [ ] Verify final extension icon appearance in installed Chrome and Edge and capture store listing screenshots.
 - [ ] Recheck permissions, privacy disclosures, dependency notices, reviewer steps, and package checksums against the release candidate.
 - [ ] Validate demand for version history, Custom Templates, organization rules, workspace combining, and opt-in sync with a small pilot.

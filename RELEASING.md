@@ -2,6 +2,39 @@
 
 ROVER Workspaces currently automates verification and packaging. Browser-store publication is not connected to the pipeline. A successful build is a development candidate until Chrome and Edge acceptance is complete.
 
+## Beta release track
+
+The first external release should be a closed beta. Use a numeric release version
+such as `0.4.0` and identify the build as `ROVER Workspaces BETA` in the store
+name and description. Chrome can restrict a private testing listing to trusted
+testers or a Google Group; Edge can use a hidden listing distributed by its
+direct URL. Both stores still require review and accurate privacy disclosures.
+
+For personal testing before store submission, run `npm run package` in the
+private application repository and share only
+`release/rover-workspaces.zip`. Testers extract it and use **Load unpacked** in
+`chrome://extensions` or `edge://extensions`. This is suitable for local
+features; updates require replacing the extracted folder and reloading.
+
+Keep the Cloudflare environments separate throughout the beta path:
+
+```text
+rover-sync-staging   development checks only
+rover-sync-beta      invited beta accounts and data
+rover-sync-production public release, later
+```
+
+Each environment needs its own database bindings, secrets, OAuth callback
+configuration, and account data. Do not give beta testers the fixed staging
+token or a shared staging account. Register Google and Microsoft callbacks
+against the beta store identities because unpacked extension IDs can differ
+from Chrome Web Store and Edge Add-ons IDs.
+
+The beta exit criteria are: no known data-loss issue in restore or upgrade,
+responsive layouts pass at the supported viewports, the exact packaged build
+passes Chrome and Edge acceptance, feedback and recovery instructions are
+ready, and the beta Cloudflare environment is isolated from development.
+
 ## The delivery path
 
 1. **Edit locally:** make a focused change and add meaningful regression coverage.

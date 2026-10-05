@@ -21,6 +21,10 @@ ROVER Workspaces is in development. These notes describe development builds, not
   issuer, and time validation; provider credentials remain unconfigured.
 - Add a short-lived, one-time OAuth transaction boundary that retains PKCE
   verifier and state only until the callback is consumed or expires.
+- Document the closed-beta release track, package-sharing path, isolated
+  Cloudflare environments, and beta exit criteria.
+- Make the desktop sidebar navigation scroll within its available height so
+  settings, information, and quick actions cannot overlap at shorter viewports.
 - Add a tested provider-code exchange boundary that resolves an account and
   issues a short-lived ROVER session without connecting live callbacks.
 - Connect browser activation to a verified hosted account session so Chrome and
