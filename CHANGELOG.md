@@ -25,6 +25,11 @@ ROVER Workspaces is in development. These notes describe development builds, not
   Cloudflare environments, and beta exit criteria.
 - Make the desktop sidebar navigation scroll within its available height so
   settings, information, and quick actions cannot overlap at shorter viewports.
+- Sort collections alphabetically in the sidebar and workspace-card selectors,
+  keeping `No collection` as the default option.
+- Add narrow-viewport accordion sections for workspace views, collections, and
+  quick actions so only one navigation area expands at a time; long collection
+  lists retain their own scroll area.
 - Add a tested provider-code exchange boundary that resolves an account and
   issues a short-lived ROVER session without connecting live callbacks.
 - Connect browser activation to a verified hosted account session so Chrome and
