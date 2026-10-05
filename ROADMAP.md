@@ -39,7 +39,7 @@ These items make the local product ready for a public release and prepare paid f
 - [x] Select Google and Microsoft sign-in as the supported ROVER identity providers; registrations and credentials remain pending.
 - [x] Define and test Google/Microsoft OIDC claim normalization with audience, nonce, issuer, and time validation; provider registrations remain pending.
 - [x] Define and test the provider-code exchange and ROVER session issuance boundary; live provider callbacks remain pending.
-- [ ] Connect browser activation to hosted account sign-in and token issuance.
+- [x] Connect browser activation to a verified hosted account session and account-bound token issuance; provider registration and production credentials remain pending.
 - [x] Build and test the short offline-grace policy for a previously verified entitlement.
 - [x] Test trial expiry, renewal, failed payment, cancellation, refund, chargeback, account recovery, duplicate webhooks, and provider outages in local simulation and adapter tests.
 - [ ] Re-run the lifecycle matrix against a hosted provider sandbox after billing and Worker deployment are approved.

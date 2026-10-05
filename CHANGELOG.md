@@ -21,6 +21,9 @@ ROVER Workspaces is in development. These notes describe development builds, not
   issuer, and time validation; provider credentials remain unconfigured.
 - Add a tested provider-code exchange boundary that resolves an account and
   issues a short-lived ROVER session without connecting live callbacks.
+- Connect browser activation to a verified hosted account session so Chrome and
+  Edge activations remain bound to the purchaser account; staging still uses
+  its fixed token until identity providers are registered.
 - Add provider-neutral encrypted backup transfer wiring that encrypts before
   upload and decrypts only in the extension; provider credentials and key
   recovery remain pending.
