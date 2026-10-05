@@ -30,6 +30,9 @@ ROVER Workspaces is in development. These notes describe development builds, not
 - Add mutually exclusive Collections and Quick Actions accordion sections with
   triangle indicators across viewports; the outer sidebar no longer adds a
   second scrollbar, while long collection lists retain their own scroll area.
+- Add a compact short-viewport sidebar mode that tightens navigation spacing,
+  keeps the footer anchored, and scrolls the middle navigation before links can
+  overlap.
 - Verify the 0.3.5 release package manifest, permissions, dependency notices,
   ZIP inventory, and file checksums with the local release checks; installed
   Chrome and Edge review remains required before store submission.

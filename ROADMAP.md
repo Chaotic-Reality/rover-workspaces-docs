@@ -7,7 +7,7 @@ This roadmap lists planned work only. Completed work is recorded in the [change 
 These items make the local product ready for a public release and prepare paid features without connecting a payment provider yet.
 
 - [ ] Complete live Chrome and Edge acceptance for the current release candidate, including upgrade, restore, import/export, responsive layout, icons, and conflict scenarios.
-- [x] Resolve responsive sidebar overflow and overlap with mutually exclusive Collections and Quick Actions sections plus an independently scrolling collection list; installed-browser acceptance remains a release gate.
+- [x] Resolve responsive sidebar overflow and overlap with mutually exclusive Collections and Quick Actions sections, an independently scrolling collection list, and a compact short-viewport navigation mode; installed-browser acceptance remains a release gate.
 - [ ] Verify final extension icon appearance in installed Chrome and Edge and capture store listing screenshots.
 - [x] Verify the release package manifest, permissions, dependency notices, ZIP inventory, and file checksums with the local package checks.
 - [ ] Recheck permissions, privacy disclosures, reviewer steps, and final package evidence against the beta/release candidate in installed Chrome and Edge.
