@@ -11,7 +11,7 @@ Updated October 5, 2026. This describes engineering evidence, not a store releas
 | Google Drive/OneDrive backups                              | Narrow-scope adapter and encrypted transfer contracts tested        | OAuth consent, token handling, live rate-limit/revocation testing    |
 | ROVER-hosted sync                                          | Free staging Worker/D1 deployed; entitlement/consent enforced        | Live identity, key recovery, profile sync and conflict acceptance    |
 | Cross-browser portability                                  | Named profiles, mappings, consent, transfer plans implemented       | Hosted UI retrieval and live Chrome↔Edge/profile round trip          |
-| Website                                                    | Free static-assets Worker beta; shared branding and linked pages    | Owner content review and installed-build screenshots                 |
+| Website                                                    | Free static-assets beta; canonical Markdown guides and shared brand | Owner content review and installed-build screenshots                 |
 | Administration                                             | Local shell only                                                    | Hostname, Cloudflare Access protection, authorized deployment        |
 
 The October 5 cleanup adds Full local backup and a replacement preview, sidebar

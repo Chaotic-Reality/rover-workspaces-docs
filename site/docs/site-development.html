@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Website maintenance.">
+<meta name="rover-doc-source-sha256" content="cd2baebb7fc5baae3ca7ffbb647da56ce72a136f70b86e31a0b9b9c96e6c6d0f">
+<title>Website maintenance · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
+<body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
+<a class="brand" href="/" aria-label="ROVER Workspaces home"><img src="/branding/rover-mark.png" width="78" height="78" alt=""><span class="wordmark"><strong>ROVER</strong><span>Workspaces</span></span></a>
+<nav aria-label="Main navigation"><a href="/">Home</a>
+<a href="/how-it-works.html">How it works</a>
+<a href="/docs.html" aria-current="page">Documentation</a>
+<a href="/beta-install.html">Beta setup</a>
+<a href="/pricing.html">Plans</a>
+<a href="/privacy.html">Privacy</a>
+<a href="/support.html">Support</a></nav></div></header>
+<main id="main" class="shell documentation"><aside class="docs-sidebar"><a class="docs-home" href="/docs.html">Documentation</a><nav aria-label="Documentation navigation"><details><summary>Using ROVER</summary><div><a href="/docs/user-guide.html">User guide</a><a href="/docs/how-it-works.html">How ROVER works</a><a href="/docs/importing.html">Import and export</a><a href="/docs/local-backup.html">Full local backup</a><a href="/docs/appearance.html">Appearance</a><a href="/docs/support.html">Support guidance</a></div></details><details><summary>Development and beta</summary><div><a href="/docs/status.html">Feature status</a><a href="/docs/roadmap.html">Roadmap</a><a href="/docs/changelog.html">Change history</a><a href="/docs/releasing.html">Release process</a><a href="/docs/beta-setup.html">Beta setup checklist</a></div></details><details><summary>Plans and policies</summary><div><a href="/docs/identity-signin.html">Account sign-in design</a><a href="/docs/hosted-sync.html">Hosted sync design</a><a href="/docs/pricing.html">Plans and trial details</a><a href="/docs/terms.html">Draft subscription terms</a><a href="/docs/privacy.html">Privacy and data handling</a><a href="/docs/license.html">License statement</a></div></details><details open><summary>Project reference</summary><div><a href="/docs/about.html">About ROVER</a><a href="/docs/brand-guidelines.html">Brand guidelines</a><a href="/docs/hosting.html">Hosting plan</a><a href="/docs/admin-portal.html">Admin portal design</a><a href="/docs/store-listing.html">Store listing preparation</a><a href="/docs/store-policy-review.html">Store policy review</a><a href="/docs/site-development.html" aria-current="page">Website maintenance</a><a href="/docs/project-overview.html">Project overview</a></div></details></nav></aside><article class="doc-article"><div class="doc-breadcrumb"><a href="/docs.html">Documentation</a><span aria-hidden="true">/</span><span>Project reference</span></div><h1 id="website-development-and-deployment">Website development and deployment</h1>
+<p class="doc-description">How documentation becomes branded pages and stays current.</p><details class="doc-contents"><summary>On this page</summary><nav aria-label="On this page"><a class="toc-level-2" href="#required-updates-with-project-changes">Required updates with project changes</a><a class="toc-level-2" href="#publication-workflow">Publication workflow</a></nav></details><div class="prose"><p>Run <code>npm ci</code>, then <code>npm run check</code>. Public Markdown files are the canonical
+documentation. The explicit registry in <code>scripts/site-content.mjs</code> generates
+each document as a branded <code>/docs/</code> page plus a grouped documentation hub.
+USER_GUIDE.md is the maintained user guide; the older GitHub wiki is historical.
+Edit documents once in Markdown rather than maintaining a separate HTML copy.</p>
+<p>Edit product-page summaries in <code>web/pages/</code>, shared styles/logo assets in
+<code>web/assets/</code>, and the common layout in <code>scripts/build-site.mjs</code>. The build
+writes reviewed HTML into <code>site/</code>, with shared navigation, contents links,
+responsive tables, and source-history links. Markdown rendering is build-time
+only; no browser JavaScript or remote fonts/icons are required.</p>
+<p>CI checks rendering behavior, local links and anchors, assets, headings, shared
+layout, beta noindex, and the complete public deployment inventory. Each
+document records a normalized source fingerprint; checks reject stale pages
+and public Markdown missing from the registry. CI also rejects generated output
+that differs from the committed source. It does not deploy or require secrets.</p>
+<h2 id="required-updates-with-project-changes">Required updates with project changes</h2>
+<p>Treat documentation as part of the same milestone as the implementation.
+Both repositories&#39; AGENTS.md files require this review before completion.</p>
+<div class="table-scroll" role="region" aria-label="Scrollable table" tabindex="0"><table>
+<thead>
+<tr>
+<th>Change</th>
+<th>Update when applicable</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Feature or user-flow change</td>
+<td>USER_GUIDE.md, the affected guide, product-page summary, and CHANGELOG.md.</td>
+</tr>
+<tr>
+<td>Work completed or priority changed</td>
+<td>Move completed scope into CHANGELOG.md; leave future work and remaining acceptance gates in ROADMAP.md.</td>
+</tr>
+<tr>
+<td>Capability tested or enabled</td>
+<td>STATUS.md, preserving local/contract/staging/live distinctions; include evidence and remaining gates.</td>
+</tr>
+<tr>
+<td>Release/build created</td>
+<td>CHANGELOG.md and relevant beta/release instructions; retain exact package/build evidence privately. Never equate packaging with installed-browser acceptance.</td>
+</tr>
+<tr>
+<td>Deployment/domain/callback changed</td>
+<td>STATUS.md, HOSTING.md, identity/beta guidance, and product links; verify actual live URLs and record pending publication if not deployed.</td>
+</tr>
+<tr>
+<td>Data, permissions, retention, or provider change</td>
+<td>PRIVACY.md, its landing-page summary, STORE_LISTING.md, and affected backup/sign-in guides before exposure.</td>
+</tr>
+<tr>
+<td>Plans, trial, limits, or billing changed</td>
+<td>PRICING.md, TERMS.md, plans-page summary, and user guide; planned services stay labeled until verified live.</td>
+</tr>
+<tr>
+<td>Brand or navigation changed</td>
+<td>BRAND_GUIDELINES.md first, then relevant app/site surfaces and checks.</td>
+</tr>
+<tr>
+<td>New public document</td>
+<td>Add its source, URL, group, and description to scripts/site-content.mjs, then build and check. Do not include private or agent-only instructions.</td>
+</tr>
+</tbody></table>
+</div><h2 id="publication-workflow">Publication workflow</h2>
+<ol>
+<li>Inspect Git status in both repositories and identify the documents affected.</li>
+<li>Update canonical Markdown and any short landing-page summaries.</li>
+<li>Run <code>npm run check</code> in this repository and review the generated pages at
+wide and narrow viewports when layout changes.</li>
+<li>Commit source and generated <code>site/</code> changes together; push the owning repo.</li>
+<li>For an authorized website update, deploy the existing free beta target and
+run <code>npm run smoke</code>. This checks every live page against the local build,
+not just a successful HTTP status.</li>
+<li>Record deployment evidence in private operations/review notes. If a gate
+prevents deployment, record that the docs are updated locally but not live.</li>
+</ol>
+<p>Completed changes belong in history; future scope belongs in the roadmap.
+Use STATUS.md for current capability facts instead of duplicating changing
+deployment evidence in every guide. Never copy private source or credentials
+into this public documentation build.</p>
+<p>For an authorized beta deployment use the pinned Wrangler installation:
+<code>npx wrangler whoami</code>, <code>npm run deploy:beta</code>, then <code>npm run smoke</code>. The existing
+Worker serves <code>site/</code> on Cloudflare&#39;s free tier. No separate Pages project is
+implied. <code>_headers</code> applies noindex, content security, referrer, and MIME rules.
+<code>robots.txt</code> is additional crawler guidance, not a private access boundary.</p>
+<p>Administration files stay outside <code>site/</code>. The smoke check requires public
+<code>/admin/</code> and unknown paths to return 404. Do not deploy the admin shell until
+Cloudflare Access has been configured and independently tested.</p>
+</div><p class="doc-source">This page is generated from the maintained documentation. <a href="https://github.com/Chaotic-Reality/rover-workspaces-docs/blob/main/SITE_DEVELOPMENT.md">View its source and revision history on GitHub</a>.</p></article></main>
+<footer><div class="shell"><p class="brand-meaning">ROVER means <strong>R</strong>estore, <strong>O</strong>rganize, <strong>V</strong>iew, <strong>E</strong>xplore, <strong>R</strong>epeat.</p><p>Make room for focus. This is a development beta; store availability and cloud services have not been announced.</p><nav aria-label="Footer navigation"><a href="/">Home</a>
+<a href="/how-it-works.html">How it works</a>
+<a href="/docs.html" aria-current="page">Documentation</a>
+<a href="/beta-install.html">Beta setup</a>
+<a href="/pricing.html">Plans</a>
+<a href="/privacy.html">Privacy</a>
+<a href="/support.html">Support</a></nav></div></footer></body></html>

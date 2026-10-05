@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Release process.">
+<meta name="rover-doc-source-sha256" content="0238c596b2efb348c82b767d7db92bd15390ca40efef1ec5a23937f87ddb8a94">
+<title>Release process · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
+<body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
+<a class="brand" href="/" aria-label="ROVER Workspaces home"><img src="/branding/rover-mark.png" width="78" height="78" alt=""><span class="wordmark"><strong>ROVER</strong><span>Workspaces</span></span></a>
+<nav aria-label="Main navigation"><a href="/">Home</a>
+<a href="/how-it-works.html">How it works</a>
+<a href="/docs.html" aria-current="page">Documentation</a>
+<a href="/beta-install.html">Beta setup</a>
+<a href="/pricing.html">Plans</a>
+<a href="/privacy.html">Privacy</a>
+<a href="/support.html">Support</a></nav></div></header>
+<main id="main" class="shell documentation"><aside class="docs-sidebar"><a class="docs-home" href="/docs.html">Documentation</a><nav aria-label="Documentation navigation"><details><summary>Using ROVER</summary><div><a href="/docs/user-guide.html">User guide</a><a href="/docs/how-it-works.html">How ROVER works</a><a href="/docs/importing.html">Import and export</a><a href="/docs/local-backup.html">Full local backup</a><a href="/docs/appearance.html">Appearance</a><a href="/docs/support.html">Support guidance</a></div></details><details open><summary>Development and beta</summary><div><a href="/docs/status.html">Feature status</a><a href="/docs/roadmap.html">Roadmap</a><a href="/docs/changelog.html">Change history</a><a href="/docs/releasing.html" aria-current="page">Release process</a><a href="/docs/beta-setup.html">Beta setup checklist</a></div></details><details><summary>Plans and policies</summary><div><a href="/docs/identity-signin.html">Account sign-in design</a><a href="/docs/hosted-sync.html">Hosted sync design</a><a href="/docs/pricing.html">Plans and trial details</a><a href="/docs/terms.html">Draft subscription terms</a><a href="/docs/privacy.html">Privacy and data handling</a><a href="/docs/license.html">License statement</a></div></details><details><summary>Project reference</summary><div><a href="/docs/about.html">About ROVER</a><a href="/docs/brand-guidelines.html">Brand guidelines</a><a href="/docs/hosting.html">Hosting plan</a><a href="/docs/admin-portal.html">Admin portal design</a><a href="/docs/store-listing.html">Store listing preparation</a><a href="/docs/store-policy-review.html">Store policy review</a><a href="/docs/site-development.html">Website maintenance</a><a href="/docs/project-overview.html">Project overview</a></div></details></nav></aside><article class="doc-article"><div class="doc-breadcrumb"><a href="/docs.html">Documentation</a><span aria-hidden="true">/</span><span>Development and beta</span></div><h1 id="from-a-change-to-a-release">From a change to a release</h1>
+<p class="doc-description">Packages, build records, browser testing, and recovery.</p><details class="doc-contents"><summary>On this page</summary><nav aria-label="On this page"><a class="toc-level-2" href="#beta-release-track">Beta release track</a><a class="toc-level-2" href="#the-delivery-path">The delivery path</a><a class="toc-level-2" href="#verifying-a-packaged-candidate">Verifying a packaged candidate</a><a class="toc-level-2" href="#versions-and-upgrade-safety">Versions and upgrade safety</a><a class="toc-level-2" href="#chrome-submission">Chrome submission</a><a class="toc-level-2" href="#edge-submission">Edge submission</a><a class="toc-level-2" href="#recovery-and-rollback">Recovery and rollback</a><a class="toc-level-2" href="#remaining-release-gates">Remaining release gates</a></nav></details><div class="prose"><p>Use <a href="/docs/local-backup.html">Full local backup</a> from settings before development
+upgrades to retain collections, favorites, appearance, templates, and revisions.
+Ordinary workspace exports retain only workspace content. Keep a stable loaded
+unpacked folder and use Reload; moving the folder or uninstalling may change
+extension identity or remove profile-local data. Match every browser acceptance
+run to the package build record and checksum.</p>
+<p>ROVER Workspaces currently automates verification and packaging. Browser-store publication is not connected to the pipeline. A successful build is a development candidate until Chrome and Edge acceptance is complete.</p>
+<h2 id="beta-release-track">Beta release track</h2>
+<p>The first external release should be a closed beta. Use a numeric release version
+such as <code>0.4.0</code> and identify the build as <code>ROVER Workspaces BETA</code> in the store
+name and description. Chrome can restrict a private testing listing to trusted
+testers or a Google Group; Edge can use a hidden listing distributed by its
+direct URL. Both stores still require review and accurate privacy disclosures.</p>
+<p>For personal testing before store submission, run <code>npm run package</code> in the
+private application repository and share only
+<code>release/rover-workspaces.zip</code>. Testers extract it and use <strong>Load unpacked</strong> in
+<code>chrome://extensions</code> or <code>edge://extensions</code>. This is suitable for local
+features; updates require replacing the extracted folder and reloading.</p>
+<p>Keep the Cloudflare environments separate throughout the beta path:</p>
+<pre><code class="language-text">rover-sync-staging   development checks only
+rover-sync-beta      invited beta accounts and data
+rover-sync-production public release, later
+</code></pre>
+<p>Each environment needs its own database bindings, secrets, OAuth callback
+configuration, and account data. Do not give beta testers the fixed staging
+token or a shared staging account. Register Google and Microsoft callbacks
+against the beta store identities because unpacked extension IDs can differ
+from Chrome Web Store and Edge Add-ons IDs.</p>
+<p>The beta exit criteria are: no known data-loss issue in restore or upgrade,
+responsive layouts pass at the supported viewports, the exact packaged build
+passes Chrome and Edge acceptance, feedback and recovery instructions are
+ready, and the beta Cloudflare environment is isolated from development.</p>
+<h2 id="the-delivery-path">The delivery path</h2>
+<ol>
+<li><strong>Edit locally:</strong> make a focused change and add meaningful regression coverage.</li>
+<li><strong>Check locally:</strong> formatting, lint, unit tests, TypeScript, production build, and package validation must pass.</li>
+<li><strong>Commit:</strong> record a checkpoint. <strong>Push:</strong> back up that checkpoint to the private application repository.</li>
+<li><strong>Continuous integration (CI):</strong> GitHub Actions installs the locked dependencies on a clean runner, repeats the checks, packages the extension, and retains the ZIP artifact for 14 days.</li>
+<li><strong>Acceptance:</strong> install the exact candidate in disposable Chrome and Edge profiles. Test capture, editing, restore, import/export, upgrades, and the changed features. Record browser versions and results.</li>
+<li><strong>Release candidate:</strong> associate the source commit, version, passing CI run, ZIP, checksum, and acceptance record. Keep the archive in private release storage before the CI artifact expires.</li>
+<li><strong>Store review and publication:</strong> submit the approved package to each store, track its review, then verify installation and upgrades from the published listing.</li>
+</ol>
+<p>This is continuous integration with packaged delivery candidates. It is not automatic deployment to customers. Public documentation can be updated independently of the private source.</p>
+<h2 id="verifying-a-packaged-candidate">Verifying a packaged candidate</h2>
+<p>Each package now comes with a separate build record containing the version, checkout reference, whether that checkout had uncommitted changes, the dependency-lock checksum, and checksums for the ZIP and its individual files. The private CI artifact includes both files. Keep the record with the ZIP, and use the verification command described in the private development guide to detect mismatches after copying or downloading it.</p>
+<p>The record is unsigned and does not prove who produced a package. It describes the checkout at packaging time; the successful CI run is the build evidence. Browser acceptance and store submission are explicitly unrecorded until tested or performed separately. A matching checksum does not make a build ready for store submission.</p>
+<h2 id="versions-and-upgrade-safety">Versions and upgrade safety</h2>
+<p>Use two identifiers with different jobs:</p>
+<ul>
+<li><strong>Release version:</strong> the semantic version in <code>package.json</code> and <code>manifest.json</code>. This is the user-facing/store-facing version. Use patch versions for fixes and small compatible additions, minor versions for substantial feature milestones, and reserve <code>1.0.0</code> for the first accepted stable release.</li>
+<li><strong>Build ID:</strong> the internal identifier in <code>release/rover-workspaces-build.json</code>. CI builds use the GitHub Actions run number (<code>ci-123</code>); local packages use the source commit (<code>local-a1b2c3d</code>). It identifies the exact artifact without changing the store release version.</li>
+</ul>
+<p>Keep the application package, lockfile, manifest, and release notes aligned. Export format and local storage schema versions are separate from both the release version and build ID. A store submission increments the release version; a rebuild of the same source release creates a new build ID and must retain its own checksum record.</p>
+<p>Test upgrades with existing local workspaces, favorites, collections, and preferences. Exported workspace backups do not include favorites, collections, or appearance preferences. Do not uninstall the user&#39;s extension as an upgrade step: local extension data may be removed. Keep the extension identity unchanged.</p>
+<h2 id="chrome-submission">Chrome submission</h2>
+<p>Use the developer account that will own ROVER Workspaces. Prepare the ZIP and listing, complete purpose, permission and data-use disclosures, provide test instructions, then submit for review. Chrome offers deferred publishing so review completion need not immediately publish the item. Follow the current <a href="https://developer.chrome.com/docs/webstore/publish">Chrome publishing guide</a>.</p>
+<h2 id="edge-submission">Edge submission</h2>
+<p>Use the intended publisher&#39;s Partner Center account. Create the extension listing, upload the ZIP, complete availability, properties, privacy, listing assets, and certification notes, then submit. Follow the current <a href="https://learn.microsoft.com/en-us/microsoft-edge/extensions/publish/publish-extension">Edge publishing guide</a>. Update the existing listing for subsequent builds rather than creating a new extension identity; see <a href="https://learn.microsoft.com/en-us/microsoft-edge/extensions/update/update-extension">Edge update instructions</a>.</p>
+<h2 id="recovery-and-rollback">Recovery and rollback</h2>
+<p>For a failed local change, preserve uncommitted work and revert the relevant commit with a new commit. Do not rewrite shared history. Build and test the recovered candidate before distributing it.</p>
+<p>For a faulty published build, pause further publication, preserve reproduction details, and prepare a corrective release. Our default recovery procedure is to restore the known-good behavior in a new, higher application version and submit that tested package. Do not assume that uploading an older version will downgrade users. Store review and browser update timing mean recovery is not instantaneous.</p>
+<p>Check data compatibility before restoring older code. A previous build might not understand data written by a newer schema. Restore from a user-exported backup only after reviewing what it contains; an application rollback is not a data rollback.</p>
+<h2 id="remaining-release-gates">Remaining release gates</h2>
+<ul>
+<li>Installed Chrome and Edge acceptance, including upgrade and conflict scenarios.</li>
+<li>Verify product icons in both installed browsers and capture listing screenshots from the actual extension, replacing sample UI previews.</li>
+<li>Accurate privacy disclosures, support details, and dependency/license review.</li>
+<li>Publisher accounts, listing ownership, and owner decision to submit.</li>
+<li>Monetization design, separately from the current local feature set.</li>
+</ul>
+<p>Process documented September 2026. Store dashboards and requirements can change; consult the linked official instructions at submission time.</p>
+</div><p class="doc-source">This page is generated from the maintained documentation. <a href="https://github.com/Chaotic-Reality/rover-workspaces-docs/blob/main/RELEASING.md">View its source and revision history on GitHub</a>.</p></article></main>
+<footer><div class="shell"><p class="brand-meaning">ROVER means <strong>R</strong>estore, <strong>O</strong>rganize, <strong>V</strong>iew, <strong>E</strong>xplore, <strong>R</strong>epeat.</p><p>Make room for focus. This is a development beta; store availability and cloud services have not been announced.</p><nav aria-label="Footer navigation"><a href="/">Home</a>
+<a href="/how-it-works.html">How it works</a>
+<a href="/docs.html" aria-current="page">Documentation</a>
+<a href="/beta-install.html">Beta setup</a>
+<a href="/pricing.html">Plans</a>
+<a href="/privacy.html">Privacy</a>
+<a href="/support.html">Support</a></nav></div></footer></body></html>

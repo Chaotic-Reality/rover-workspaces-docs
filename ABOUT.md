@@ -24,4 +24,4 @@ See the [roadmap](ROADMAP.md) for priorities. The extension's About screen shows
 
 ## Project ownership
 
-The [Chaotic-Reality GitHub profile](https://github.com/Chaotic-Reality) owns this documentation repository. Public documentation does not make the application source open source. No billing or licensing service is currently implemented.
+The [Chaotic-Reality GitHub profile](https://github.com/Chaotic-Reality) owns this documentation repository. Public documentation does not make the application source open source. Licensing contracts and a protected staging ledger are implemented for development testing; live purchases, billing, and account sign-in are not enabled. See [feature status](STATUS.md).

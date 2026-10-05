@@ -1,6 +1,6 @@
 # How ROVER Workspaces works
 
-ROVER Workspaces is a local Chromium extension for saving, organizing, and restoring groups of browser tabs. It stores workspace records in the current browser profile and only talks to the browser APIs when you capture, restore, import, or export.
+ROVER Workspaces is a local Chromium extension for saving, organizing, and restoring groups of browser tabs. It stores workspace records in the current browser profile. Capture can be manual or an optional daily schedule that is off by default; restore, import, export, and organization operate locally.
 
 ## The simple flow
 
@@ -18,7 +18,8 @@ The private application uses TypeScript for type checking, Vite for the Manifest
 
 ## Where to learn more
 
-- [User guide](https://github.com/Chaotic-Reality/rover-workspaces-docs/wiki/User-Guide)
+- [User guide](USER_GUIDE.md)
+- [Full local backup](LOCAL_BACKUP.md)
 - [Privacy and data handling](PRIVACY.md)
 - [Import and export guide](IMPORTING.md)
 - [Pricing and trial](PRICING.md)

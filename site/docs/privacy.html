@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Privacy and data handling.">
+<meta name="rover-doc-source-sha256" content="f48bbfd95004540cf0657a23887a6f54ebe1c6e16b92b74f8b5969945b6ec654">
+<title>Privacy and data handling · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
+<body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
+<a class="brand" href="/" aria-label="ROVER Workspaces home"><img src="/branding/rover-mark.png" width="78" height="78" alt=""><span class="wordmark"><strong>ROVER</strong><span>Workspaces</span></span></a>
+<nav aria-label="Main navigation"><a href="/">Home</a>
+<a href="/how-it-works.html">How it works</a>
+<a href="/docs.html" aria-current="page">Documentation</a>
+<a href="/beta-install.html">Beta setup</a>
+<a href="/pricing.html">Plans</a>
+<a href="/privacy.html">Privacy</a>
+<a href="/support.html">Support</a></nav></div></header>
+<main id="main" class="shell documentation"><aside class="docs-sidebar"><a class="docs-home" href="/docs.html">Documentation</a><nav aria-label="Documentation navigation"><details><summary>Using ROVER</summary><div><a href="/docs/user-guide.html">User guide</a><a href="/docs/how-it-works.html">How ROVER works</a><a href="/docs/importing.html">Import and export</a><a href="/docs/local-backup.html">Full local backup</a><a href="/docs/appearance.html">Appearance</a><a href="/docs/support.html">Support guidance</a></div></details><details><summary>Development and beta</summary><div><a href="/docs/status.html">Feature status</a><a href="/docs/roadmap.html">Roadmap</a><a href="/docs/changelog.html">Change history</a><a href="/docs/releasing.html">Release process</a><a href="/docs/beta-setup.html">Beta setup checklist</a></div></details><details open><summary>Plans and policies</summary><div><a href="/docs/identity-signin.html">Account sign-in design</a><a href="/docs/hosted-sync.html">Hosted sync design</a><a href="/docs/pricing.html">Plans and trial details</a><a href="/docs/terms.html">Draft subscription terms</a><a href="/docs/privacy.html" aria-current="page">Privacy and data handling</a><a href="/docs/license.html">License statement</a></div></details><details><summary>Project reference</summary><div><a href="/docs/about.html">About ROVER</a><a href="/docs/brand-guidelines.html">Brand guidelines</a><a href="/docs/hosting.html">Hosting plan</a><a href="/docs/admin-portal.html">Admin portal design</a><a href="/docs/store-listing.html">Store listing preparation</a><a href="/docs/store-policy-review.html">Store policy review</a><a href="/docs/site-development.html">Website maintenance</a><a href="/docs/project-overview.html">Project overview</a></div></details></nav></aside><article class="doc-article"><div class="doc-breadcrumb"><a href="/docs.html">Documentation</a><span aria-hidden="true">/</span><span>Plans and policies</span></div><h1 id="privacy-and-data-handling">Privacy and data handling</h1>
+<p class="doc-description">Local records, permissions, retention, exports, and deletion.</p><details class="doc-contents"><summary>On this page</summary><nav aria-label="On this page"><a class="toc-level-2" href="#our-privacy-statement">Our privacy statement</a><a class="toc-level-2" href="#data-kept-on-your-device">Data kept on your device</a><a class="toc-level-2" href="#what-the-extension-does-not-collect">What the extension does not collect</a><a class="toc-level-2" href="#permissions-and-connections">Permissions and connections</a><a class="toc-level-2" href="#export-retention-and-deletion">Export, retention, and deletion</a><a class="toc-level-2" href="#questions-and-changes">Questions and changes</a></nav></details><div class="prose"><p>Last updated: October 5, 2026. Applies to the current local-only ROVER Workspaces development builds, owned by Chaotic-Reality. Store availability has not been announced.</p>
+<h2 id="our-privacy-statement">Our privacy statement</h2>
+<p>ROVER Workspaces helps you organize your tabs without sending your saved workspaces to us. The current extension keeps workspace information and preferences on your device. We do not receive, sell, or use that locally stored workspace data for advertising. No ROVER Workspaces account is required.</p>
+<p>You choose when to capture, import, export, or open a workspace. Capture can also be started from the extension context menu. If you explicitly enable daily scheduled capture in settings, the browser alarm runs at the chosen local time and saves a local workspace while the browser is available; Free limits and paid-feature checks still apply. Scheduling is off by default. Exporting creates a file you control; opening a workspace connects your browser to the saved websites. Information you voluntarily post in public support issues is separate from the extension&#39;s local data and is publicly visible on GitHub. The details below explain these boundaries and how to remove your local data.</p>
+<h2 id="data-kept-on-your-device">Data kept on your device</h2>
+<p>When you capture or save a workspace, ROVER Workspaces stores its name and description; supported HTTP/HTTPS tab URLs and titles; window and tab order; pinned and active state; group names, colors, and collapsed state; and workspace identifiers and creation/update times.</p>
+<p>Favorites, collection names and assignments, and the last time a workspace was successfully opened are also stored locally. This recent-workspace record is not a record of every website you visit. Appearance preferences, Custom Templates, saved workspace revisions, trial/entitlement status, and explicit local profile/link records are stored separately. Saved revisions follow the configured per-workspace retention (5–50), subject to a 500-revision total limit. Local previews are drawn from saved group names and colors; ROVER Workspaces does not fetch screenshots or remote favicons for them.</p>
+<p>These records use extension-local storage in the current browser profile. ROVER Workspaces does not provide its own encryption or a cloud backup. Other users or software with access to your device or profile may be able to access that data. Device backup software may also copy it.</p>
+<h2 id="what-the-extension-does-not-collect">What the extension does not collect</h2>
+<p>The current implementation has no ROVER Workspaces account, analytics, advertising, crash-report upload, cloud synchronization, or server that receives saved workspaces. It does not read page content, cookies, passwords, form entries, or the browser&#39;s history database. It excludes private windows and browser-internal, file, and unsupported tab URLs when capturing.</p>
+<p>URLs and titles can still contain personal information, search terms, private document names, or access tokens in query strings. Capture does not remove that information. Review saved data and exports before sharing them.</p>
+<h2 id="permissions-and-connections">Permissions and connections</h2>
+<div class="table-scroll" role="region" aria-label="Scrollable table" tabindex="0"><table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Current purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>storage</td>
+<td>Save workspaces, organization, recent opens, and appearance preferences locally.</td>
+</tr>
+<tr>
+<td>tabs</td>
+<td>Read tab URLs/titles during capture and create, activate, pin, or group tabs during restore.</td>
+</tr>
+<tr>
+<td>tabGroups</td>
+<td>Read group names/colors/collapsed state and recreate those properties.</td>
+</tr>
+<tr>
+<td>contextMenus</td>
+<td>Offer the explicit capture action in the browser extension context menu.</td>
+</tr>
+<tr>
+<td>alarms</td>
+<td>Run opt-in daily local capture; scheduling is off by default.</td>
+</tr>
+</tbody></table>
+</div><p>The manifest requests no host permissions and installs no content scripts. Capture is manually initiated unless you enable scheduled capture. Restoring opens saved websites in new windows or the current window as selected; Reload current window closes current tabs except the extension page before restoring; those sites receive normal browser requests and follow their own privacy practices. Clicking documentation or support links opens GitHub, whose policies apply there. Browser and store services may have their own update or diagnostic behavior independent of ROVER Workspaces.</p>
+<h2 id="export-retention-and-deletion">Export, retention, and deletion</h2>
+<p>Exports are unencrypted JSON or YAML files containing workspace data. They do not include favorites, collections, recent-open records, or appearance settings. The separate Full local backup in settings also contains collections, favorites, recent opens, appearance, Custom Templates, and saved revisions. It excludes account sessions, entitlement/license records, provider tokens, encryption keys, and profile/device sync links. It is unencrypted; restoring it replaces the previewed local library and switches scheduled capture off. Neither export type is a credentials or browser-profile backup. Exported files remain wherever your browser saves downloads until you remove them; deleting a workspace does not delete an exported copy.</p>
+<p>Saved workspaces remain until you delete them or remove the extension&#39;s local data. Removing a collection only removes its organization; it does not delete the workspaces inside it. Uninstalling removes the extension&#39;s local data. Export anything you want to retain before uninstalling. Data copied to other devices, backups, exports, or websites must be managed separately.</p>
+<h2 id="questions-and-changes">Questions and changes</h2>
+<p>Use the <a href="/docs/support.html">support guide</a> to contact the maintainer through the public project issue tracker. Do not post private exports, sensitive URLs, or credentials. Future account, sync, or monetization features would require this document and the corresponding store disclosures to be reviewed before release.</p>
+</div><p class="doc-source">This page is generated from the maintained documentation. <a href="https://github.com/Chaotic-Reality/rover-workspaces-docs/blob/main/PRIVACY.md">View its source and revision history on GitHub</a>.</p></article></main>
+<footer><div class="shell"><p class="brand-meaning">ROVER means <strong>R</strong>estore, <strong>O</strong>rganize, <strong>V</strong>iew, <strong>E</strong>xplore, <strong>R</strong>epeat.</p><p>Make room for focus. This is a development beta; store availability and cloud services have not been announced.</p><nav aria-label="Footer navigation"><a href="/">Home</a>
+<a href="/how-it-works.html">How it works</a>
+<a href="/docs.html" aria-current="page">Documentation</a>
+<a href="/beta-install.html">Beta setup</a>
+<a href="/pricing.html">Plans</a>
+<a href="/privacy.html">Privacy</a>
+<a href="/support.html">Support</a></nav></div></footer></body></html>

@@ -53,7 +53,11 @@ Keep visible keyboard focus, sufficient contrast, and useful touch targets.
 
 Website navigation is shared at build time across every page, with the current
 page marked using `aria-current`. It wraps on narrow screens and works without
-JavaScript. Always link Home, How it works, Beta setup, Plans, Privacy, and Support.
+JavaScript. Always link Home, How it works, Documentation, Beta setup, Plans,
+Privacy, and Support. Documentation pages use grouped guide navigation, an
+On this page contents menu, and readable headings, tables, lists, and code.
+Product links lead to the branded guides; GitHub links are reserved for source
+history, editing, and issue reporting.
 Admin pages remain separate and must be protected before deployment.
 
 Use plain language. Explain local data, optional cloud features, and limitations

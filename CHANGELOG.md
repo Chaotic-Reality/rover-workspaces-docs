@@ -4,6 +4,14 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Publish the public Markdown documents as branded website pages with a grouped
+  documentation hub, shared navigation, contents links, and responsive tables.
+  Product-page and extension About documentation links now use the website; GitHub remains
+  available for source history and public issue reporting.
+- Adopt a canonical user guide and a required documentation-update matrix for
+  features, releases, deployments, privacy, plans, history, and roadmap changes.
+  Website checks verify source freshness, registration, links, and public scope.
+
 - Adopt a shared ROVER brand guideline, app logo and acronym, and responsive
   website navigation. Add beta installation instructions and truthful feature
   status, plans, privacy, and support pages to the free staging website.

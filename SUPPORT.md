@@ -12,7 +12,7 @@ If the problem involves private data or a potential security issue, open a minim
 
 ## First checks
 
-1. Export a backup before troubleshooting saved data. Export backups contain workspaces, not appearance preferences or collections.
+1. Download a [Full local backup](LOCAL_BACKUP.md) from settings before troubleshooting saved data. Ordinary JSON/YAML workspace exports contain workspaces, not appearance preferences or collections.
 2. Check the version in About and the [release notes](CHANGELOG.md).
 3. For an unpacked development extension, reload it on the browser's extensions page and reopen the manager. Do not uninstall as a routine troubleshooting step; that removes local extension data.
 4. If capture skips tabs, check whether they are private, browser-internal, file, or unsupported URLs. Supported capture uses normal HTTP/HTTPS tabs.

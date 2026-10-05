@@ -16,7 +16,7 @@ Paddle is the current implementation-planning candidate for checkout and licensi
 
 ## Trial
 
-The current local build includes one 15-day, full-feature trial. It starts only when you select **Start 15-day Pro trial**, requires no account, and shows its end date in the extension. At the end of the trial, existing local data remains available and the Free workspace limit applies. A future store or checkout release may use different eligibility rules, which will be disclosed before activation.
+The current local build includes one 15-day trial of local Pro features. It starts only when you select **Start 15-day Pro trial**, requires no account, and shows its end date in the extension. Cloud connections are not enabled by this local trial. At the end of the trial, existing local data remains available and the Free workspace limit applies. A future store or checkout release may use different eligibility rules, which will be disclosed before activation.
 
 ## Future purchase terms
 

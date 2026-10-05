@@ -2,13 +2,13 @@
 
 Save, organize, and restore browser workspaces with groups and tabs arranged the way you work.
 
-[Visit the ROVER beta product site](https://rover-workspaces-beta.tech-e40.workers.dev) for the overview, beginner guide, privacy boundary, and current plan notes.
+[Visit the ROVER beta product site](https://rover-workspaces-beta.tech-e40.workers.dev) or its [documentation hub](https://rover-workspaces-beta.tech-e40.workers.dev/docs) for branded guides, feature status, change history, and the roadmap. Public Markdown in this repository is the maintained source for those pages.
 
 ROVER Workspaces is in development for Microsoft Edge and Google Chrome. Store availability has not been announced. This repository contains public product documentation; application source and development history remain private.
 
 ## Documentation
 
-- [Wiki user guide](https://github.com/Chaotic-Reality/rover-workspaces-docs/wiki/User-Guide): step-by-step installation, workspace management, import/export, appearance, privacy, and support guidance.
+- [User guide](USER_GUIDE.md): step-by-step installation, workspace management, import/export, appearance, privacy, and support guidance.
 - [Prioritized roadmap](ROADMAP.md): future improvements and release gates.
 - [Capability status](STATUS.md): implemented local features, tested contracts, staging, and remaining live integration gates.
 - [Brand guidelines](BRAND_GUIDELINES.md): shared logo, acronym, typography, colors, and navigation.

@@ -7,11 +7,13 @@
   },
   "scripts": {
     "build": "node scripts/build-site.mjs",
-    "check": "npm run build && node scripts/check-site.mjs",
+    "test": "node --test scripts/render-document.test.mjs",
+    "check": "npm test && npm run build && node scripts/check-site.mjs",
     "smoke": "node scripts/smoke-site.mjs",
     "deploy:beta": "npm run check && wrangler deploy"
   },
   "devDependencies": {
+    "marked": "18.1.0",
     "wrangler": "4.147.0"
   }
 }

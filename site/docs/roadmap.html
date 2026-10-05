@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Roadmap.">
+<meta name="rover-doc-source-sha256" content="61478363fcbfdf88ddffcbc450a8579322dbf806b38a8143b679443e8f1ba9db">
+<title>Roadmap · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
+<body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
+<a class="brand" href="/" aria-label="ROVER Workspaces home"><img src="/branding/rover-mark.png" width="78" height="78" alt=""><span class="wordmark"><strong>ROVER</strong><span>Workspaces</span></span></a>
+<nav aria-label="Main navigation"><a href="/">Home</a>
+<a href="/how-it-works.html">How it works</a>
+<a href="/docs.html" aria-current="page">Documentation</a>
+<a href="/beta-install.html">Beta setup</a>
+<a href="/pricing.html">Plans</a>
+<a href="/privacy.html">Privacy</a>
+<a href="/support.html">Support</a></nav></div></header>
+<main id="main" class="shell documentation"><aside class="docs-sidebar"><a class="docs-home" href="/docs.html">Documentation</a><nav aria-label="Documentation navigation"><details><summary>Using ROVER</summary><div><a href="/docs/user-guide.html">User guide</a><a href="/docs/how-it-works.html">How ROVER works</a><a href="/docs/importing.html">Import and export</a><a href="/docs/local-backup.html">Full local backup</a><a href="/docs/appearance.html">Appearance</a><a href="/docs/support.html">Support guidance</a></div></details><details open><summary>Development and beta</summary><div><a href="/docs/status.html">Feature status</a><a href="/docs/roadmap.html" aria-current="page">Roadmap</a><a href="/docs/changelog.html">Change history</a><a href="/docs/releasing.html">Release process</a><a href="/docs/beta-setup.html">Beta setup checklist</a></div></details><details><summary>Plans and policies</summary><div><a href="/docs/identity-signin.html">Account sign-in design</a><a href="/docs/hosted-sync.html">Hosted sync design</a><a href="/docs/pricing.html">Plans and trial details</a><a href="/docs/terms.html">Draft subscription terms</a><a href="/docs/privacy.html">Privacy and data handling</a><a href="/docs/license.html">License statement</a></div></details><details><summary>Project reference</summary><div><a href="/docs/about.html">About ROVER</a><a href="/docs/brand-guidelines.html">Brand guidelines</a><a href="/docs/hosting.html">Hosting plan</a><a href="/docs/admin-portal.html">Admin portal design</a><a href="/docs/store-listing.html">Store listing preparation</a><a href="/docs/store-policy-review.html">Store policy review</a><a href="/docs/site-development.html">Website maintenance</a><a href="/docs/project-overview.html">Project overview</a></div></details></nav></aside><article class="doc-article"><div class="doc-breadcrumb"><a href="/docs.html">Documentation</a><span aria-hidden="true">/</span><span>Development and beta</span></div><h1 id="rover-workspaces-roadmap">ROVER Workspaces roadmap</h1>
+<p class="doc-description">Future improvements and release gates.</p><details class="doc-contents"><summary>On this page</summary><nav aria-label="On this page"><a class="toc-level-2" href="#priority-1--release-gate-and-local-pro-foundation">Priority 1 — release gate and local Pro foundation</a><a class="toc-level-2" href="#priority-2--first-paid-value">Priority 2 — first paid value</a><a class="toc-level-2" href="#priority-3--licensing-and-subscriptions">Priority 3 — licensing and subscriptions</a><a class="toc-level-2" href="#priority-4--user-owned-backups">Priority 4 — user-owned backups</a><a class="toc-level-2" href="#priority-5--named-profiles-and-portability">Priority 5 — named profiles and portability</a><a class="toc-level-2" href="#priority-6--rover-hosted-sync-and-later-capabilities">Priority 6 — ROVER-hosted sync and later capabilities</a><a class="toc-level-2" href="#launch-learning">Launch learning</a><a class="toc-level-2" href="#working-approach">Working approach</a></nav></details><div class="prose"><p>This roadmap lists planned work only. Completed work is recorded in the <a href="/docs/changelog.html">change history</a>. ROVER Workspaces is currently in development; Chrome and Edge are the supported release targets, and live browser acceptance remains a release gate. Plans may change and do not promise delivery dates.</p>
+<h2 id="priority-1--release-gate-and-local-pro-foundation">Priority 1 — release gate and local Pro foundation</h2>
+<p>These items make the local product ready for a public release and prepare paid features without connecting a payment provider yet.</p>
+<ul>
+<li><input disabled="" type="checkbox"> Complete live Chrome and Edge acceptance for the current release candidate, including upgrade, restore, import/export, responsive layout, icons, and conflict scenarios.</li>
+<li><input disabled="" type="checkbox"> Verify final extension icon appearance in installed Chrome and Edge and capture store listing screenshots.</li>
+<li><input disabled="" type="checkbox"> Recheck permissions, privacy disclosures, reviewer steps, and final package evidence against the beta/release candidate in installed Chrome and Edge.</li>
+<li><input disabled="" type="checkbox"> Validate demand for version history, Custom Templates, organization rules, workspace combining, and opt-in sync with a small pilot.</li>
+</ul>
+<h2 id="priority-2--first-paid-value">Priority 2 — first paid value</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Validate local Pro controls and the 15-day trial in the invited pilot.</li>
+</ul>
+<h2 id="priority-3--licensing-and-subscriptions">Priority 3 — licensing and subscriptions</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Complete Google and Microsoft app registrations, final callback/domain setup, and live sign-in with account-bound sessions.</li>
+<li><input disabled="" type="checkbox"> Connect an approved payment-provider sandbox and verify purchase, renewal, cancellation, revocation, and complimentary Pro grants before enabling billing.</li>
+<li><input disabled="" type="checkbox"> Re-run the lifecycle matrix against a hosted provider sandbox after billing and Worker deployment are approved.</li>
+</ul>
+<h2 id="priority-4--user-owned-backups">Priority 4 — user-owned backups</h2>
+<p>Implement one provider at a time so users own the storage and ROVER&#39;s initial operating cost stays low.</p>
+<ul>
+<li><input disabled="" type="checkbox"> Add Google Drive backup using the hidden <code>appDataFolder</code> and minimum required permissions.</li>
+<li><input disabled="" type="checkbox"> Add OneDrive backup using the dedicated application folder and minimum Microsoft Graph permissions.</li>
+<li><input disabled="" type="checkbox"> Use OAuth 2.0 authorization code flow with PKCE, <code>S256</code>, state validation, account switching, token revocation, and no client secrets in the extension.</li>
+<li><input disabled="" type="checkbox"> Enable live provider controls after OAuth registration and account consent.</li>
+<li><input disabled="" type="checkbox"> Test provider rate limits, revoked access, expired tokens, partial failures, and interrupted uploads.</li>
+</ul>
+<h2 id="priority-5--named-profiles-and-portability">Priority 5 — named profiles and portability</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Retrieve, clone, or merge selected workspaces from another linked browser profile through the linked-profile UI and hosted sync.</li>
+</ul>
+<h2 id="priority-6--rover-hosted-sync-and-later-capabilities">Priority 6 — ROVER-hosted sync and later capabilities</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Replace the fixed staging credential with verified user sessions and a profile/device consent UI; test live sync, conflicts, revocation, and account isolation.</li>
+<li><input disabled="" type="checkbox"> Add hosted key recovery before launch.</li>
+<li><input disabled="" type="checkbox"> Protect the admin hostname with a verified Cloudflare Access policy before deployment.</li>
+<li><input disabled="" type="checkbox"> Evaluate team workspaces, shared templates, and administration after individual Pro usage is validated.</li>
+<li><input disabled="" type="checkbox"> Evaluate sponsorship only as clearly labeled, non-personalized content; do not use browsing activity, workspace contents, or survey answers for targeting.</li>
+<li><input disabled="" type="checkbox"> Add other Chromium browsers only when customer demand justifies the maintenance cost.</li>
+</ul>
+<h2 id="launch-learning">Launch learning</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Offer a short, skippable onboarding survey with a separate explicit submit action.</li>
+<li><input disabled="" type="checkbox"> Offer a feedback prompt after several days of actual use with Later and Do not ask again choices.</li>
+<li><input disabled="" type="checkbox"> Provide a private feedback channel with retention, deletion, abuse protection, and restricted administration.</li>
+</ul>
+<h2 id="working-approach">Working approach</h2>
+<p>Finish and verify one milestone at a time. Commit each milestone, let CI check it, and update the change history when it ships. Retain existing user workspaces throughout upgrades.</p>
+</div><p class="doc-source">This page is generated from the maintained documentation. <a href="https://github.com/Chaotic-Reality/rover-workspaces-docs/blob/main/ROADMAP.md">View its source and revision history on GitHub</a>.</p></article></main>
+<footer><div class="shell"><p class="brand-meaning">ROVER means <strong>R</strong>estore, <strong>O</strong>rganize, <strong>V</strong>iew, <strong>E</strong>xplore, <strong>R</strong>epeat.</p><p>Make room for focus. This is a development beta; store availability and cloud services have not been announced.</p><nav aria-label="Footer navigation"><a href="/">Home</a>
+<a href="/how-it-works.html">How it works</a>
+<a href="/docs.html" aria-current="page">Documentation</a>
+<a href="/beta-install.html">Beta setup</a>
+<a href="/pricing.html">Plans</a>
+<a href="/privacy.html">Privacy</a>
+<a href="/support.html">Support</a></nav></div></footer></body></html>

@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Change history.">
+<meta name="rover-doc-source-sha256" content="e42de2e88601724d0f1507bae2b93e8b344087375707c785111d86a5aca184b3">
+<title>Change history · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
+<body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
+<a class="brand" href="/" aria-label="ROVER Workspaces home"><img src="/branding/rover-mark.png" width="78" height="78" alt=""><span class="wordmark"><strong>ROVER</strong><span>Workspaces</span></span></a>
+<nav aria-label="Main navigation"><a href="/">Home</a>
+<a href="/how-it-works.html">How it works</a>
+<a href="/docs.html" aria-current="page">Documentation</a>
+<a href="/beta-install.html">Beta setup</a>
+<a href="/pricing.html">Plans</a>
+<a href="/privacy.html">Privacy</a>
+<a href="/support.html">Support</a></nav></div></header>
+<main id="main" class="shell documentation"><aside class="docs-sidebar"><a class="docs-home" href="/docs.html">Documentation</a><nav aria-label="Documentation navigation"><details><summary>Using ROVER</summary><div><a href="/docs/user-guide.html">User guide</a><a href="/docs/how-it-works.html">How ROVER works</a><a href="/docs/importing.html">Import and export</a><a href="/docs/local-backup.html">Full local backup</a><a href="/docs/appearance.html">Appearance</a><a href="/docs/support.html">Support guidance</a></div></details><details open><summary>Development and beta</summary><div><a href="/docs/status.html">Feature status</a><a href="/docs/roadmap.html">Roadmap</a><a href="/docs/changelog.html" aria-current="page">Change history</a><a href="/docs/releasing.html">Release process</a><a href="/docs/beta-setup.html">Beta setup checklist</a></div></details><details><summary>Plans and policies</summary><div><a href="/docs/identity-signin.html">Account sign-in design</a><a href="/docs/hosted-sync.html">Hosted sync design</a><a href="/docs/pricing.html">Plans and trial details</a><a href="/docs/terms.html">Draft subscription terms</a><a href="/docs/privacy.html">Privacy and data handling</a><a href="/docs/license.html">License statement</a></div></details><details><summary>Project reference</summary><div><a href="/docs/about.html">About ROVER</a><a href="/docs/brand-guidelines.html">Brand guidelines</a><a href="/docs/hosting.html">Hosting plan</a><a href="/docs/admin-portal.html">Admin portal design</a><a href="/docs/store-listing.html">Store listing preparation</a><a href="/docs/store-policy-review.html">Store policy review</a><a href="/docs/site-development.html">Website maintenance</a><a href="/docs/project-overview.html">Project overview</a></div></details></nav></aside><article class="doc-article"><div class="doc-breadcrumb"><a href="/docs.html">Documentation</a><span aria-hidden="true">/</span><span>Development and beta</span></div><h1 id="rover-workspaces-release-notes">ROVER Workspaces release notes</h1>
+<p class="doc-description">Completed development milestones and release notes.</p><details class="doc-contents"><summary>On this page</summary><nav aria-label="On this page"><a class="toc-level-2" href="#unreleased">Unreleased</a><a class="toc-level-2" href="#035">0.3.5</a><a class="toc-level-2" href="#034">0.3.4</a><a class="toc-level-2" href="#033">0.3.3</a><a class="toc-level-2" href="#032">0.3.2</a><a class="toc-level-2" href="#031">0.3.1</a><a class="toc-level-2" href="#030">0.3.0</a><a class="toc-level-2" href="#023">0.2.3</a><a class="toc-level-2" href="#022">0.2.2</a><a class="toc-level-2" href="#021">0.2.1</a><a class="toc-level-2" href="#020">0.2.0</a><a class="toc-level-2" href="#implementation-records-moved-from-the-roadmap--october-5-2026">Implementation records moved from the roadmap — October 5, 2026</a></nav></details><div class="prose"><p>ROVER Workspaces is in development. These notes describe development builds, not browser-store availability. Live Chrome and Edge acceptance remains a release gate.</p>
+<h2 id="unreleased">Unreleased</h2>
+<ul>
+<li><p>Publish the public Markdown documents as branded website pages with a grouped
+documentation hub, shared navigation, contents links, and responsive tables.
+Product-page and extension About documentation links now use the website; GitHub remains
+available for source history and public issue reporting.</p>
+</li>
+<li><p>Adopt a canonical user guide and a required documentation-update matrix for
+features, releases, deployments, privacy, plans, history, and roadmap changes.
+Website checks verify source freshness, registration, links, and public scope.</p>
+</li>
+<li><p>Adopt a shared ROVER brand guideline, app logo and acronym, and responsive
+website navigation. Add beta installation instructions and truthful feature
+status, plans, privacy, and support pages to the free staging website.</p>
+</li>
+<li><p>Add Free Full local backup with validated replacement preview, preserving
+workspace ordering, collections, favorites, appearance, Custom Templates,
+and revisions. Credentials and licensing are excluded; scheduled capture
+remains disabled after replacement.</p>
+</li>
+<li><p>Extract sidebar initialization and add regression coverage for optional
+links, collection sorting, accordion behavior, and persisted preferences.</p>
+</li>
+<li><p>Harden staging request limits, entitlement and profile/device consent,
+concurrent manifest and ledger writes, and identity validation. Verify the
+deployed Worker bundle against isolated D1 runtime tests. Live identity,
+provider backups, and multi-user sync remain disabled.</p>
+</li>
+<li><p>Consolidate future work into ROADMAP.md and engineering evidence into
+STATUS.md; add repository instructions and a reusable ChatGPT handoff prompt.</p>
+</li>
+<li><p>Deploy the local encrypted-manifest and durable-queue Worker/D1 contract to a
+free Cloudflare staging Worker for development testing; hosted activation,
+key recovery, R2 storage, and production sync remain disabled.</p>
+</li>
+<li><p>Connect the provider-neutral entitlement ledger to the same free staging
+Worker/D1 endpoint with signed webhook verification and account lookup;
+billing-provider credentials and hosted browser activation remain disabled.</p>
+</li>
+<li><p>Add and smoke-test a protected staging-only activation-token route backed by
+the D1 entitlement ledger; hosted account sign-in remains disabled.</p>
+</li>
+<li><p>Add a tested provider-neutral account-session contract so a future hosted
+identity adapter can issue short-lived sessions without putting identity
+provider secrets in the extension.</p>
+</li>
+<li><p>Select Google and Microsoft as the supported ROVER sign-in providers; OAuth
+registrations and hosted callbacks remain pending.</p>
+</li>
+<li><p>Add tested Google/Microsoft OIDC claim normalization with audience, nonce,
+issuer, and time validation; provider credentials remain unconfigured.</p>
+</li>
+<li><p>Add a short-lived, one-time OAuth transaction boundary that retains PKCE
+verifier and state only until the callback is consumed or expires.</p>
+</li>
+<li><p>Document the closed-beta release track, package-sharing path, isolated
+Cloudflare environments, and beta exit criteria.</p>
+</li>
+<li><p>Make the desktop sidebar navigation scroll within its available height so
+settings, information, and quick actions cannot overlap at shorter viewports.</p>
+</li>
+<li><p>Sort collections alphabetically in the sidebar and workspace-card selectors,
+keeping <code>No collection</code> as the default option.</p>
+</li>
+<li><p>Add mutually exclusive Collections and Quick Actions accordion sections with
+triangle indicators across viewports; the outer sidebar no longer adds a
+second scrollbar, while long collection lists retain their own scroll area.</p>
+</li>
+<li><p>Add a compact short-viewport sidebar mode that tightens navigation spacing,
+keeps the footer anchored, and scrolls the middle navigation before links can
+overlap.</p>
+</li>
+<li><p>Fix the collapsed Quick Actions state so every action link hides with its
+section header instead of leaving the buttons visible.</p>
+</li>
+<li><p>Start Collections and Quick Actions collapsed; opening either section still
+closes the other, while both may remain closed.</p>
+</li>
+<li><p>In compact mode, remove the duplicate uppercase Quick Actions label so the
+arrow button is the single section heading.</p>
+</li>
+<li><p>Use one sidebar-navigation scrollbar for longer collection lists at every
+desktop viewport instead of nesting a collection scrollbar inside it.</p>
+</li>
+<li><p>Remove the duplicate uppercase Quick Actions label; the accordion button is
+the single heading for that section.</p>
+</li>
+<li><p>Remove the duplicate uppercase Collections label for the same single-heading
+accordion treatment.</p>
+</li>
+<li><p>Remove the standalone Prioritized roadmap sidebar link; the roadmap remains
+available from the About page.</p>
+</li>
+<li><p>Remove the stale icon-decoration reference left by that link removal so
+startup continues into stored workspace and appearance loading.</p>
+</li>
+<li><p>Add the first free-tier beta product site with product, how-it-works,
+privacy, plans, and support pages at the Cloudflare Pages/Workers URL.</p>
+</li>
+<li><p>Add a non-deployed administration portal shell and Access-first hosting
+boundary for future entitlement, provider, health, and support views.</p>
+</li>
+<li><p>Keep the beta site out of search indexing and add a friendly static 404 page.</p>
+</li>
+<li><p>Record the current Chrome Web Store and Microsoft Edge Add-ons policy review,
+including privacy, Limited Use, paid-feature, and third-party purchase rules.</p>
+</li>
+<li><p>Verify the 0.3.5 release package manifest, permissions, dependency notices,
+ZIP inventory, and file checksums with the local release checks; installed
+Chrome and Edge review remains required before store submission.</p>
+</li>
+<li><p>Add a tested provider-code exchange boundary that resolves an account and
+issues a short-lived ROVER session without connecting live callbacks.</p>
+</li>
+<li><p>Connect browser activation to a verified hosted account session so Chrome and
+Edge activations remain bound to the purchaser account; staging still uses
+its fixed token until identity providers are registered.</p>
+</li>
+<li><p>Add provider-neutral encrypted backup transfer wiring that encrypts before
+upload and decrypts only in the extension; provider credentials and key
+recovery remain pending.</p>
+</li>
+<li><p>Add tested provider-specific Google Drive and OneDrive PKCE authorization
+configuration with narrow app-data and app-folder scopes.</p>
+</li>
+<li><p>Add provider backup control hooks for connect, reauthorize, disconnect,
+backup, restore, and delete while keeping them safely disabled until OAuth
+registration and account consent are configured.</p>
+</li>
+<li><p>Add a local named-profile store with stable IDs and explicit create, rename,
+and delete behavior; browser and account identity remain separate.</p>
+</li>
+<li><p>Add explicit browser-profile mappings that use opaque installation IDs and
+never infer a ROVER profile from a label or email.</p>
+</li>
+<li><p>Add a portability identity-binding contract that keeps purchaser, ROVER
+profile, browser mapping, device, and provider account references separate.</p>
+</li>
+<li><p>Add local active-profile switching and linked-device records; unlinking removes
+only the link and preserves local workspace data.</p>
+</li>
+<li><p>Add a profile-to-profile transfer planner with safe copy defaults, explicit
+replace/merge destinations, previewable results, and source preservation.</p>
+</li>
+<li><p>Add metadata-only conflict previews and an explicit cloud-deletion request
+contract that guarantees local data preservation.</p>
+</li>
+<li><p>Add an opt-in sync-consent contract tied to explicit profile, device, and
+browser-mapping IDs, with revocation and no email or display-name matching.</p>
+</li>
+<li><p>Document the Cloudflare Workers, D1, and R2 hosted-sync evaluation; no
+account, deployment, bucket, or paid service is connected.</p>
+</li>
+<li><p>Add tested local sync-policy boundaries for encrypted-object quotas,
+retention tombstones, bounded offline operations, and key-recovery metadata.</p>
+</li>
+<li><p>Add a local Worker/D1 sync contract for authenticated encrypted manifests and
+durable queue operations, with an in-memory test store and no deployment.</p>
+</li>
+<li><p>Add lifecycle coverage for purchase, renewal, past-due, cancellation, refund, chargeback, and expiration events.</p>
+</li>
+<li><p>Add a tested, provider-neutral Worker/D1 entitlement adapter contract for signed webhooks and account lookup.</p>
+</li>
+<li><p>Add cross-browser activation coverage proving Chrome and Edge can share one account-bound entitlement token.</p>
+</li>
+<li><p>Complete the local licensing lifecycle matrix, including trial expiry, payment state changes, recovery, duplicate delivery, and offline provider outage behavior.</p>
+</li>
+<li><p>Add a release-boundary scan that rejects server-only billing and ledger terms from the extension bundle.</p>
+</li>
+<li><p>Add a tested Google Drive <code>appDataFolder</code> adapter contract with narrow scope and injectable transport.</p>
+</li>
+<li><p>Add a tested OneDrive application-folder adapter contract with minimum Graph scope and injectable transport.</p>
+</li>
+<li><p>Add a tested OAuth 2.0 PKCE helper with S256 challenges, state validation, account switching, and token revocation.</p>
+</li>
+<li><p>Add a tested local backup-connection boundary for provider switching, reauthorization, and token cleanup.</p>
+</li>
+<li><p>Add visible, safely disabled cloud backup controls with provider status in Appearance &amp; settings.</p>
+</li>
+<li><p>Add a versioned AES-GCM-256 backup envelope with round-trip and wrong-key tests.</p>
+</li>
+<li><p>Add bounded provider retry and failure classification tests for backup reliability.</p>
+</li>
+<li><p>Add a local entitlement state model for Free, 15-day Trial, Pro Local, Pro Sync, and Expired without connecting payment or cloud services.</p>
+</li>
+<li><p>Show local entitlement status, offer the 15-day trial, and enforce the two-workspace Free creation limit without blocking exports or existing data.</p>
+</li>
+<li><p>Add local Custom Templates with named project placeholders, resolved previews, and apply/save controls.</p>
+</li>
+<li><p>Gate Custom Templates, organization rules, workspace history, and workspace combining with clear ROVER Pro upgrade messaging.</p>
+</li>
+<li><p>Complete the local 15-day full-feature trial flow and preserve the core local workflow after trial expiry.</p>
+</li>
+<li><p>Add Pro scheduled local capture with a daily time setting and browser alarm scheduling.</p>
+</li>
+<li><p>Publish pre-release pricing, privacy, support, cancellation, refund, and trial disclosures.</p>
+</li>
+<li><p>Select Paddle as the first hosted checkout/licensing provider for planning, with Lemon Squeezy retained as fallback; no payment account is connected.</p>
+</li>
+<li><p>Add a provider-neutral entitlement ledger core with signed-event verification, duplicate protection, stale-event handling, and gifted grant support.</p>
+</li>
+<li><p>Add account-bound short-lived activation tokens with separate browser, device, and ROVER profile metadata.</p>
+</li>
+<li><p>Require grant issuer, reason, ID, and optional expiration for auditable non-payment Pro access.</p>
+</li>
+<li><p>Add a tested 72-hour offline-grace policy for previously verified account entitlements.</p>
+</li>
+<li><p>Add a local setting for retaining 5–50 revisions per workspace.</p>
+</li>
+<li><p>Add card-level organization previews for duplicate URLs, empty groups, and trimmed group names before local changes are saved.</p>
+</li>
+<li><p>Add selective opening of groups and tabs from an older workspace revision without replacing the current saved workspace.</p>
+</li>
+<li><p>Keep recent local workspace revisions with comparison and whole-revision recovery from each workspace card.</p>
+</li>
+<li><p>Save the current tab or tab group directly from the browser context menu.</p>
+</li>
+<li><p>Preview browser bookmark HTML and pasted URL-list imports before adding, replacing, or merging workspaces.</p>
+</li>
+</ul>
+<h2 id="035">0.3.5</h2>
+<ul>
+<li>Consistent outline icons for navigation and templates.</li>
+<li>Roadmap and About grouped at the bottom of the left navigation.</li>
+<li>Plain-language privacy statement and proprietary license statement, linked from About.</li>
+</ul>
+<h2 id="034">0.3.4</h2>
+<ul>
+<li>Replace placeholder extension icons with blue-grey artwork depicting a browser window and nested groups.</li>
+<li>Generate consistent 16, 32, 48, and 128 pixel icons with transparent rounded corners; validate packaged PNG dimensions during builds.</li>
+<li>Installed-browser icon checks and final store screenshots remain pending.</li>
+</ul>
+<h2 id="033">0.3.3</h2>
+<ul>
+<li>About links to the current privacy/data-handling document and support guide.</li>
+<li>Build verification checks that bundled runtime license notices match the installed dependency versions and license texts. Final store disclosures and installed-browser acceptance remain release gates.</li>
+</ul>
+<h2 id="032">0.3.2</h2>
+<ul>
+<li>Import JSON/YAML as copies, replacements, or merges after choosing destinations and reviewing before/after counts.</li>
+<li>Imports save as one operation. A destination changed since review blocks the entire import, preserving the latest saved data.</li>
+<li>Replacements retain the destination identity and use imported contents. Merges preserve every window, group, and duplicate tab.</li>
+</ul>
+<h2 id="031">0.3.1</h2>
+<ul>
+<li>Manager shortcuts: / focuses search, Alt+Shift+C captures, and Alt+Shift+R restores the single selected workspace after confirmation. Shortcuts pause while typing or using dialogs.</li>
+<li>Group emoji picker and locally generated workspace previews. No page images are fetched.</li>
+</ul>
+<h2 id="030">0.3.0</h2>
+<ul>
+<li>Merge into an existing workspace with a preview, revision protection, and safe undo.</li>
+<li>Select multiple workspace cards for combine and export.</li>
+<li>Favorites and Recently opened views, stored locally and separately from exports.</li>
+<li>An About page with version, ownership, privacy information, documentation, and issue links.</li>
+<li>Collections, appearance settings, storage usage, and collapsible navigation.</li>
+<li>Clean/Modern styles, light/dark/system colors, custom accents, and density controls. See <a href="/docs/appearance.html">appearance notes</a>.</li>
+</ul>
+<h2 id="023">0.2.3</h2>
+<ul>
+<li>Move product documentation and the roadmap to this public repository.</li>
+</ul>
+<h2 id="022">0.2.2</h2>
+<ul>
+<li>Dotted insertion indicators show where dragged groups and tabs will land.</li>
+</ul>
+<h2 id="021">0.2.1</h2>
+<ul>
+<li>Collapse and expand groups in the editor.</li>
+<li>Automatic scrolling during dragging and a fixed drop target for the last group position.</li>
+</ul>
+<h2 id="020">0.2.0</h2>
+<ul>
+<li>Nested group editing, keyboard movement, and drag-and-drop ordering.</li>
+<li>Nested JSON/YAML exports with support for legacy imports.</li>
+<li>Combine workspaces and add templates to existing workspaces.</li>
+<li>Blue-grey styling and sidebar shortcuts.</li>
+</ul>
+<h2 id="implementation-records-moved-from-the-roadmap--october-5-2026">Implementation records moved from the roadmap — October 5, 2026</h2>
+<p>These completed development records retain their original contract/staging
+qualifications. They are not evidence of live account sync or store acceptance;
+see <a href="/docs/status.html">STATUS.md</a> for the remaining integration gates.</p>
+<ul>
+<li>Resolve responsive sidebar overflow and overlap with mutually exclusive Collections and Quick Actions sections, one middle-navigation scroll area, and a compact short-viewport mode; installed-browser acceptance remains a release gate.</li>
+<li>Verify the release package manifest, permissions, dependency notices, ZIP inventory, and file checksums with the local package checks.</li>
+<li>Implement local entitlement simulation: <code>free</code>, <code>trial</code>, <code>pro-local</code>, <code>pro-sync</code>, and <code>expired</code>.</li>
+<li>Add a 15-day full-feature trial with clear start/end dates and no account requirement until activation.</li>
+<li>Limit Free to two workspaces while keeping existing data viewable, exportable, renameable, and deletable after trial expiry.</li>
+<li>Keep local capture, editing, import/export, and restore available after trial expiry.</li>
+<li>Add reusable Custom Templates with project placeholders and a resolved preview.</li>
+<li>Add local organization rules and duplicate cleanup with a reviewable dry run.</li>
+<li>Extend local snapshots with selective tab/group recovery and revision comparison.</li>
+<li>Add scheduled capture.</li>
+<li>Add configurable local snapshot retention.</li>
+<li>Publish pricing, refund, privacy, support, cancellation, and trial terms.</li>
+<li>Select a hosted checkout/licensing provider for implementation planning: Paddle is the first choice, with Lemon Squeezy as fallback and Stripe as a later comparison; no account is connected.</li>
+<li>Connect the tested entitlement ledger core to the free staging Worker/D1 endpoint, protected by signed provider-event verification; no billing provider is connected.</li>
+<li>Define and test the provider-neutral Worker/D1 adapter contract without deploying paid infrastructure.</li>
+<li>Test the provider-event status transitions and idempotent/stale handling in the local ledger core.</li>
+<li>Build and test the provider-neutral entitlement ledger core with signature verification, idempotency, stale-event protection, and auditable grants.</li>
+<li>Keep the license tied to the purchaser account, not a browser, device, browser profile, or ROVER sync profile.</li>
+<li>Support auditable gifted, promotional, support, and pilot Pro grants with optional expiration and no payment event required.</li>
+<li>Define and test account-bound activation across Chrome and Edge with a short-lived signed entitlement and documented offline grace.</li>
+<li>Deploy and smoke-test a staging-only token issuance contract against the free Worker/D1 ledger; it remains fixed to the staging account.</li>
+<li>Define and test a provider-neutral account-session contract for a future hosted identity adapter; no identity provider is connected.</li>
+<li>Select Google and Microsoft sign-in as the supported ROVER identity providers; registrations and credentials remain pending.</li>
+<li>Define and test Google/Microsoft OIDC claim normalization with audience, nonce, issuer, and time validation; provider registrations remain pending.</li>
+<li>Define and test the provider-code exchange and ROVER session issuance boundary; live provider callbacks remain pending.</li>
+<li>Connect browser activation to a verified hosted account session and account-bound token issuance; provider registration and production credentials remain pending.</li>
+<li>Build and test the short offline-grace policy for a previously verified entitlement.</li>
+<li>Test trial expiry, renewal, failed payment, cancellation, refund, chargeback, account recovery, duplicate webhooks, and provider outages in local simulation and adapter tests.</li>
+<li>Verify releases do not place payment secrets, provider credentials, webhook handlers, or authoritative paid flags in extension code.</li>
+<li>Define and test the Google Drive <code>appDataFolder</code> adapter contract without connecting credentials or uploading user data.</li>
+<li>Define and test the OneDrive application-folder adapter contract without connecting credentials or uploading user data.</li>
+<li>Define and test the provider-neutral PKCE/state/revocation contract without registering provider credentials.</li>
+<li>Add and test a short-lived, one-time browser OAuth transaction store that consumes callbacks safely and rejects expiry or provider denial.</li>
+<li>Define and test provider-specific Google Drive and OneDrive authorization configuration; client registrations remain pending.</li>
+<li>Add visible connect, disconnect, reauthorize, backup, restore, and delete control shells with safe disabled behavior before provider registration.</li>
+<li>Define and test provider connection, reauthorization, and disconnect state without deleting local workspace data.</li>
+<li>Render safe provider status and disabled backup controls before provider registration is approved.</li>
+<li>Encrypt backup payloads before upload and never sync cookies, passwords, authentication sessions, or general browser history; key recovery remains separate.</li>
+<li>Define and test the client-side AES-GCM backup envelope; keep key storage/recovery and upload wiring separate.</li>
+<li>Define and test provider failure classification and bounded retry behavior for rate limits, authorization expiry, outages, and interrupted uploads.</li>
+<li>Add user-named profiles such as Personal, Work, Scouts, and Client projects.</li>
+<li>Let users explicitly map Chrome Work, Edge Work, and other browser installations to a selected ROVER profile.</li>
+<li>Keep purchaser identity, ROVER profile, browser profile, device, and provider account as separate records.</li>
+<li>Add local profile switching and linked-device management with unlinking that preserves local data.</li>
+<li>Add conflict previews and explicit cloud deletion without deleting local data.</li>
+<li>Define and test opt-in cross-browser/device sync consent without matching profiles by display name or email; live account sync is not enabled.</li>
+<li>Define and test a profile-to-profile transfer planner for selected copy, replace, and merge operations; source data is preserved by default.</li>
+<li>Evaluate Cloudflare Workers, D1, and R2 for encrypted ROVER-hosted sync only after provider backup demand is validated.</li>
+<li>Define and test client-side encryption, quotas, retention, key recovery, tombstones, and offline-queue policy boundaries.</li>
+<li>Define and test the Worker/D1 encrypted-manifest and durable-queue contract locally.</li>
+<li>Deploy the local contract to a free staging Worker/D1 environment for development testing.</li>
+<li>Review current Chrome and Edge store policies before enabling sponsorship, cloud upload, or paid features; repeat the review before submission or any material data-policy change (see <a href="/docs/store-policy-review.html">STORE_POLICY_REVIEW.md</a>).</li>
+</ul>
+</div><p class="doc-source">This page is generated from the maintained documentation. <a href="https://github.com/Chaotic-Reality/rover-workspaces-docs/blob/main/CHANGELOG.md">View its source and revision history on GitHub</a>.</p></article></main>
+<footer><div class="shell"><p class="brand-meaning">ROVER means <strong>R</strong>estore, <strong>O</strong>rganize, <strong>V</strong>iew, <strong>E</strong>xplore, <strong>R</strong>epeat.</p><p>Make room for focus. This is a development beta; store availability and cloud services have not been announced.</p><nav aria-label="Footer navigation"><a href="/">Home</a>
+<a href="/how-it-works.html">How it works</a>
+<a href="/docs.html" aria-current="page">Documentation</a>
+<a href="/beta-install.html">Beta setup</a>
+<a href="/pricing.html">Plans</a>
+<a href="/privacy.html">Privacy</a>
+<a href="/support.html">Support</a></nav></div></footer></body></html>
