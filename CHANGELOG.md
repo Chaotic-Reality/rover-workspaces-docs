@@ -4,6 +4,22 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Adopt a shared ROVER brand guideline, app logo and acronym, and responsive
+  website navigation. Add beta installation instructions and truthful feature
+  status, plans, privacy, and support pages to the free staging website.
+- Add Free Full local backup with validated replacement preview, preserving
+  workspace ordering, collections, favorites, appearance, Custom Templates,
+  and revisions. Credentials and licensing are excluded; scheduled capture
+  remains disabled after replacement.
+- Extract sidebar initialization and add regression coverage for optional
+  links, collection sorting, accordion behavior, and persisted preferences.
+- Harden staging request limits, entitlement and profile/device consent,
+  concurrent manifest and ledger writes, and identity validation. Verify the
+  deployed Worker bundle against isolated D1 runtime tests. Live identity,
+  provider backups, and multi-user sync remain disabled.
+- Consolidate future work into ROADMAP.md and engineering evidence into
+  STATUS.md; add repository instructions and a reusable ChatGPT handoff prompt.
+
 - Deploy the local encrypted-manifest and durable-queue Worker/D1 contract to a
   free Cloudflare staging Worker for development testing; hosted activation,
   key recovery, R2 storage, and production sync remain disabled.
@@ -179,3 +195,62 @@ ROVER Workspaces is in development. These notes describe development builds, not
 - Nested JSON/YAML exports with support for legacy imports.
 - Combine workspaces and add templates to existing workspaces.
 - Blue-grey styling and sidebar shortcuts.
+
+## Implementation records moved from the roadmap — October 5, 2026
+
+These completed development records retain their original contract/staging
+qualifications. They are not evidence of live account sync or store acceptance;
+see [STATUS.md](STATUS.md) for the remaining integration gates.
+
+- Resolve responsive sidebar overflow and overlap with mutually exclusive Collections and Quick Actions sections, one middle-navigation scroll area, and a compact short-viewport mode; installed-browser acceptance remains a release gate.
+- Verify the release package manifest, permissions, dependency notices, ZIP inventory, and file checksums with the local package checks.
+- Implement local entitlement simulation: `free`, `trial`, `pro-local`, `pro-sync`, and `expired`.
+- Add a 15-day full-feature trial with clear start/end dates and no account requirement until activation.
+- Limit Free to two workspaces while keeping existing data viewable, exportable, renameable, and deletable after trial expiry.
+- Keep local capture, editing, import/export, and restore available after trial expiry.
+- Add reusable Custom Templates with project placeholders and a resolved preview.
+- Add local organization rules and duplicate cleanup with a reviewable dry run.
+- Extend local snapshots with selective tab/group recovery and revision comparison.
+- Add scheduled capture.
+- Add configurable local snapshot retention.
+- Publish pricing, refund, privacy, support, cancellation, and trial terms.
+- Select a hosted checkout/licensing provider for implementation planning: Paddle is the first choice, with Lemon Squeezy as fallback and Stripe as a later comparison; no account is connected.
+- Connect the tested entitlement ledger core to the free staging Worker/D1 endpoint, protected by signed provider-event verification; no billing provider is connected.
+- Define and test the provider-neutral Worker/D1 adapter contract without deploying paid infrastructure.
+- Test the provider-event status transitions and idempotent/stale handling in the local ledger core.
+- Build and test the provider-neutral entitlement ledger core with signature verification, idempotency, stale-event protection, and auditable grants.
+- Keep the license tied to the purchaser account, not a browser, device, browser profile, or ROVER sync profile.
+- Support auditable gifted, promotional, support, and pilot Pro grants with optional expiration and no payment event required.
+- Define and test account-bound activation across Chrome and Edge with a short-lived signed entitlement and documented offline grace.
+- Deploy and smoke-test a staging-only token issuance contract against the free Worker/D1 ledger; it remains fixed to the staging account.
+- Define and test a provider-neutral account-session contract for a future hosted identity adapter; no identity provider is connected.
+- Select Google and Microsoft sign-in as the supported ROVER identity providers; registrations and credentials remain pending.
+- Define and test Google/Microsoft OIDC claim normalization with audience, nonce, issuer, and time validation; provider registrations remain pending.
+- Define and test the provider-code exchange and ROVER session issuance boundary; live provider callbacks remain pending.
+- Connect browser activation to a verified hosted account session and account-bound token issuance; provider registration and production credentials remain pending.
+- Build and test the short offline-grace policy for a previously verified entitlement.
+- Test trial expiry, renewal, failed payment, cancellation, refund, chargeback, account recovery, duplicate webhooks, and provider outages in local simulation and adapter tests.
+- Verify releases do not place payment secrets, provider credentials, webhook handlers, or authoritative paid flags in extension code.
+- Define and test the Google Drive `appDataFolder` adapter contract without connecting credentials or uploading user data.
+- Define and test the OneDrive application-folder adapter contract without connecting credentials or uploading user data.
+- Define and test the provider-neutral PKCE/state/revocation contract without registering provider credentials.
+- Add and test a short-lived, one-time browser OAuth transaction store that consumes callbacks safely and rejects expiry or provider denial.
+- Define and test provider-specific Google Drive and OneDrive authorization configuration; client registrations remain pending.
+- Add visible connect, disconnect, reauthorize, backup, restore, and delete control shells with safe disabled behavior before provider registration.
+- Define and test provider connection, reauthorization, and disconnect state without deleting local workspace data.
+- Render safe provider status and disabled backup controls before provider registration is approved.
+- Encrypt backup payloads before upload and never sync cookies, passwords, authentication sessions, or general browser history; key recovery remains separate.
+- Define and test the client-side AES-GCM backup envelope; keep key storage/recovery and upload wiring separate.
+- Define and test provider failure classification and bounded retry behavior for rate limits, authorization expiry, outages, and interrupted uploads.
+- Add user-named profiles such as Personal, Work, Scouts, and Client projects.
+- Let users explicitly map Chrome Work, Edge Work, and other browser installations to a selected ROVER profile.
+- Keep purchaser identity, ROVER profile, browser profile, device, and provider account as separate records.
+- Add local profile switching and linked-device management with unlinking that preserves local data.
+- Add conflict previews and explicit cloud deletion without deleting local data.
+- Define and test opt-in cross-browser/device sync consent without matching profiles by display name or email; live account sync is not enabled.
+- Define and test a profile-to-profile transfer planner for selected copy, replace, and merge operations; source data is preserved by default.
+- Evaluate Cloudflare Workers, D1, and R2 for encrypted ROVER-hosted sync only after provider backup demand is validated.
+- Define and test client-side encryption, quotas, retention, key recovery, tombstones, and offline-queue policy boundaries.
+- Define and test the Worker/D1 encrypted-manifest and durable-queue contract locally.
+- Deploy the local contract to a free staging Worker/D1 environment for development testing.
+- Review current Chrome and Edge store policies before enabling sponsorship, cloud upload, or paid features; repeat the review before submission or any material data-policy change (see [STORE_POLICY_REVIEW.md](STORE_POLICY_REVIEW.md)).

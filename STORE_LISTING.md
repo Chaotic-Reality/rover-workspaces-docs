@@ -11,6 +11,7 @@ Save, organize, and restore browser workspaces with grouped tabs. Stored locally
 ## Full description draft
 
 Keep the tabs for a project together and return to them when you need them.
+ROVER means Restore, Organize, View, Explore, Repeat.
 
 ROVER Workspaces saves browser windows, tabs, and tab groups as reusable workspaces. Capture your current window or all normal windows, organize the result, and reopen it in new windows while keeping your existing tabs open.
 
@@ -21,6 +22,14 @@ ROVER Workspaces saves browser windows, tabs, and tab groups as reusable workspa
 - Find workspaces with search, Favorites, Recently opened, and collections.
 - Choose Clean or Modern styling, light/dark/system appearance, accent colors, and comfortable or compact spacing.
 - Start with templates for AI Tools, Search Engines, Developer Tools, Cloud Platforms, and Productivity.
+- Download a Full local backup from settings to retain workspace ordering,
+  collections, favorites, appearance, Custom Templates, and revisions. Review
+  the replacement preview before restoring it.
+
+Free includes two workspaces. A manually started 15-day trial previews local
+Pro features, including combining workspaces, Custom Templates, and organization.
+Purchasing subscriptions is not enabled in this beta; do not promise live
+payments or cloud connections in a submitted listing.
 
 Workspace data stays in extension-local storage in your browser profile. The current version has no ROVER Workspaces account, telemetry, or cloud upload. Exported files contain saved URLs and titles, so review them before sharing. Restoring a workspace opens its websites, which follow their own privacy practices.
 
@@ -35,9 +44,10 @@ Save, organize, and restore user-selected browser workspaces consisting of windo
 | Permission | Explanation for review                                                                                                                                     |
 | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | storage    | Retain saved workspaces, favorites, collections, recent-workspace timestamps, and appearance preferences in the current profile's local extension storage. |
-| tabs       | Access URLs and titles when the user captures a workspace, and create or adjust tabs when the user restores one. Capture is user initiated.                |
+| tabs       | Access URLs and titles for manual capture or optional scheduled capture, and create or adjust tabs when restoring a workspace.                            |
 | tabGroups  | Read tab-group names, colors, and collapsed state during capture and restore those properties when reopening saved groups.                                 |
 | contextMenus | Add user-invoked commands to save the current tab or tab group as a local workspace.                                                                       |
+| alarms | Run optional daily workspace captures only after the user enables scheduling; scheduling is off by default. |
 
 The current manifest has no host permissions, content scripts, or remote-code loader. All executable extension code is bundled. Opening a saved website is a normal browser navigation, not a background upload of the workspace to a ROVER Workspaces server.
 
@@ -70,5 +80,5 @@ Record these results separately for Chrome and Edge. These are instructions for 
 - Confirm toolbar/icon appearance on light and dark Chrome and Edge themes, including display scaling.
 - Verify the current store's required image sizes and formats before producing upload assets. Sample-data browser previews are not final store screenshots.
 - Confirm the intended publisher accounts, listing visibility/markets, and support route before submission.
-- Decide monetization after core validation. This draft makes no pricing, subscription, or paid-feature promises.
+- Approve final plan wording and billing availability before submission. Distinguish trial/local Pro features from the currently unavailable subscriptions and cloud connections.
 - Recheck the final version, permissions, data handling, dependency audit, and package verification record. Obtain the owner's release decision before submitting.

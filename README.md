@@ -9,11 +9,15 @@ ROVER Workspaces is in development for Microsoft Edge and Google Chrome. Store a
 ## Documentation
 
 - [Wiki user guide](https://github.com/Chaotic-Reality/rover-workspaces-docs/wiki/User-Guide): step-by-step installation, workspace management, import/export, appearance, privacy, and support guidance.
-- [Prioritized roadmap](ROADMAP.md): completed features, upcoming improvements, and release gates.
+- [Prioritized roadmap](ROADMAP.md): future improvements and release gates.
+- [Capability status](STATUS.md): implemented local features, tested contracts, staging, and remaining live integration gates.
+- [Brand guidelines](BRAND_GUIDELINES.md): shared logo, acronym, typography, colors, and navigation.
+- [Website development](SITE_DEVELOPMENT.md): shared page layout, checks, and beta deployment.
 - [About ROVER Workspaces](ABOUT.md): ownership, privacy, and product boundaries.
 - [Release notes](CHANGELOG.md): changes in development builds.
 - [Appearance](APPEARANCE.md): styles, colors, and browser theme limitations.
 - [Import guide](IMPORTING.md): copy, replace, merge, and conflict protection.
+- [Full local backup](LOCAL_BACKUP.md): retain collections, favorites, appearance, templates, and revisions; preview replacement before recovery.
 - [Release process](RELEASING.md): CI, packages, acceptance, versioning, and recovery.
 - [Privacy and data handling](PRIVACY.md): local records, permissions, exports, and deletion.
 - [License statement](LICENSE.md): permitted use, reserved application rights, and ownership of your data.

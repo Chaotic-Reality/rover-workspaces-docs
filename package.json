@@ -1,0 +1,17 @@
+{
+  "name": "rover-public-site",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "build": "node scripts/build-site.mjs",
+    "check": "npm run build && node scripts/check-site.mjs",
+    "smoke": "node scripts/smoke-site.mjs",
+    "deploy:beta": "npm run check && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "4.147.0"
+  }
+}

@@ -1,11 +1,35 @@
 :root {
   color-scheme: dark;
-  --bg: #0d1b2a;
-  --surface: #172b40;
+  --bg: #121f2b;
+  --surface: #1d2b3a;
   --border: #6e94b44d;
   --text: #eef6ff;
   --muted: #b6c8da;
   --accent: #55a7e8;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--text);
+  text-decoration: none;
+}
+.brand img {
+  object-fit: contain;
+}
+.wordmark {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+.wordmark strong {
+  font-size: 27px;
+  letter-spacing: 0.15em;
+}
+.wordmark span {
+  color: var(--accent);
+  font-size: 18px;
+  letter-spacing: 0.04em;
 }
 * {
   box-sizing: border-box;

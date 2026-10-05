@@ -1,5 +1,12 @@
 # From a change to a release
 
+Use [Full local backup](LOCAL_BACKUP.md) from settings before development
+upgrades to retain collections, favorites, appearance, templates, and revisions.
+Ordinary workspace exports retain only workspace content. Keep a stable loaded
+unpacked folder and use Reload; moving the folder or uninstalling may change
+extension identity or remove profile-local data. Match every browser acceptance
+run to the package build record and checksum.
+
 ROVER Workspaces currently automates verification and packaging. Browser-store publication is not connected to the pipeline. A successful build is a development candidate until Chrome and Edge acceptance is complete.
 
 ## Beta release track
