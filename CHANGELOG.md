@@ -53,6 +53,7 @@ ROVER Workspaces is in development. These notes describe development builds, not
   privacy, plans, and support pages at the Cloudflare Pages/Workers URL.
 - Add a non-deployed administration portal shell and Access-first hosting
   boundary for future entitlement, provider, health, and support views.
+- Keep the beta site out of search indexing and add a friendly static 404 page.
 - Verify the 0.3.5 release package manifest, permissions, dependency notices,
   ZIP inventory, and file checksums with the local release checks; installed
   Chrome and Edge review remains required before store submission.
