@@ -21,6 +21,7 @@ ROVER Workspaces is in development for Microsoft Edge and Google Chrome. Store a
 - [How it works](HOW_IT_WORKS.md): a beginner-friendly overview of the extension and its tooling.
 - [Hosting plan](HOSTING.md): the planned public site, docs site, and private admin boundaries.
 - [Pricing](PRICING.md): planned Free, Pro Local, and Pro Sync access and trial disclosure.
+- [Beta setup checklist](BETA_SETUP_CHECKLIST.md): owner setup for local beta testing, identity providers, backups, and admin protection.
 - [Trial and subscription terms](TERMS.md): pre-release cancellation, refund, renewal, and promotional-access terms.
 - [Store listing preparation](STORE_LISTING.md): draft descriptions, permission explanations, and reviewer test steps; not submitted.
 
