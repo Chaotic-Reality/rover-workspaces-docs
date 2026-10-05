@@ -19,6 +19,8 @@ ROVER Workspaces is in development. These notes describe development builds, not
   registrations and hosted callbacks remain pending.
 - Add tested Google/Microsoft OIDC claim normalization with audience, nonce,
   issuer, and time validation; provider credentials remain unconfigured.
+- Add a short-lived, one-time OAuth transaction boundary that retains PKCE
+  verifier and state only until the callback is consumed or expires.
 - Add a tested provider-code exchange boundary that resolves an account and
   issues a short-lived ROVER session without connecting live callbacks.
 - Connect browser activation to a verified hosted account session so Chrome and

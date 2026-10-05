@@ -55,6 +55,7 @@ Implement one provider at a time so users own the storage and ROVER's initial op
 - [x] Define and test the OneDrive application-folder adapter contract without connecting credentials or uploading user data.
 - [ ] Use OAuth 2.0 authorization code flow with PKCE, `S256`, state validation, account switching, token revocation, and no client secrets in the extension.
 - [x] Define and test the provider-neutral PKCE/state/revocation contract without registering provider credentials.
+- [x] Add and test a short-lived, one-time browser OAuth transaction store that consumes callbacks safely and rejects expiry or provider denial.
 - [x] Define and test provider-specific Google Drive and OneDrive authorization configuration; client registrations remain pending.
 - [x] Add visible connect, disconnect, reauthorize, backup, restore, and delete control shells with safe disabled behavior before provider registration.
 - [ ] Enable live provider controls after OAuth registration and account consent.
