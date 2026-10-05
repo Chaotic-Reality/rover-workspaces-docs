@@ -95,7 +95,7 @@ Implement one provider at a time so users own the storage and ROVER's initial op
 - [ ] Offer a short, skippable onboarding survey with a separate explicit submit action.
 - [ ] Offer a feedback prompt after several days of actual use with Later and Do not ask again choices.
 - [ ] Provide a private feedback channel with retention, deletion, abuse protection, and restricted administration.
-- [ ] Review Chrome and Edge store policies before enabling any sponsorship, cloud upload, or paid feature.
+- [x] Review current Chrome and Edge store policies before enabling sponsorship, cloud upload, or paid features; repeat the review before submission or any material data-policy change (see [STORE_POLICY_REVIEW.md](STORE_POLICY_REVIEW.md)).
 
 ## Working approach
 
