@@ -27,9 +27,9 @@ ROVER Workspaces is in development. These notes describe development builds, not
   settings, information, and quick actions cannot overlap at shorter viewports.
 - Sort collections alphabetically in the sidebar and workspace-card selectors,
   keeping `No collection` as the default option.
-- Add narrow-viewport accordion sections for workspace views, collections, and
-  quick actions so only one navigation area expands at a time; long collection
-  lists retain their own scroll area.
+- Add mutually exclusive Collections and Quick Actions accordion sections with
+  triangle indicators across viewports; the outer sidebar no longer adds a
+  second scrollbar, while long collection lists retain their own scroll area.
 - Add a tested provider-code exchange boundary that resolves an account and
   issues a short-lived ROVER session without connecting live callbacks.
 - Connect browser activation to a verified hosted account session so Chrome and
