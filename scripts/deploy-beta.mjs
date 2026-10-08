@@ -29,6 +29,14 @@ execFileSync(process.execPath, ["scripts/test-beta-site.mjs"], {
   cwd: privateRepo,
   stdio: "inherit",
 });
+execFileSync(process.execPath, ["--test", "scripts/test-beta-support.mjs"], {
+  cwd: privateRepo,
+  stdio: "inherit",
+});
+execFileSync(process.execPath, ["scripts/test-beta-runtime.mjs"], {
+  cwd: privateRepo,
+  stdio: "inherit",
+});
 execFileSync(
   process.execPath,
   [

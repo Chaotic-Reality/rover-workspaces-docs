@@ -17,6 +17,7 @@ if (gated) {
     "/branding/rover-mark.png",
     "/admin/",
     "/AGENTS.md",
+    "/api/bug-report",
   ]) {
     const response = await fetch(new URL(route, base), { redirect: "manual" });
     assert.equal(
@@ -41,9 +42,12 @@ if (gated) {
   process.exit(0);
 }
 // Small batches avoid needlessly flooding the free staging site.
-for (let offset = 0; offset < routes.length; offset += 4) {
+// Dynamic support routes need authenticated runtime acceptance, not comparison
+// to their static shells. Gate mode above still checks that they are protected.
+const staticRoutes = routes.filter((route) => !["/report-bug.html", "/issues.html"].includes(route));
+for (let offset = 0; offset < staticRoutes.length; offset += 4) {
   await Promise.all(
-    routes.slice(offset, offset + 4).map(async (route) => {
+    staticRoutes.slice(offset, offset + 4).map(async (route) => {
       const response = await fetch(new URL(route, base));
       assert.equal(response.status, 200, route);
       const html = await response.text();
@@ -69,5 +73,5 @@ for (let offset = 0; offset < routes.length; offset += 4) {
 for (const route of ["/admin/", "/AGENTS.md", "/not-a-rover-page"])
   assert.equal((await fetch(new URL(route, base))).status, 404, route);
 console.log(
-  `Website smoke passed: ${routes.length} live pages match the build; nonpublic paths remain unavailable at ${base.origin}.`,
+  `Website smoke passed: ${staticRoutes.length} static pages match the build; nonpublic paths remain unavailable at ${base.origin}. Dynamic support acceptance is separate.`,
 );

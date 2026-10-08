@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Website maintenance.">
-<meta name="rover-doc-source-sha256" content="75d02e04df293be20708624de03ed43ed426ad29e35be1e5a5aa178de4ddddf1">
+<meta name="rover-doc-source-sha256" content="f0d0ea96da39b92ccd71d3f57bf706e93fffa935b5544e0eda2d0857fe46a92b">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/site-development.html">
 <title>Website maintenance · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -30,6 +30,15 @@ document records a normalized source fingerprint; checks reject stale pages
 and public Markdown missing from the registry. CI also rejects generated output
 that differs from the committed source. It does not deploy or require secrets.</p>
 <h2 id="required-updates-with-project-changes">Required updates with project changes</h2>
+<p>Support pages have public static shells registered in the same inventory.
+The private beta Worker renders the form and live public GitHub issue data;
+do not add credentials, server implementation, or browser scripts to this repo.
+The form has no uploads and publishes only explicitly entered fields after
+public-disclosure consent. Its enabled state comes from deployed server secrets.
+Local assets-only previews show explanatory placeholders. Content-comparison
+smoke checks exclude dynamic support bodies; authenticated support/runtime
+tests and the deployed Access gate are checked separately. Before enabling
+submission, record the repository credential setup and a live owner report.</p>
 <p>Treat documentation as part of the same milestone as the implementation.
 Both repositories&#39; AGENTS.md files require this review before completion.</p>
 <div class="table-scroll" role="region" aria-label="Scrollable table" tabindex="0"><table>

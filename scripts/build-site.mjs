@@ -18,10 +18,10 @@ const acronym =
   "<strong>R</strong>estore, <strong>O</strong>rganize, <strong>V</strong>iew, <strong>E</strong>xplore, <strong>R</strong>epeat";
 function layout(id, title, content, sourceHash = "", route = pageUrl(id)) {
   const links = pages
-    .filter(([key]) => key !== "404")
+    .filter(([key]) => !["404", "report-bug", "issues"].includes(key))
     .map(
       ([key, label]) =>
-        `<a href="${pageUrl(key)}"${key === id ? ' aria-current="page"' : ""}>${label}</a>`,
+        `<a href="${pageUrl(key)}"${key === id || (key === "support" && ["report-bug", "issues"].includes(id)) ? ' aria-current="page"' : ""}>${label}</a>`,
     )
     .join("\n");
   return `<!doctype html>

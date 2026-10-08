@@ -4,6 +4,16 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Add branded Report a bug and Issue updates pages with status filters,
+  pagination, descriptions, and comments. The extension's About page links to
+  them. The server submission flow verifies tester sign-in, publication consent,
+  form origin/token, size limits, and submission rate; failures retain details.
+  Reports are public, with no automatic diagnostics or email publication.
+  Configure a server-only credential restricted to this repository's issues;
+  live submission, closed status, and comment viewing passed on October 8.
+  Use authenticated server reads to avoid shared anonymous GitHub limits,
+  verify that the repository is public, and keep those responses out of cache.
+
 - Harden the beta website with HTTPS redirects, TLS 1.2 minimum, per-response
   security nonces for bot detection, stronger indexing exclusions, and an
   approved-tester sign-in gate. Keep administration unavailable and remove

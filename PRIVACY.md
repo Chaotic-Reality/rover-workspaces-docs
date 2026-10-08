@@ -50,6 +50,30 @@ local workspace deletion does not delete those separate service records.
 See [Cloudflare's privacy policy](https://www.cloudflare.com/privacypolicy/).
 The site requests no search indexing and does not add marketing analytics.
 
+## Voluntary bug reports
+
+The beta support form asks for a summary, app version, browser/version, optional
+screen size, reproduction steps, expected result, and actual result. Submission
+requires explicit confirmation that the report is public. Those entered fields
+are sent to GitHub and published in the public project issue tracker under
+the maintainer's integration identity. The form does not automatically send
+saved workspaces, tab URLs, screenshots, or your tester email. Anything you type
+into the fields is part of the public report: do not include private information.
+The GitHub submission credential stays on the server, outside the extension
+and public website assets.
+
+The server verifies Cloudflare Access sign-in and uses the verified tester
+identifier for submission rate limiting; it is not added to the GitHub report.
+A short-lived, secure support cookie protects form submission. Authenticated
+GitHub reads are not cached. Without the integration credential, public GitHub
+issue content is cached briefly for the on-site viewer; form bodies and
+authentication credentials are not cached or deliberately logged by ROVER.
+Website/security request logs remain subject to the Cloudflare handling above.
+GitHub retains reports and comments under its own policies, and they may be
+copied or indexed outside the beta. Contact the maintainer about corrections
+or removal; deleting local extension data does not remove public issues.
+See [GitHub's privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
+
 ## Export, retention, and deletion
 
 Exports are unencrypted JSON or YAML files containing workspace data. They do not include favorites, collections, recent-open records, or appearance settings. The separate Full local backup in settings also contains collections, favorites, recent opens, appearance, Custom Templates, and saved revisions. It excludes account sessions, entitlement/license records, provider tokens, encryption keys, and profile/device sync links. It is unencrypted; restoring it replaces the previewed local library and switches scheduled capture off. Neither export type is a credentials or browser-profile backup. Exported files remain wherever your browser saves downloads until you remove them; deleting a workspace does not delete an exported copy.

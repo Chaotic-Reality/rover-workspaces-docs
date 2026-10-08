@@ -63,6 +63,11 @@ const contents = new Map(
   ),
 );
 for (const [file, html] of contents) {
+  if (["report-bug.html", "issues.html"].includes(file)) {
+    assert.equal((html.match(/<!-- SUPPORT_START -->/g) || []).length, 1, `${file}: support rendering slot missing or duplicated`);
+    assert.equal((html.match(/<!-- SUPPORT_END -->/g) || []).length, 1, `${file}: support rendering slot missing or duplicated`);
+    assert(html.includes('aria-label="Support navigation"'), `${file}: support navigation missing`);
+  }
   assert(
     html.includes('aria-label="Main navigation"') &&
       html.includes('class="wordmark"'),

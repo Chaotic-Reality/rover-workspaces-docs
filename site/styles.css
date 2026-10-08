@@ -384,7 +384,126 @@ footer {
   color: var(--muted);
   font-size: 0.9rem;
 }
+.support-navigation,
+.issue-filters,
+.issue-pagination {
+  justify-content: flex-start;
+  margin: 26px 0;
+}
+.support-warning,
+.support-notice {
+  max-width: none;
+  padding: 18px 22px;
+  border: 1px solid #8ec8f066;
+  border-radius: 10px;
+  background: var(--surface-strong);
+  margin: 24px 0;
+}
+.support-form {
+  max-width: 880px;
+}
+.support-form fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+.support-form legend {
+  font-size: 1.35rem;
+  font-weight: 700;
+  padding: 0 0 20px;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.full-width {
+  grid-column: 1 / -1;
+}
+.form-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 650;
+}
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #8ec8f066;
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+}
+.form-field textarea {
+  resize: vertical;
+}
+.public-confirmation {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 24px 0;
+}
+.public-confirmation input {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  accent-color: var(--accent);
+}
+button.button {
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+.issue-list,
+.issue-comments {
+  display: grid;
+  gap: 20px;
+}
+.issue-list h2 {
+  font-size: 1.5rem;
+  overflow-wrap: anywhere;
+}
+.issue-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.issue-state {
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: #164a3d;
+  color: #c5f7db;
+  font-weight: 700;
+}
+.issue-state.closed {
+  background: #46375d;
+  color: #ecdcff;
+}
+.issue-body {
+  font: inherit;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.issue-detail {
+  margin-bottom: 32px;
+}
 @media (max-width: 760px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
   .documentation {
     grid-template-columns: 1fr;
     gap: 24px;

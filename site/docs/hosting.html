@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Hosting plan.">
-<meta name="rover-doc-source-sha256" content="7015aa1d4202c3279ac482f38cf97681430175bb5dfb1070a345237ba87f4af9">
+<meta name="rover-doc-source-sha256" content="91dac9e9888c1ca88e0dd534d55b4333c765935ccd33d41621ab0970bdba1739">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/hosting.html">
 <title>Hosting plan · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -26,6 +26,15 @@
 <p>The beta site&#39;s configured address is <a href="https://beta.roverworkspaces.com">beta.roverworkspaces.com</a>, attached to the existing <code>rover-workspaces-beta</code> Worker. Public Markdown documentation generates branded pages under <code>/docs/</code>; the site is built into <code>site/</code>. Its security handler and deployment configuration stay in the sibling private repository. Use <code>npm run deploy:beta</code> for an authorized update and <code>npm run smoke -- --access-gate</code> to check the approved-tester sign-in boundary. Full content acceptance requires an approved owner session after the gate is active. No paid plan upgrade or separate Pages project is needed for this small beta. See <a href="/docs/site-development.html">website maintenance</a> for the shared URL setting and live validation.</p>
 <p>The future admin console is kept separately in <code>admin/</code> and is not deployed with the public site. It must be placed behind a Cloudflare Access allow policy before any admin route or data view is published. See <a href="/docs/admin-portal.html">ADMIN_PORTAL.md</a>.</p>
 <p>See the private repository&#39;s hosting plan for implementation details and the manual Cloudflare setup steps. Keep payment secrets, workspace exports, and administrator credentials out of this public repository.</p>
+<p>Bug reporting and issue updates reuse the existing beta Worker. Static hosting
+alone cannot securely hold a GitHub write credential; the private server handles
+that part, with no extra database, email service, or paid plan added. Dynamic
+requests share the <a href="https://developers.cloudflare.com/workers/platform/pricing/">Workers Free allowance</a>
+of 100,000 requests per day and its CPU limit. The server uses its restricted
+integration for GitHub reads to avoid the shared anonymous quota; these reads
+are not cached and remain subject to GitHub&#39;s API limits. Without that credential,
+public reads use a five-minute cache. The form and viewer require
+approved tester sign-in; submitted reports are public in the GitHub tracker.</p>
 </div><p class="doc-source">This page is generated from the maintained documentation. <a href="https://github.com/Chaotic-Reality/rover-workspaces-docs/blob/main/HOSTING.md">View its source and revision history on GitHub</a>.</p></article></main>
 <footer><div class="shell"><p class="brand-meaning">ROVER means <strong>R</strong>estore, <strong>O</strong>rganize, <strong>V</strong>iew, <strong>E</strong>xplore, <strong>R</strong>epeat.</p><p>Make room for focus. This is a development beta; store availability and cloud services have not been announced.</p><nav aria-label="Footer navigation"><a href="/">Home</a>
 <a href="/how-it-works.html">How it works</a>

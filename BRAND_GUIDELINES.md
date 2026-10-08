@@ -59,6 +59,10 @@ On this page contents menu, and readable headings, tables, lists, and code.
 Product links lead to the branded guides; GitHub links are reserved for source
 history, editing, and issue reporting.
 Admin pages remain separate and must be protected before deployment.
+Support has shared local navigation for Support home, Report a bug, and Issue
+updates. Forms use persistent labels, clear focus, a visible public-report
+disclosure, and explicit consent. Issues use both text and color for state.
+External GitHub content is displayed as escaped plain text, not embedded HTML.
 
 Use plain language. Explain local data, optional cloud features, and limitations
 accurately. Label planned integrations and unavailable purchasing explicitly.

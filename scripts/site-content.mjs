@@ -7,6 +7,8 @@ export const pages = [
   ["pricing", "Plans"],
   ["privacy", "Privacy"],
   ["support", "Support"],
+  ["report-bug", "Report a bug"],
+  ["issues", "Issue updates"],
   ["404", "Page not found"],
 ];
 export const documents = [

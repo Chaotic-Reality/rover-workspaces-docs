@@ -20,6 +20,16 @@ that differs from the committed source. It does not deploy or require secrets.
 
 ## Required updates with project changes
 
+Support pages have public static shells registered in the same inventory.
+The private beta Worker renders the form and live public GitHub issue data;
+do not add credentials, server implementation, or browser scripts to this repo.
+The form has no uploads and publishes only explicitly entered fields after
+public-disclosure consent. Its enabled state comes from deployed server secrets.
+Local assets-only previews show explanatory placeholders. Content-comparison
+smoke checks exclude dynamic support bodies; authenticated support/runtime
+tests and the deployed Access gate are checked separately. Before enabling
+submission, record the repository credential setup and a live owner report.
+
 Treat documentation as part of the same milestone as the implementation.
 Both repositories' AGENTS.md files require this review before completion.
 

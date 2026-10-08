@@ -92,6 +92,11 @@ Record the extension version and build, browser/version, viewport, steps,
 expected result, and actual result. Redact screenshots and use invented names
 and public URLs. Do not post credentials or private workspace exports.
 The [support guide](SUPPORT.md) explains the current reporting channel.
+In the updated build, **About ROVER Workspaces → Report a bug** opens a ROVER
+form, and **Issue updates** lets you read issue status and comments without
+leaving the site. Approved tester website sign-in is required. Reports are
+public on GitHub. The server handles submission credentials; you do not need
+a GitHub account to report a bug or read updates here.
 
 Follow the [roadmap](ROADMAP.md) for future work and [change history](CHANGELOG.md)
 for completed development milestones. This guide is maintained in the public

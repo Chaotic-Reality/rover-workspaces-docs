@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Feature status.">
-<meta name="rover-doc-source-sha256" content="d277a3f6f183d17d25b0f307f31592aa11ae0adb34baea09ff4b6170a3a05817">
+<meta name="rover-doc-source-sha256" content="d2298fcee0b3f59de727d691947abbf6c2b643489fc2bb242b3511a45d36c49d">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/status.html">
 <title>Feature status · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -14,7 +14,7 @@
 <a href="/privacy.html">Privacy</a>
 <a href="/support.html">Support</a></nav></div></header>
 <main id="main" class="shell documentation"><aside class="docs-sidebar"><a class="docs-home" href="/docs.html">Documentation</a><nav aria-label="Documentation navigation"><details><summary>Using ROVER</summary><div><a href="/docs/user-guide.html">User guide</a><a href="/docs/how-it-works.html">How ROVER works</a><a href="/docs/importing.html">Import and export</a><a href="/docs/local-backup.html">Full local backup</a><a href="/docs/appearance.html">Appearance</a><a href="/docs/support.html">Support guidance</a></div></details><details open><summary>Development and beta</summary><div><a href="/docs/status.html" aria-current="page">Feature status</a><a href="/docs/roadmap.html">Roadmap</a><a href="/docs/changelog.html">Change history</a><a href="/docs/releasing.html">Release process</a><a href="/docs/beta-setup.html">Beta setup checklist</a></div></details><details><summary>Plans and policies</summary><div><a href="/docs/identity-signin.html">Account sign-in design</a><a href="/docs/hosted-sync.html">Hosted sync design</a><a href="/docs/pricing.html">Plans and trial details</a><a href="/docs/terms.html">Draft subscription terms</a><a href="/docs/privacy.html">Privacy and data handling</a><a href="/docs/license.html">License statement</a></div></details><details><summary>Project reference</summary><div><a href="/docs/about.html">About ROVER</a><a href="/docs/brand-guidelines.html">Brand guidelines</a><a href="/docs/hosting.html">Hosting plan</a><a href="/docs/admin-portal.html">Admin portal design</a><a href="/docs/store-listing.html">Store listing preparation</a><a href="/docs/store-policy-review.html">Store policy review</a><a href="/docs/site-development.html">Website maintenance</a><a href="/docs/project-overview.html">Project overview</a></div></details></nav></aside><article class="doc-article"><div class="doc-breadcrumb"><a href="/docs.html">Documentation</a><span aria-hidden="true">/</span><span>Development and beta</span></div><h1 id="rover-capability-status">ROVER capability status</h1>
-<p class="doc-description">See what is local, tested, staged, or still waiting for setup.</p><div class="prose"><p>Updated October 7, 2026. This describes engineering evidence, not a store release.</p>
+<p class="doc-description">See what is local, tested, staged, or still waiting for setup.</p><div class="prose"><p>Updated October 8, 2026. This describes engineering evidence, not a store release.</p>
 <div class="table-scroll" role="region" aria-label="Scrollable table" tabindex="0"><table>
 <thead>
 <tr>
@@ -68,6 +68,11 @@
 <td>Local shell only</td>
 <td>Hostname, Cloudflare Access protection, authorized deployment</td>
 </tr>
+<tr>
+<td>Bug reports and issue updates</td>
+<td>Live form submission, closed status and comments verified; restricted credential</td>
+<td>Tester feedback and integration lifecycle before public rollout</td>
+</tr>
 </tbody></table>
 </div><p>The October 5 cleanup adds Full local backup and a replacement preview, sidebar
 startup regression coverage, and real Worker/D1 runtime tests. Staging now checks
@@ -85,8 +90,10 @@ may take time to refresh after a domain change.</p>
 This website gate is separate from the planned ROVER account system. Beta
 deployment uses a private security handler with the public static assets;
 HTTPS/TLS, bot-script security nonces, noindex, and alternate-address checks
-are part of deployment acceptance. Email-code sign-in must still be tested by
-an approved owner. The admin shell remains undeployed.</p>
+are part of deployment acceptance. An approved owner session submitted and read
+<a href="https://beta.roverworkspaces.com/issues.html?issue=1">acceptance issue #1</a> on
+October 8, including its closed status and maintainer comment. The admin shell
+remains undeployed.</p>
 <p>The release path is personal debugging → privately shared reviewed package →
 invited store beta → public release. Keep a stable unpacked folder for local
 upgrades. The app version is the release version; each package has a separate

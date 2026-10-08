@@ -46,6 +46,9 @@ Implement one provider at a time so users own the storage and ROVER's initial op
 
 ## Launch learning
 
+- [ ] Replace the beta submission token with a dedicated GitHub App before a
+  larger public rollout; review abuse limits and credential lifecycle.
+
 - [ ] Offer a short, skippable onboarding survey with a separate explicit submit action.
 - [ ] Offer a feedback prompt after several days of actual use with Later and Do not ask again choices.
 - [ ] Provide a private feedback channel with retention, deletion, abuse protection, and restricted administration.

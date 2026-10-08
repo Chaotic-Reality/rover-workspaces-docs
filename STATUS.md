@@ -1,6 +1,6 @@
 # ROVER capability status
 
-Updated October 7, 2026. This describes engineering evidence, not a store release.
+Updated October 8, 2026. This describes engineering evidence, not a store release.
 
 | Area                                                       | Current evidence                                                    | Remaining gate                                                       |
 | ---------------------------------------------------------- | ------------------------------------------------------------------- | -------------------------------------------------------------------- |
@@ -13,6 +13,7 @@ Updated October 7, 2026. This describes engineering evidence, not a store releas
 | Cross-browser portability                                  | Named profiles, mappings, consent, transfer plans implemented       | Hosted UI retrieval and live Chrome↔Edge/profile round trip          |
 | Website                                                    | Free static-assets beta; canonical Markdown guides and shared brand | Owner content review and installed-build screenshots                 |
 | Administration                                             | Local shell only                                                    | Hostname, Cloudflare Access protection, authorized deployment        |
+| Bug reports and issue updates                              | Live form submission, closed status and comments verified; restricted credential | Tester feedback and integration lifecycle before public rollout |
 
 The October 5 cleanup adds Full local backup and a replacement preview, sidebar
 startup regression coverage, and real Worker/D1 runtime tests. Staging now checks
@@ -32,8 +33,10 @@ The beta website requires Cloudflare Access sign-in for approved tester emails.
 This website gate is separate from the planned ROVER account system. Beta
 deployment uses a private security handler with the public static assets;
 HTTPS/TLS, bot-script security nonces, noindex, and alternate-address checks
-are part of deployment acceptance. Email-code sign-in must still be tested by
-an approved owner. The admin shell remains undeployed.
+are part of deployment acceptance. An approved owner session submitted and read
+[acceptance issue #1](https://beta.roverworkspaces.com/issues.html?issue=1) on
+October 8, including its closed status and maintainer comment. The admin shell
+remains undeployed.
 
 The release path is personal debugging → privately shared reviewed package →
 invited store beta → public release. Keep a stable unpacked folder for local

@@ -15,3 +15,13 @@ The beta site's configured address is [beta.roverworkspaces.com](https://beta.ro
 The future admin console is kept separately in `admin/` and is not deployed with the public site. It must be placed behind a Cloudflare Access allow policy before any admin route or data view is published. See [ADMIN_PORTAL.md](ADMIN_PORTAL.md).
 
 See the private repository's hosting plan for implementation details and the manual Cloudflare setup steps. Keep payment secrets, workspace exports, and administrator credentials out of this public repository.
+
+Bug reporting and issue updates reuse the existing beta Worker. Static hosting
+alone cannot securely hold a GitHub write credential; the private server handles
+that part, with no extra database, email service, or paid plan added. Dynamic
+requests share the [Workers Free allowance](https://developers.cloudflare.com/workers/platform/pricing/)
+of 100,000 requests per day and its CPU limit. The server uses its restricted
+integration for GitHub reads to avoid the shared anonymous quota; these reads
+are not cached and remain subject to GitHub's API limits. Without that credential,
+public reads use a five-minute cache. The form and viewer require
+approved tester sign-in; submitted reports are public in the GitHub tracker.
