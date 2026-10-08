@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Change history.">
-<meta name="rover-doc-source-sha256" content="53e097f5a6b9cd3bdc346e4302b015e57f022f67381a19468fd25eb19cce0ec2">
+<meta name="rover-doc-source-sha256" content="08159124fc678d99a8f68f12e04970560d4dd8cd92f4af10da5af38060dd0bc1">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/changelog.html">
 <title>Change history · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -17,6 +17,12 @@
 <p class="doc-description">Completed development milestones and release notes.</p><details class="doc-contents"><summary>On this page</summary><nav aria-label="On this page"><a class="toc-level-2" href="#unreleased">Unreleased</a><a class="toc-level-2" href="#035">0.3.5</a><a class="toc-level-2" href="#034">0.3.4</a><a class="toc-level-2" href="#033">0.3.3</a><a class="toc-level-2" href="#032">0.3.2</a><a class="toc-level-2" href="#031">0.3.1</a><a class="toc-level-2" href="#030">0.3.0</a><a class="toc-level-2" href="#023">0.2.3</a><a class="toc-level-2" href="#022">0.2.2</a><a class="toc-level-2" href="#021">0.2.1</a><a class="toc-level-2" href="#020">0.2.0</a><a class="toc-level-2" href="#implementation-records-moved-from-the-roadmap--october-5-2026">Implementation records moved from the roadmap — October 5, 2026</a></nav></details><div class="prose"><p>ROVER Workspaces is in development. These notes describe development builds, not browser-store availability. Live Chrome and Edge acceptance remains a release gate.</p>
 <h2 id="unreleased">Unreleased</h2>
 <ul>
+<li><p>Harden the beta website with HTTPS redirects, TLS 1.2 minimum, per-response
+security nonces for bot detection, stronger indexing exclusions, and an
+approved-tester sign-in gate. Keep administration unavailable and remove
+public preview/alternate website entry points. Email-code acceptance remains
+an owner check; this gate is separate from future ROVER account sign-in.</p>
+</li>
 <li><p>Use <code>beta.roverworkspaces.com</code> for the beta website and extension documentation
 links. Centralize the public origin, generate matching canonical page URLs,
 and preserve the beta custom domain in deployment configuration.</p>

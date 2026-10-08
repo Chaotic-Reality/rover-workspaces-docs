@@ -4,6 +4,12 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Harden the beta website with HTTPS redirects, TLS 1.2 minimum, per-response
+  security nonces for bot detection, stronger indexing exclusions, and an
+  approved-tester sign-in gate. Keep administration unavailable and remove
+  public preview/alternate website entry points. Email-code acceptance remains
+  an owner check; this gate is separate from future ROVER account sign-in.
+
 - Use `beta.roverworkspaces.com` for the beta website and extension documentation
   links. Centralize the public origin, generate matching canonical page URLs,
   and preserve the beta custom domain in deployment configuration.

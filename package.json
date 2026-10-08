@@ -10,7 +10,7 @@
     "test": "node --test scripts/render-document.test.mjs scripts/smoke-content.test.mjs",
     "check": "npm test && npm run build && node scripts/check-site.mjs",
     "smoke": "node scripts/smoke-site.mjs",
-    "deploy:beta": "npm run check && wrangler deploy"
+    "deploy:beta": "node scripts/deploy-beta.mjs"
   },
   "devDependencies": {
     "marked": "18.1.0",

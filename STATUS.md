@@ -28,6 +28,13 @@ The custom domain is active on the existing beta Worker. Live DNS/TLS and page
 checks are recorded separately from local build verification; cached DNS results
 may take time to refresh after a domain change.
 
+The beta website requires Cloudflare Access sign-in for approved tester emails.
+This website gate is separate from the planned ROVER account system. Beta
+deployment uses a private security handler with the public static assets;
+HTTPS/TLS, bot-script security nonces, noindex, and alternate-address checks
+are part of deployment acceptance. Email-code sign-in must still be tested by
+an approved owner. The admin shell remains undeployed.
+
 The release path is personal debugging → privately shared reviewed package →
 invited store beta → public release. Keep a stable unpacked folder for local
 upgrades. The app version is the release version; each package has a separate

@@ -1,6 +1,6 @@
 # Privacy and data handling
 
-Last updated: October 5, 2026. Applies to the current local-only ROVER Workspaces development builds, owned by Chaotic-Reality. Store availability has not been announced.
+Last updated: October 7, 2026. Applies to the current local-only ROVER Workspaces development builds and the protected beta website, owned by Chaotic-Reality. Store availability has not been announced.
 
 ## Our privacy statement
 
@@ -32,7 +32,23 @@ URLs and titles can still contain personal information, search terms, private do
 | contextMenus | Offer the explicit capture action in the browser extension context menu.                     |
 | alarms       | Run opt-in daily local capture; scheduling is off by default.                                |
 
-The manifest requests no host permissions and installs no content scripts. Capture is manually initiated unless you enable scheduled capture. Restoring opens saved websites in new windows or the current window as selected; Reload current window closes current tabs except the extension page before restoring; those sites receive normal browser requests and follow their own privacy practices. Clicking documentation or support links opens GitHub, whose policies apply there. Browser and store services may have their own update or diagnostic behavior independent of ROVER Workspaces.
+The manifest requests no host permissions and installs no content scripts. Capture is manually initiated unless you enable scheduled capture. Restoring opens saved websites in new windows or the current window as selected; Reload current window closes current tabs except the extension page before restoring; those sites receive normal browser requests and follow their own privacy practices. Documentation links open the Cloudflare-hosted beta site; source and public support links open GitHub. Their respective policies apply. Browser and store services may have their own update or diagnostic behavior independent of ROVER Workspaces.
+
+## Protected beta website
+
+The beta website uses Cloudflare Access to admit approved tester email addresses.
+Cloudflare verifies an email address through a one-time login code and uses
+session cookies to remember website access. It processes connection information,
+including IP addresses, requested website paths, and authentication/security
+events. Bot protection may run Cloudflare detection scripts in the website.
+These website controls do not read or upload saved extension workspaces and
+are separate from the future ROVER account and sync system.
+
+The maintainer manages the tester allowlist and can remove access on request.
+Website and security logs follow the configured Cloudflare service retention;
+local workspace deletion does not delete those separate service records.
+See [Cloudflare's privacy policy](https://www.cloudflare.com/privacypolicy/).
+The site requests no search indexing and does not add marketing analytics.
 
 ## Export, retention, and deletion
 

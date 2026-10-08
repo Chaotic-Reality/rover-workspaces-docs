@@ -3,11 +3,43 @@ import { readFile } from "node:fs/promises";
 import { pages, documents, pageUrl, documentUrl } from "./site-content.mjs";
 import { siteUrl } from "./site-config.mjs";
 import { normalizeLiveHtml } from "./smoke-content.mjs";
-const base = new URL(process.argv[2] || siteUrl);
+const args = process.argv.slice(2);
+const gated = args.includes("--access-gate");
+const base = new URL(args.find((arg) => !arg.startsWith("--")) || siteUrl);
 const routes = [
   ...pages.filter(([id]) => id !== "404").map(([id]) => pageUrl(id)),
   ...documents.map(documentUrl),
 ];
+if (gated) {
+  for (const route of [
+    ...routes,
+    "/styles.css",
+    "/branding/rover-mark.png",
+    "/admin/",
+    "/AGENTS.md",
+  ]) {
+    const response = await fetch(new URL(route, base), { redirect: "manual" });
+    assert.equal(
+      response.status,
+      302,
+      `${route}: unsigned visitor must be sent to Access`,
+    );
+    const login = new URL(response.headers.get("location"));
+    assert(
+      login.hostname.endsWith(".cloudflareaccess.com"),
+      `${route}: unexpected sign-in host`,
+    );
+    assert.equal(
+      login.pathname,
+      `/cdn-cgi/access/login/${base.hostname}`,
+      `${route}: unexpected sign-in route`,
+    );
+  }
+  console.log(
+    `Access gate smoke passed: all site content requires sign-in at ${base.origin}.`,
+  );
+  process.exit(0);
+}
 // Small batches avoid needlessly flooding the free staging site.
 for (let offset = 0; offset < routes.length; offset += 4) {
   await Promise.all(

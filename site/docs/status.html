@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Feature status.">
-<meta name="rover-doc-source-sha256" content="5303bacf417b31b3018ccfe691ad348205b85a9756762b9054a4a88b8a8a6d48">
+<meta name="rover-doc-source-sha256" content="d277a3f6f183d17d25b0f307f31592aa11ae0adb34baea09ff4b6170a3a05817">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/status.html">
 <title>Feature status · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -81,6 +81,12 @@ round trip. Configured public beta website: <a href="https://beta.roverworkspace
 The custom domain is active on the existing beta Worker. Live DNS/TLS and page
 checks are recorded separately from local build verification; cached DNS results
 may take time to refresh after a domain change.</p>
+<p>The beta website requires Cloudflare Access sign-in for approved tester emails.
+This website gate is separate from the planned ROVER account system. Beta
+deployment uses a private security handler with the public static assets;
+HTTPS/TLS, bot-script security nonces, noindex, and alternate-address checks
+are part of deployment acceptance. Email-code sign-in must still be tested by
+an approved owner. The admin shell remains undeployed.</p>
 <p>The release path is personal debugging → privately shared reviewed package →
 invited store beta → public release. Keep a stable unpacked folder for local
 upgrades. The app version is the release version; each package has a separate
