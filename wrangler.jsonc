@@ -2,6 +2,10 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "rover-workspaces-beta",
   "compatibility_date": "2026-10-01",
+  "workers_dev": true,
+  "routes": [
+    { "pattern": "beta.roverworkspaces.com", "custom_domain": true }
+  ],
   "observability": {
     "enabled": true
   },

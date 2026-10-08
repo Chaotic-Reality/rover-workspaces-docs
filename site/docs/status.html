@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Feature status.">
-<meta name="rover-doc-source-sha256" content="5d750236169bb9541f4322ff0a5a88f4966cf5c5d35649bd7c8747928657a715">
+<meta name="rover-doc-source-sha256" content="7670ecdcd03dd271ea7648b8c3bdd3572bc012871d8cfee015444f0ca4667df5">
+<link rel="canonical" href="https://beta.roverworkspaces.com/docs/status.html">
 <title>Feature status · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
 <a class="brand" href="/" aria-label="ROVER Workspaces home"><img src="/branding/rover-mark.png" width="78" height="78" alt=""><span class="wordmark"><strong>ROVER</strong><span>Workspaces</span></span></a>
@@ -13,7 +14,7 @@
 <a href="/privacy.html">Privacy</a>
 <a href="/support.html">Support</a></nav></div></header>
 <main id="main" class="shell documentation"><aside class="docs-sidebar"><a class="docs-home" href="/docs.html">Documentation</a><nav aria-label="Documentation navigation"><details><summary>Using ROVER</summary><div><a href="/docs/user-guide.html">User guide</a><a href="/docs/how-it-works.html">How ROVER works</a><a href="/docs/importing.html">Import and export</a><a href="/docs/local-backup.html">Full local backup</a><a href="/docs/appearance.html">Appearance</a><a href="/docs/support.html">Support guidance</a></div></details><details open><summary>Development and beta</summary><div><a href="/docs/status.html" aria-current="page">Feature status</a><a href="/docs/roadmap.html">Roadmap</a><a href="/docs/changelog.html">Change history</a><a href="/docs/releasing.html">Release process</a><a href="/docs/beta-setup.html">Beta setup checklist</a></div></details><details><summary>Plans and policies</summary><div><a href="/docs/identity-signin.html">Account sign-in design</a><a href="/docs/hosted-sync.html">Hosted sync design</a><a href="/docs/pricing.html">Plans and trial details</a><a href="/docs/terms.html">Draft subscription terms</a><a href="/docs/privacy.html">Privacy and data handling</a><a href="/docs/license.html">License statement</a></div></details><details><summary>Project reference</summary><div><a href="/docs/about.html">About ROVER</a><a href="/docs/brand-guidelines.html">Brand guidelines</a><a href="/docs/hosting.html">Hosting plan</a><a href="/docs/admin-portal.html">Admin portal design</a><a href="/docs/store-listing.html">Store listing preparation</a><a href="/docs/store-policy-review.html">Store policy review</a><a href="/docs/site-development.html">Website maintenance</a><a href="/docs/project-overview.html">Project overview</a></div></details></nav></aside><article class="doc-article"><div class="doc-breadcrumb"><a href="/docs.html">Documentation</a><span aria-hidden="true">/</span><span>Development and beta</span></div><h1 id="rover-capability-status">ROVER capability status</h1>
-<p class="doc-description">See what is local, tested, staged, or still waiting for setup.</p><div class="prose"><p>Updated October 5, 2026. This describes engineering evidence, not a store release.</p>
+<p class="doc-description">See what is local, tested, staged, or still waiting for setup.</p><div class="prose"><p>Updated October 7, 2026. This describes engineering evidence, not a store release.</p>
 <div class="table-scroll" role="region" aria-label="Scrollable table" tabindex="0"><table>
 <thead>
 <tr>
@@ -76,7 +77,9 @@ The additive consent migration is deployed and starts empty. It does not turn
 the fixed staging credential into multi-user sign-in.</p>
 <p>No live account sync, billing, Google Drive, or OneDrive connection is enabled
 for testers. A healthy staging endpoint does not prove an authenticated sync
-round trip. Public beta website: <a href="https://rover-workspaces-beta.tech-e40.workers.dev/">https://rover-workspaces-beta.tech-e40.workers.dev/</a></p>
+round trip. Configured public beta website: <a href="https://beta.roverworkspaces.com/">https://beta.roverworkspaces.com/</a>.
+The custom domain is attached to the existing beta Worker; live DNS/TLS and page
+checks are recorded separately from local build verification.</p>
 <p>The release path is personal debugging → privately shared reviewed package →
 invited store beta → public release. Keep a stable unpacked folder for local
 upgrades. The app version is the release version; each package has a separate

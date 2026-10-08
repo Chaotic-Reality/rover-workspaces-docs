@@ -37,6 +37,19 @@ Both repositories' AGENTS.md files require this review before completion.
 
 ## Publication workflow
 
+The beta origin is centralized in `scripts/site-config.mjs`. Build metadata and
+the default smoke target use that URL; internal navigation remains relative.
+For an alternate build origin, set the `ROVER_SITE_URL` environment variable to
+an HTTPS origin before building and checking. This variable does not change DNS
+or deploy a domain. `wrangler.jsonc` separately records the actual custom-domain
+route; update it when moving the hosted site. The extension keeps its public
+documentation origin in private `src/site-links.ts`; update and rebuild it with
+domain changes. The authenticated sync API has its own endpoint.
+
+October 7 domain update: the configured beta address is
+`https://beta.roverworkspaces.com`. DNS/TLS and full live smoke checks are
+required before treating a newly attached hostname as available.
+
 1. Inspect Git status in both repositories and identify the documents affected.
 2. Update canonical Markdown and any short landing-page summaries.
 3. Run `npm run check` in this repository and review the generated pages at

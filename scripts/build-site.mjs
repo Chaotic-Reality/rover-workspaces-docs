@@ -11,11 +11,12 @@ import {
   sourceUrl,
 } from "./site-content.mjs";
 import { escapeHtml, renderDocument } from "./render-document.mjs";
+import { siteUrl } from "./site-config.mjs";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
 const acronym =
   "<strong>R</strong>estore, <strong>O</strong>rganize, <strong>V</strong>iew, <strong>E</strong>xplore, <strong>R</strong>epeat";
-function layout(id, title, content, sourceHash = "") {
+function layout(id, title, content, sourceHash = "", route = pageUrl(id)) {
   const links = pages
     .filter(([key]) => key !== "404")
     .map(
@@ -27,6 +28,7 @@ function layout(id, title, content, sourceHash = "") {
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. ${escapeHtml(title)}.">
 ${sourceHash ? `<meta name="rover-doc-source-sha256" content="${sourceHash}">` : ""}
+<link rel="canonical" href="${escapeHtml(new URL(route, siteUrl).href)}">
 <title>${escapeHtml(title)} · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
 <a class="brand" href="/" aria-label="ROVER Workspaces home"><img src="/branding/rover-mark.png" width="78" height="78" alt=""><span class="wordmark"><strong>ROVER</strong><span>Workspaces</span></span></a>
@@ -95,7 +97,7 @@ for (const doc of documents) {
   const content = `${guideNav(doc)}<article class="doc-article"><div class="doc-breadcrumb"><a href="/docs.html">Documentation</a><span aria-hidden="true">/</span><span>${escapeHtml(doc.group)}</span></div>${heading[0]}<p class="doc-description">${escapeHtml(doc.description)}</p>${contents}<div class="prose">${rendered.html.slice(heading[0].length)}</div><p class="doc-source">This page is generated from the maintained documentation. <a href="${sourceUrl(doc.source)}">View its source and revision history on GitHub</a>.</p></article>`;
   await writeFile(
     path.join(root, `site/docs/${doc.slug}.html`),
-    layout("docs", doc.title, content, hash),
+    layout("docs", doc.title, content, hash, documentUrl(doc)),
   );
 }
 console.log(

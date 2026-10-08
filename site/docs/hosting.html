@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Hosting plan.">
-<meta name="rover-doc-source-sha256" content="28125bde44b08b0ac14d9453b23f36512caa07bd9947476ea00fa37f124347ff">
+<meta name="rover-doc-source-sha256" content="f91e66d1ce12983b3e0b00250f6207b8c8729011e9d29a8a8a7a65d84de130fd">
+<link rel="canonical" href="https://beta.roverworkspaces.com/docs/hosting.html">
 <title>Hosting plan · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
 <a class="brand" href="/" aria-label="ROVER Workspaces home"><img src="/branding/rover-mark.png" width="78" height="78" alt=""><span class="wordmark"><strong>ROVER</strong><span>Workspaces</span></span></a>
@@ -22,7 +23,7 @@
 <li><code>roverws.com</code> for redirects and short campaign links.</li>
 </ul>
 <p>Cloudflare Pages can deploy from GitHub and create preview deployments for branches and pull requests. Cloudflare Workers and D1 provide a low-cost path for the future entitlement ledger, but no account service or paid checkout is connected yet.</p>
-<p>The static beta site is live at <a href="https://rover-workspaces-beta.tech-e40.workers.dev">rover-workspaces-beta.tech-e40.workers.dev</a>. It uses a free Cloudflare Worker serving static assets, not a separate Pages project. Public Markdown documentation generates branded pages under <code>/docs/</code>; the site is built into <code>site/</code>. Use <code>npm run deploy:beta</code> and <code>npm run smoke</code> from this repository for an authorized update. Custom domains can be attached later without changing the content. See <a href="/docs/site-development.html">website maintenance</a>.</p>
+<p>The beta site&#39;s configured address is <a href="https://beta.roverworkspaces.com">beta.roverworkspaces.com</a>, attached to the existing <code>rover-workspaces-beta</code> Worker. It uses free Cloudflare static assets, not a separate Pages project. Public Markdown documentation generates branded pages under <code>/docs/</code>; the site is built into <code>site/</code>. Use <code>npm run deploy:beta</code> and <code>npm run smoke</code> from this repository for an authorized update. The custom domain is recorded in Wrangler so deployments preserve it. See <a href="/docs/site-development.html">website maintenance</a> for the shared URL setting and live validation.</p>
 <p>The future admin console is kept separately in <code>admin/</code> and is not deployed with the public site. It must be placed behind a Cloudflare Access allow policy before any admin route or data view is published. See <a href="/docs/admin-portal.html">ADMIN_PORTAL.md</a>.</p>
 <p>See the private repository&#39;s hosting plan for implementation details and the manual Cloudflare setup steps. Keep payment secrets, workspace exports, and administrator credentials out of this public repository.</p>
 </div><p class="doc-source">This page is generated from the maintained documentation. <a href="https://github.com/Chaotic-Reality/rover-workspaces-docs/blob/main/HOSTING.md">View its source and revision history on GitHub</a>.</p></article></main>

@@ -10,7 +10,7 @@ The recommended low-cost setup is Cloudflare for DNS, static hosting, and the fu
 
 Cloudflare Pages can deploy from GitHub and create preview deployments for branches and pull requests. Cloudflare Workers and D1 provide a low-cost path for the future entitlement ledger, but no account service or paid checkout is connected yet.
 
-The static beta site is live at [rover-workspaces-beta.tech-e40.workers.dev](https://rover-workspaces-beta.tech-e40.workers.dev). It uses a free Cloudflare Worker serving static assets, not a separate Pages project. Public Markdown documentation generates branded pages under `/docs/`; the site is built into `site/`. Use `npm run deploy:beta` and `npm run smoke` from this repository for an authorized update. Custom domains can be attached later without changing the content. See [website maintenance](SITE_DEVELOPMENT.md).
+The beta site's configured address is [beta.roverworkspaces.com](https://beta.roverworkspaces.com), attached to the existing `rover-workspaces-beta` Worker. It uses free Cloudflare static assets, not a separate Pages project. Public Markdown documentation generates branded pages under `/docs/`; the site is built into `site/`. Use `npm run deploy:beta` and `npm run smoke` from this repository for an authorized update. The custom domain is recorded in Wrangler so deployments preserve it. See [website maintenance](SITE_DEVELOPMENT.md) for the shared URL setting and live validation.
 
 The future admin console is kept separately in `admin/` and is not deployed with the public site. It must be placed behind a Cloudflare Access allow policy before any admin route or data view is published. See [ADMIN_PORTAL.md](ADMIN_PORTAL.md).
 

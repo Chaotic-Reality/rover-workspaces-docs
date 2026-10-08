@@ -4,6 +4,7 @@ import assert from "node:assert/strict";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { pages, documents } from "./site-content.mjs";
+import { siteUrl } from "./site-config.mjs";
 const root = fileURLToPath(new URL("../", import.meta.url));
 const site = path.join(root, "site");
 const htmlFiles = [
@@ -68,6 +69,11 @@ for (const [file, html] of contents) {
     `${file}: missing shared layout`,
   );
   assert(html.includes("noindex,nofollow"), `${file}: missing beta noindex`);
+  const route = file === "index.html" ? "/" : `/${file}`;
+  assert(
+    html.includes(`<link rel="canonical" href="${new URL(route, siteUrl).href}">`),
+    `${file}: wrong canonical site URL`,
+  );
   assert.equal(
     (html.match(/<h1[ >]/g) || []).length,
     1,

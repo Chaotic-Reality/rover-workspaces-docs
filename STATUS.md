@@ -1,6 +1,6 @@
 # ROVER capability status
 
-Updated October 5, 2026. This describes engineering evidence, not a store release.
+Updated October 7, 2026. This describes engineering evidence, not a store release.
 
 | Area                                                       | Current evidence                                                    | Remaining gate                                                       |
 | ---------------------------------------------------------- | ------------------------------------------------------------------- | -------------------------------------------------------------------- |
@@ -23,7 +23,9 @@ the fixed staging credential into multi-user sign-in.
 
 No live account sync, billing, Google Drive, or OneDrive connection is enabled
 for testers. A healthy staging endpoint does not prove an authenticated sync
-round trip. Public beta website: https://rover-workspaces-beta.tech-e40.workers.dev/
+round trip. Configured public beta website: https://beta.roverworkspaces.com/.
+The custom domain is attached to the existing beta Worker; live DNS/TLS and page
+checks are recorded separately from local build verification.
 
 The release path is personal debugging → privately shared reviewed package →
 invited store beta → public release. Keep a stable unpacked folder for local

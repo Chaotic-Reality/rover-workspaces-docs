@@ -8,7 +8,7 @@ still needs setup; live cloud connections are not enabled.
 
 ## Install and update the beta
 
-Use the [beta installation page](https://rover-workspaces-beta.tech-e40.workers.dev/beta-install.html) for the complete procedure.
+Use the [beta installation page](https://beta.roverworkspaces.com/beta-install.html) for the complete procedure.
 Extract the reviewed extension ZIP into a stable folder, open
 `chrome://extensions/` or `edge://extensions/`, enable Developer mode, and choose
 **Load unpacked**. Select the extracted folder containing `manifest.json`.

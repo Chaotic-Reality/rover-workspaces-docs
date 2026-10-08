@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Website maintenance.">
-<meta name="rover-doc-source-sha256" content="cd2baebb7fc5baae3ca7ffbb647da56ce72a136f70b86e31a0b9b9c96e6c6d0f">
+<meta name="rover-doc-source-sha256" content="a76a6bd097a9238b9a62039ebd3980801eb444928358cfeb2736512f291a08da">
+<link rel="canonical" href="https://beta.roverworkspaces.com/docs/site-development.html">
 <title>Website maintenance · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
 <a class="brand" href="/" aria-label="ROVER Workspaces home"><img src="/branding/rover-mark.png" width="78" height="78" alt=""><span class="wordmark"><strong>ROVER</strong><span>Workspaces</span></span></a>
@@ -76,6 +77,17 @@ Both repositories&#39; AGENTS.md files require this review before completion.</p
 </tr>
 </tbody></table>
 </div><h2 id="publication-workflow">Publication workflow</h2>
+<p>The beta origin is centralized in <code>scripts/site-config.mjs</code>. Build metadata and
+the default smoke target use that URL; internal navigation remains relative.
+For an alternate build origin, set the <code>ROVER_SITE_URL</code> environment variable to
+an HTTPS origin before building and checking. This variable does not change DNS
+or deploy a domain. <code>wrangler.jsonc</code> separately records the actual custom-domain
+route; update it when moving the hosted site. The extension keeps its public
+documentation origin in private <code>src/site-links.ts</code>; update and rebuild it with
+domain changes. The authenticated sync API has its own endpoint.</p>
+<p>October 7 domain update: the configured beta address is
+<code>https://beta.roverworkspaces.com</code>. DNS/TLS and full live smoke checks are
+required before treating a newly attached hostname as available.</p>
 <ol>
 <li>Inspect Git status in both repositories and identify the documents affected.</li>
 <li>Update canonical Markdown and any short landing-page summaries.</li>

@@ -4,6 +4,10 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Use `beta.roverworkspaces.com` for the beta website and extension documentation
+  links. Centralize the public origin, generate matching canonical page URLs,
+  and preserve the beta custom domain in deployment configuration.
+
 - Publish the public Markdown documents as branded website pages with a grouped
   documentation hub, shared navigation, contents links, and responsive tables.
   Product-page and extension About documentation links now use the website; GitHub remains
