@@ -49,6 +49,9 @@ domain changes. The authenticated sync API has its own endpoint.
 October 7 domain update: the configured beta address is
 `https://beta.roverworkspaces.com`. DNS/TLS and full live smoke checks are
 required before treating a newly attached hostname as available.
+Live content comparison permits only Cloudflare's recognized JavaScript
+Detection wrapper added at the edge; unexpected scripts and page changes still
+fail. No bot-protection or security setting is disabled by deployment.
 
 1. Inspect Git status in both repositories and identify the documents affected.
 2. Update canonical Markdown and any short landing-page summaries.

@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { pages, documents, pageUrl, documentUrl } from "./site-content.mjs";
 import { siteUrl } from "./site-config.mjs";
+import { normalizeLiveHtml } from "./smoke-content.mjs";
 const base = new URL(process.argv[2] || siteUrl);
 const routes = [
   ...pages.filter(([id]) => id !== "404").map(([id]) => pageUrl(id)),
@@ -26,7 +27,7 @@ for (let offset = 0; offset < routes.length; offset += 4) {
         "utf8",
       );
       assert.equal(
-        html.replace(/\r\n/g, "\n"),
+        normalizeLiveHtml(html),
         local.replace(/\r\n/g, "\n"),
         `${route}: deployed content differs from build`,
       );

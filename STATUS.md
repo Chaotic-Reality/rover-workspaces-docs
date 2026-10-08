@@ -24,8 +24,9 @@ the fixed staging credential into multi-user sign-in.
 No live account sync, billing, Google Drive, or OneDrive connection is enabled
 for testers. A healthy staging endpoint does not prove an authenticated sync
 round trip. Configured public beta website: https://beta.roverworkspaces.com/.
-The custom domain is attached to the existing beta Worker; live DNS/TLS and page
-checks are recorded separately from local build verification.
+The custom domain is active on the existing beta Worker. Live DNS/TLS and page
+checks are recorded separately from local build verification; cached DNS results
+may take time to refresh after a domain change.
 
 The release path is personal debugging → privately shared reviewed package →
 invited store beta → public release. Keep a stable unpacked folder for local

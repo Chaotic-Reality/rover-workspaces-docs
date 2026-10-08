@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Website maintenance.">
-<meta name="rover-doc-source-sha256" content="a76a6bd097a9238b9a62039ebd3980801eb444928358cfeb2736512f291a08da">
+<meta name="rover-doc-source-sha256" content="2d52eaac329b07c5a03e9c2d13cb55c930e5a7fd865e6032b7119d53b4295e5c">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/site-development.html">
 <title>Website maintenance · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -87,7 +87,10 @@ documentation origin in private <code>src/site-links.ts</code>; update and rebui
 domain changes. The authenticated sync API has its own endpoint.</p>
 <p>October 7 domain update: the configured beta address is
 <code>https://beta.roverworkspaces.com</code>. DNS/TLS and full live smoke checks are
-required before treating a newly attached hostname as available.</p>
+required before treating a newly attached hostname as available.
+Live content comparison permits only Cloudflare&#39;s recognized JavaScript
+Detection wrapper added at the edge; unexpected scripts and page changes still
+fail. No bot-protection or security setting is disabled by deployment.</p>
 <ol>
 <li>Inspect Git status in both repositories and identify the documents affected.</li>
 <li>Update canonical Markdown and any short landing-page summaries.</li>
