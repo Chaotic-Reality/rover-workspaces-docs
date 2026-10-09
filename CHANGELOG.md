@@ -4,6 +4,10 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Update the pinned development/deployment tools and source-map dependency to
+  address reported dependency vulnerabilities. Existing Cloudflare resources,
+  compatibility settings, and extension permissions remain unchanged.
+
 - Add server-side Google and Microsoft identity verification with real signed
   tokens, tenant restrictions, browser-bound one-time sign-in transactions,
   and race-safe account creation. Isolated tests verify replay rejection and

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Change history.">
-<meta name="rover-doc-source-sha256" content="7a5e58f0380ec8de471f57922629024f097362bb131992115c632d665d7ede53">
+<meta name="rover-doc-source-sha256" content="86d16b40963a38c3691bb0584199f26c2026b55cfc9d196cc961ce68735b731f">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/changelog.html">
 <title>Change history · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -17,6 +17,10 @@
 <p class="doc-description">Completed development milestones and release notes.</p><details class="doc-contents"><summary>On this page</summary><nav aria-label="On this page"><a class="toc-level-2" href="#unreleased">Unreleased</a><a class="toc-level-2" href="#035">0.3.5</a><a class="toc-level-2" href="#034">0.3.4</a><a class="toc-level-2" href="#033">0.3.3</a><a class="toc-level-2" href="#032">0.3.2</a><a class="toc-level-2" href="#031">0.3.1</a><a class="toc-level-2" href="#030">0.3.0</a><a class="toc-level-2" href="#023">0.2.3</a><a class="toc-level-2" href="#022">0.2.2</a><a class="toc-level-2" href="#021">0.2.1</a><a class="toc-level-2" href="#020">0.2.0</a><a class="toc-level-2" href="#implementation-records-moved-from-the-roadmap--october-5-2026">Implementation records moved from the roadmap — October 5, 2026</a></nav></details><div class="prose"><p>ROVER Workspaces is in development. These notes describe development builds, not browser-store availability. Live Chrome and Edge acceptance remains a release gate.</p>
 <h2 id="unreleased">Unreleased</h2>
 <ul>
+<li><p>Update the pinned development/deployment tools and source-map dependency to
+address reported dependency vulnerabilities. Existing Cloudflare resources,
+compatibility settings, and extension permissions remain unchanged.</p>
+</li>
 <li><p>Add server-side Google and Microsoft identity verification with real signed
 tokens, tenant restrictions, browser-bound one-time sign-in transactions,
 and race-safe account creation. Isolated tests verify replay rejection and

@@ -14,6 +14,6 @@
   },
   "devDependencies": {
     "marked": "18.1.0",
-    "wrangler": "4.147.0"
+    "wrangler": "4.149.0"
   }
 }
