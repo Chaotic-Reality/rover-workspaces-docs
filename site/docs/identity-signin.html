@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Account sign-in design.">
-<meta name="rover-doc-source-sha256" content="d64e2260213adefcc775689f540b19389b1dc771b7f36d0e7909a9fcc394db5b">
+<meta name="rover-doc-source-sha256" content="c3fca87dc1282558ed11a5d18aa9e9d1f3d06240e91f82aa34f07eaec5987416">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/identity-signin.html">
 <title>Account sign-in design · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -75,18 +75,22 @@ before activation. Visiting the page does not connect an account or upload data.
 expire quickly, require a private proof from the requesting installation, and
 can be redeemed only once. A revoked website session cannot authorize redemption,
 and a new extension session cannot outlast the source session. This core is not
-yet connected to public HTTP routes or the extension sign-in UI; live browser
+yet connected to the extension sign-in UI; live browser
 acceptance and provider consent remain required.</p>
 <p>The private extension approval adapter now passes isolated tests for explicit
 consent, protected same-origin actions, approved extension IDs and fixed return
 addresses. Codes are also bound to the approved extension ID; a different ID
-cannot consume the rightful code. This adapter is not mounted on the beta site.
+cannot consume the rightful code. This adapter is mounted behind disabled configuration.
 The exchange transport, extension UI and installed-browser acceptance remain
 before activation. No live account connection is available from this preparation.</p>
 <p>The private exchange adapter also passes isolated database tests for tester
 authentication, exact approved extension origins, request limits, concurrent
 redemption and replay rejection. A valid exchange returns a distinct registered
-session without a token-bearing redirect. This remains an unmounted contract:
+session without a token-bearing redirect. The beta host now includes approval
+and exchange behind a separate disabled switch and an explicit extension
+allowlist. Isolated host tests verify the signed tester boundary, real database
+operations, native rate limits and rejection of missing or malformed configuration.
+The deployed controls remain unavailable:
 browser transport and website access must work together before it can be enabled.</p>
 <h2 id="manual-setup-checklist">Manual setup checklist</h2>
 <p>When hosted sign-in is ready to configure:</p>

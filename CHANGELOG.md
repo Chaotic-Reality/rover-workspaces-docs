@@ -4,6 +4,12 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Connect extension approval and exchange to the beta host behind separate
+  disabled configuration. Isolated runtime tests verify signed tester access,
+  protected approval, one-time redemption, independent session revocation,
+  native rate limits and rejection of incomplete extension configuration.
+  Live sign-in remains disabled; browser transport and consent are still required.
+
 - Prepare and test the private one-time extension exchange with strict origin,
   tester authentication, rate and request checks. Concurrent redemption returns
   one registered session; invalid requests and replay are rejected. The adapter

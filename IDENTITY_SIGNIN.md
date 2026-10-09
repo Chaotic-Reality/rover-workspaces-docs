@@ -71,20 +71,24 @@ The one-time extension handoff core also passes isolated database tests. Codes
 expire quickly, require a private proof from the requesting installation, and
 can be redeemed only once. A revoked website session cannot authorize redemption,
 and a new extension session cannot outlast the source session. This core is not
-yet connected to public HTTP routes or the extension sign-in UI; live browser
+yet connected to the extension sign-in UI; live browser
 acceptance and provider consent remain required.
 
 The private extension approval adapter now passes isolated tests for explicit
 consent, protected same-origin actions, approved extension IDs and fixed return
 addresses. Codes are also bound to the approved extension ID; a different ID
-cannot consume the rightful code. This adapter is not mounted on the beta site.
+cannot consume the rightful code. This adapter is mounted behind disabled configuration.
 The exchange transport, extension UI and installed-browser acceptance remain
 before activation. No live account connection is available from this preparation.
 
 The private exchange adapter also passes isolated database tests for tester
 authentication, exact approved extension origins, request limits, concurrent
 redemption and replay rejection. A valid exchange returns a distinct registered
-session without a token-bearing redirect. This remains an unmounted contract:
+session without a token-bearing redirect. The beta host now includes approval
+and exchange behind a separate disabled switch and an explicit extension
+allowlist. Isolated host tests verify the signed tester boundary, real database
+operations, native rate limits and rejection of missing or malformed configuration.
+The deployed controls remain unavailable:
 browser transport and website access must work together before it can be enabled.
 
 ## Manual setup checklist
