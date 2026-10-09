@@ -74,6 +74,13 @@ and a new extension session cannot outlast the source session. This core is not
 yet connected to public HTTP routes or the extension sign-in UI; live browser
 acceptance and provider consent remain required.
 
+The private extension approval adapter now passes isolated tests for explicit
+consent, protected same-origin actions, approved extension IDs and fixed return
+addresses. Codes are also bound to the approved extension ID; a different ID
+cannot consume the rightful code. This adapter is not mounted on the beta site.
+The exchange transport, extension UI and installed-browser acceptance remain
+before activation. No live account connection is available from this preparation.
+
 ## Manual setup checklist
 
 When hosted sign-in is ready to configure:

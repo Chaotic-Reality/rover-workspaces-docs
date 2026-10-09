@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Account sign-in design.">
-<meta name="rover-doc-source-sha256" content="4bbaf3de4a96fca587ef425c53fd80fdb9cd8d35ef3bd040918ff5707a4af045">
+<meta name="rover-doc-source-sha256" content="bf14c6c95c45594f473dc492726a375bb07d57c68bbd765f3cc1202d3fb81d77">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/identity-signin.html">
 <title>Account sign-in design · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -77,6 +77,12 @@ can be redeemed only once. A revoked website session cannot authorize redemption
 and a new extension session cannot outlast the source session. This core is not
 yet connected to public HTTP routes or the extension sign-in UI; live browser
 acceptance and provider consent remain required.</p>
+<p>The private extension approval adapter now passes isolated tests for explicit
+consent, protected same-origin actions, approved extension IDs and fixed return
+addresses. Codes are also bound to the approved extension ID; a different ID
+cannot consume the rightful code. This adapter is not mounted on the beta site.
+The exchange transport, extension UI and installed-browser acceptance remain
+before activation. No live account connection is available from this preparation.</p>
 <h2 id="manual-setup-checklist">Manual setup checklist</h2>
 <p>When hosted sign-in is ready to configure:</p>
 <ul>

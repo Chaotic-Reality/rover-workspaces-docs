@@ -4,6 +4,11 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Prepare and test extension sign-in approval with explicit consent, protected
+  same-origin actions, approved extension IDs and fixed return addresses.
+  One-time codes are bound to the approved extension and requesting installation.
+  This remains isolated preparation; live sign-in is disabled pending integration.
+
 - Improve automated-check reliability by running browser-interface tests in
   separate processes while retaining automatic discovery and failure reporting.
   All 222 application tests and the production build passed the full check.

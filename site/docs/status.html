@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Feature status.">
-<meta name="rover-doc-source-sha256" content="c047731f5ba17c17a740b6d40c93ada5aca5824bfe0fdb971e95b8da1f0f2924">
+<meta name="rover-doc-source-sha256" content="cbcebc29b758b41e979e0e52d14a1c95245eac9cf5447f75b9336ed288b5cf34">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/status.html">
 <title>Feature status · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -16,10 +16,11 @@
 <a href="/support.html">Support</a></nav></div></header>
 <main id="main" class="shell documentation"><aside class="docs-sidebar"><a class="docs-home" href="/docs.html">Documentation</a><nav aria-label="Documentation navigation"><details><summary>Using ROVER</summary><div><a href="/docs/user-guide.html">User guide</a><a href="/docs/how-it-works.html">How ROVER works</a><a href="/docs/importing.html">Import and export</a><a href="/docs/local-backup.html">Full local backup</a><a href="/docs/appearance.html">Appearance</a><a href="/docs/support.html">Support guidance</a></div></details><details open><summary>Development and beta</summary><div><a href="/docs/status.html" aria-current="page">Feature status</a><a href="/docs/roadmap.html">Roadmap</a><a href="/docs/changelog.html">Change history</a><a href="/docs/releasing.html">Release process</a><a href="/docs/beta-setup.html">Beta setup checklist</a></div></details><details><summary>Plans and policies</summary><div><a href="/docs/identity-signin.html">Account sign-in design</a><a href="/docs/hosted-sync.html">Hosted sync design</a><a href="/docs/pricing.html">Plans and trial details</a><a href="/docs/terms.html">Draft subscription terms</a><a href="/docs/privacy.html">Privacy and data handling</a><a href="/docs/license.html">License statement</a></div></details><details><summary>Project reference</summary><div><a href="/docs/about.html">About ROVER</a><a href="/docs/brand-guidelines.html">Brand guidelines</a><a href="/docs/hosting.html">Hosting plan</a><a href="/docs/admin-portal.html">Admin portal design</a><a href="/docs/store-listing.html">Store listing preparation</a><a href="/docs/store-policy-review.html">Store policy review</a><a href="/docs/site-development.html">Website maintenance</a><a href="/docs/project-overview.html">Project overview</a></div></details></nav></aside><article class="doc-article"><div class="doc-breadcrumb"><a href="/docs.html">Documentation</a><span aria-hidden="true">/</span><span>Development and beta</span></div><h1 id="rover-capability-status">ROVER capability status</h1>
 <p class="doc-description">See what is local, tested, staged, or still waiting for setup.</p><div class="prose"><p>Updated October 9, 2026. This describes engineering evidence, not a store release.</p>
-<p>The application check passed all 222 tests and the build after a test-runner
-process workaround for intermittent Windows startup failures. Tests remain
-automatically discovered and failures stop the check. This tooling milestone
-does not enable any additional live capability.</p>
+<p>An earlier application check passed all 222 tests and the build after a
+test-runner process workaround. A later check still encountered an intermittent
+Windows worker startup failure before a browser test ran; the underlying runner
+issue remains unresolved. Tests remain automatically discovered and failures
+stop the check. This tooling work enables no additional live capability.</p>
 <div class="table-scroll" role="region" aria-label="Scrollable table" tabindex="0"><table>
 <thead>
 <tr>
@@ -45,8 +46,8 @@ does not enable any additional live capability.</p>
 </tr>
 <tr>
 <td>Google/Microsoft sign-in</td>
-<td>Enabled beta host and proof-bound one-time handoff core pass isolated runtime tests; empty account database prepared; deployed sign-in stays disabled</td>
-<td>Handoff HTTP/extension integration, installed-browser acceptance and live consent</td>
+<td>Enabled beta host, one-time handoff core and protected extension approval adapter pass isolated runtime tests; empty account database prepared; deployed sign-in stays disabled</td>
+<td>Approval/exchange mounting, extension UI, installed-browser acceptance and live consent</td>
 </tr>
 <tr>
 <td>Google Drive/OneDrive backups</td>

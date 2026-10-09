@@ -2,17 +2,18 @@
 
 Updated October 9, 2026. This describes engineering evidence, not a store release.
 
-The application check passed all 222 tests and the build after a test-runner
-process workaround for intermittent Windows startup failures. Tests remain
-automatically discovered and failures stop the check. This tooling milestone
-does not enable any additional live capability.
+An earlier application check passed all 222 tests and the build after a
+test-runner process workaround. A later check still encountered an intermittent
+Windows worker startup failure before a browser test ran; the underlying runner
+issue remains unresolved. Tests remain automatically discovered and failures
+stop the check. This tooling work enables no additional live capability.
 
 | Area                                                       | Current evidence                                                    | Remaining gate                                                       |
 | ---------------------------------------------------------- | ------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | Local workspace capture, edit, restore, collections, theme | Implemented with automated tests                                    | Installed Chrome/Edge upgrade and visual acceptance                  |
 | Custom Templates, organization, history, scheduled capture | Implemented; local entitlement simulation and manual 15-day trial   | Pilot usefulness and installed-browser behavior                      |
 | Free and paid plans                                        | Free limit of two workspaces; planned Pro Local and Pro Sync        | Actual purchase/renewal/provider sandbox and legal terms             |
-| Google/Microsoft sign-in                                   | Enabled beta host and proof-bound one-time handoff core pass isolated runtime tests; empty account database prepared; deployed sign-in stays disabled | Handoff HTTP/extension integration, installed-browser acceptance and live consent |
+| Google/Microsoft sign-in                                   | Enabled beta host, one-time handoff core and protected extension approval adapter pass isolated runtime tests; empty account database prepared; deployed sign-in stays disabled | Approval/exchange mounting, extension UI, installed-browser acceptance and live consent |
 | Google Drive/OneDrive backups                              | Narrow-scope adapter and encrypted transfer contracts tested        | OAuth consent, token handling, live rate-limit/revocation testing    |
 | ROVER-hosted sync                                          | Free staging Worker/D1 deployed; entitlement/consent enforced        | Live identity, key recovery, profile sync and conflict acceptance    |
 | Cross-browser portability                                  | Named profiles, mappings, consent, transfer plans implemented       | Hosted UI retrieval and live Chrome↔Edge/profile round trip          |
