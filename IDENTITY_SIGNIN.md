@@ -52,9 +52,10 @@ and subject rather than merging matching email addresses.
 This preparation is verified locally and in isolated server/database tests.
 Revocable session storage also passes isolated tests: signing out invalidates
 that session without ending other sessions or affecting another account.
-Hosted callback routes, secure browser cookies, sign-out integration, and the
-extension handoff remain to complete before configuring credentials and testing
-live consent. Google Drive and OneDrive permissions will be separate opt-in
+Hosted callback routes, secure browser cookies and sign-out integration also
+pass an enabled-host isolated runtime test. Remote account storage and the
+extension handoff remain before configuring credentials and testing live
+consent. Google Drive and OneDrive permissions will be separate opt-in
 connections. Account sign-in and account sync are not enabled for testers yet.
 
 The HTTP adapter also passes isolated tests for protected cookies, explicit
@@ -62,7 +63,7 @@ same-origin actions, one-time callbacks tied to the approved tester, and sign-ou
 The beta host now includes the routes behind a disabled feature flag. The
 [account page](/account.html) explains the distinction between tester access
 and ROVER account sign-in; provider buttons remain disabled. Account database
-configuration, enabled-host tests, extension handoff, and live consent remain
+configuration, extension handoff, installed-browser acceptance and live consent remain
 before activation. Visiting the page does not connect an account or upload data.
 
 ## Manual setup checklist

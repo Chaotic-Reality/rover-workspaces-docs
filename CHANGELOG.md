@@ -4,6 +4,11 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Verify the actual beta host with account sign-in enabled in an isolated runtime:
+  signed tester/provider assertions, temporary database, cross-tester and replay
+  rejection, session revocation and native rate limiting. No live credentials or
+  provider requests are used; deployed sign-in remains disabled.
+
 - Prepare beta-host account routing behind a disabled feature flag and add an
   explanatory Account page to shared navigation. Verify tester authentication
   and disabled-route behavior in the server runtime, keep provider buttons

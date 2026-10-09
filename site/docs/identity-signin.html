@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Account sign-in design.">
-<meta name="rover-doc-source-sha256" content="763aabedb2fa2801326562a147237a89b6fc3392af8559fbc8b0ca4d9f9f4e8c">
+<meta name="rover-doc-source-sha256" content="2638e1e84afc682f1ecae4d66a3d062c3f6ecf614c22404f172b3ecc52081e48">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/identity-signin.html">
 <title>Account sign-in design · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -58,16 +58,17 @@ and subject rather than merging matching email addresses.</p>
 <p>This preparation is verified locally and in isolated server/database tests.
 Revocable session storage also passes isolated tests: signing out invalidates
 that session without ending other sessions or affecting another account.
-Hosted callback routes, secure browser cookies, sign-out integration, and the
-extension handoff remain to complete before configuring credentials and testing
-live consent. Google Drive and OneDrive permissions will be separate opt-in
+Hosted callback routes, secure browser cookies and sign-out integration also
+pass an enabled-host isolated runtime test. Remote account storage and the
+extension handoff remain before configuring credentials and testing live
+consent. Google Drive and OneDrive permissions will be separate opt-in
 connections. Account sign-in and account sync are not enabled for testers yet.</p>
 <p>The HTTP adapter also passes isolated tests for protected cookies, explicit
 same-origin actions, one-time callbacks tied to the approved tester, and sign-out.
 The beta host now includes the routes behind a disabled feature flag. The
 <a href="/account.html">account page</a> explains the distinction between tester access
 and ROVER account sign-in; provider buttons remain disabled. Account database
-configuration, enabled-host tests, extension handoff, and live consent remain
+configuration, extension handoff, installed-browser acceptance and live consent remain
 before activation. Visiting the page does not connect an account or upload data.</p>
 <h2 id="manual-setup-checklist">Manual setup checklist</h2>
 <p>When hosted sign-in is ready to configure:</p>
