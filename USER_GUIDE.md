@@ -22,6 +22,19 @@ The bottom-left **About ROVER Workspaces** link includes the installed app
 version, for example **About ROVER Workspaces 0.3.6**. Its label updates with
 each build's release version, so you can identify the loaded version at a glance.
 
+Use **Check for updates** below About to open the protected beta setup page.
+It receives only your installed release version and compares it with the beta
+server build. Sign in through the existing tester gate if prompted. A newer
+server build is not proof of a reviewed ZIP; ask the maintainer for the testing
+package and follow the backup/reload instructions above. No automatic ZIP
+download or installation is performed, and no background version polling runs.
+
+For future store installations, a browser-reported pending version appears as
+**Update ready**. Finish any current operation and save or close open dialogs,
+then choose **Reload to update**, or **Later**. After a version upgrade, the
+sidebar shows **Updated to …**, **What's new**, and **Dismiss update notice**.
+Saved workspaces remain intact; a first installation does not show an upgrade notice.
+
 ## Save a workspace
 
 1. Open the HTTP/HTTPS pages you want to keep. Arrange browser tab groups and

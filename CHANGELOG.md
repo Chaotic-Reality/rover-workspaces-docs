@@ -4,6 +4,16 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+## 0.3.7 — development testing build
+
+- Add Check for updates beside the sidebar version. Manual testing builds open
+  the protected beta page to compare their installed version with the beta server
+  build. ZIP updates remain manual and are supplied by the maintainer.
+- Show browser-reported pending updates with explicit reload confirmation,
+  and a dismissible What's new notice after a version upgrade. Finish open
+  dialogs and operations before reloading. No background version polling or new
+  extension permissions are added. Store delivery still requires store publication.
+
 ## 0.3.6 — development testing build
 
 - Show the installed release version directly in the sidebar's About link.

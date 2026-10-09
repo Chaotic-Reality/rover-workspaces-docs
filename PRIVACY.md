@@ -1,6 +1,6 @@
 # Privacy and data handling
 
-Last updated: October 7, 2026. Applies to the current local-only ROVER Workspaces development builds and the protected beta website, owned by Chaotic-Reality. Store availability has not been announced.
+Last updated: October 9, 2026. Applies to the current local-only ROVER Workspaces development builds and the protected beta website, owned by Chaotic-Reality. Store availability has not been announced.
 
 ## Our privacy statement
 
@@ -9,6 +9,13 @@ ROVER Workspaces helps you organize your tabs without sending your saved workspa
 You choose when to capture, import, export, or open a workspace. Capture can also be started from the extension context menu. If you explicitly enable daily scheduled capture in settings, the browser alarm runs at the chosen local time and saves a local workspace while the browser is available; Free limits and paid-feature checks still apply. Scheduling is off by default. Exporting creates a file you control; opening a workspace connects your browser to the saved websites. Information you voluntarily post in public support issues is separate from the extension's local data and is publicly visible on GitHub. The details below explain these boundaries and how to remove your local data.
 
 ## Data kept on your device
+
+Update notices store pending/installed version information and dismissal state
+locally, separately from portable backups. **Check for updates** opens the
+protected beta website in a browser tab with the installed release version in
+the URL. It does not send workspace URLs, names or contents, and does not poll
+in the background. Normal website access/security processing still applies.
+Browser-store update delivery is handled by the browser and its store.
 
 When you capture or save a workspace, ROVER Workspaces stores its name and description; supported HTTP/HTTPS tab URLs and titles; window and tab order; pinned and active state; group names, colors, and collapsed state; and workspace identifiers and creation/update times.
 
