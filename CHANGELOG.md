@@ -4,6 +4,11 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Prepare and test the private one-time extension exchange with strict origin,
+  tester authentication, rate and request checks. Concurrent redemption returns
+  one registered session; invalid requests and replay are rejected. The adapter
+  remains unmounted pending browser transport and host integration acceptance.
+
 - Prepare and test extension sign-in approval with explicit consent, protected
   same-origin actions, approved extension IDs and fixed return addresses.
   One-time codes are bound to the approved extension and requesting installation.

@@ -81,6 +81,12 @@ cannot consume the rightful code. This adapter is not mounted on the beta site.
 The exchange transport, extension UI and installed-browser acceptance remain
 before activation. No live account connection is available from this preparation.
 
+The private exchange adapter also passes isolated database tests for tester
+authentication, exact approved extension origins, request limits, concurrent
+redemption and replay rejection. A valid exchange returns a distinct registered
+session without a token-bearing redirect. This remains an unmounted contract:
+browser transport and website access must work together before it can be enabled.
+
 ## Manual setup checklist
 
 When hosted sign-in is ready to configure:
