@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Change history.">
-<meta name="rover-doc-source-sha256" content="45e5c6d1a5ec17c6b9d463efcb212a774e7ef49df1484330fac07c88bcd0e64e">
+<meta name="rover-doc-source-sha256" content="98766af0fbb52139825683674603e858ad18604b9f2700fa663828c1fe51dc14">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/changelog.html">
 <title>Change history · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -18,6 +18,10 @@
 <p class="doc-description">Completed development milestones and release notes.</p><details class="doc-contents"><summary>On this page</summary><nav aria-label="On this page"><a class="toc-level-2" href="#unreleased">Unreleased</a><a class="toc-level-2" href="#035">0.3.5</a><a class="toc-level-2" href="#034">0.3.4</a><a class="toc-level-2" href="#033">0.3.3</a><a class="toc-level-2" href="#032">0.3.2</a><a class="toc-level-2" href="#031">0.3.1</a><a class="toc-level-2" href="#030">0.3.0</a><a class="toc-level-2" href="#023">0.2.3</a><a class="toc-level-2" href="#022">0.2.2</a><a class="toc-level-2" href="#021">0.2.1</a><a class="toc-level-2" href="#020">0.2.0</a><a class="toc-level-2" href="#implementation-records-moved-from-the-roadmap--october-5-2026">Implementation records moved from the roadmap — October 5, 2026</a></nav></details><div class="prose"><p>ROVER Workspaces is in development. These notes describe development builds, not browser-store availability. Live Chrome and Edge acceptance remains a release gate.</p>
 <h2 id="unreleased">Unreleased</h2>
 <ul>
+<li><p>Prepare a separate beta account database with empty identity and session
+tables. Keep account migrations separate from workspace sync migrations and
+retain disabled sign-in until the handoff and provider consent are verified.</p>
+</li>
 <li><p>Verify the actual beta host with account sign-in enabled in an isolated runtime:
 signed tester/provider assertions, temporary database, cross-tester and replay
 rejection, session revocation and native rate limiting. No live credentials or

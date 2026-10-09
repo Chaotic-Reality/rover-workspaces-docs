@@ -63,7 +63,8 @@ same-origin actions, one-time callbacks tied to the approved tester, and sign-ou
 The beta host now includes the routes behind a disabled feature flag. The
 [account page](/account.html) explains the distinction between tester access
 and ROVER account sign-in; provider buttons remain disabled. Account database
-configuration, extension handoff, installed-browser acceptance and live consent remain
+is prepared separately from workspace sync storage. The extension handoff,
+installed-browser acceptance and live consent remain
 before activation. Visiting the page does not connect an account or upload data.
 
 ## Manual setup checklist

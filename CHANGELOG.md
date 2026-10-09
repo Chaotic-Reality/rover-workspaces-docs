@@ -4,6 +4,10 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Prepare a separate beta account database with empty identity and session
+  tables. Keep account migrations separate from workspace sync migrations and
+  retain disabled sign-in until the handoff and provider consent are verified.
+
 - Verify the actual beta host with account sign-in enabled in an isolated runtime:
   signed tester/provider assertions, temporary database, cross-tester and replay
   rejection, session revocation and native rate limiting. No live credentials or
