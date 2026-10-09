@@ -25,6 +25,23 @@ Different browser profiles have separate local libraries.
 2. Open ROVER from its toolbar action and choose **Capture workspace**.
 3. Choose the capture scope, name the workspace, review its tabs, and save.
 
+### Update an existing workspace from current tabs
+
+Arrange tabs and groups in the browser, then choose the workspace card's
+**More actions → Update from current tabs**. Review the saved/replacement
+counts and expand **Review captured tabs and groups** to inspect the captured
+URLs. Choose **Replace saved tabs** to replace all saved windows with the
+current window's supported tabs, or **Cancel** to keep the existing workspace.
+
+The preview is a snapshot: cancel and reopen it after further browser changes.
+ROVER keeps the workspace name, description, collection, favorite and card
+position. It leaves open tabs alone and excludes private, internal and extension
+pages. An empty capture or a concurrent edit cannot overwrite your workspace.
+**Undo update** reverses the replacement while the saved result remains
+unchanged. The standard local revision is also retained; History access follows
+your plan. This action updates an existing workspace and does not use another
+workspace slot.
+
 Private windows, browser-internal pages, and unsupported URLs are excluded.
 ROVER does not copy a website's cookies, passwords, forms, or sign-in session.
 

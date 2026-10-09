@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. User guide.">
-<meta name="rover-doc-source-sha256" content="8c5c796ec9de0538e9c2141a4baf1a957603900fd7cab25a0d981e1080339bde">
+<meta name="rover-doc-source-sha256" content="20167b94b27b868a4387a5923be72b2a1d46cac4839868ffba393bd0885d51f1">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/user-guide.html">
 <title>User guide · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -15,7 +15,7 @@
 <a href="/privacy.html">Privacy</a>
 <a href="/support.html">Support</a></nav></div></header>
 <main id="main" class="shell documentation"><aside class="docs-sidebar"><a class="docs-home" href="/docs.html">Documentation</a><nav aria-label="Documentation navigation"><details open><summary>Using ROVER</summary><div><a href="/docs/user-guide.html" aria-current="page">User guide</a><a href="/docs/how-it-works.html">How ROVER works</a><a href="/docs/importing.html">Import and export</a><a href="/docs/local-backup.html">Full local backup</a><a href="/docs/appearance.html">Appearance</a><a href="/docs/support.html">Support guidance</a></div></details><details><summary>Development and beta</summary><div><a href="/docs/status.html">Feature status</a><a href="/docs/roadmap.html">Roadmap</a><a href="/docs/changelog.html">Change history</a><a href="/docs/releasing.html">Release process</a><a href="/docs/beta-setup.html">Beta setup checklist</a></div></details><details><summary>Plans and policies</summary><div><a href="/docs/identity-signin.html">Account sign-in design</a><a href="/docs/hosted-sync.html">Hosted sync design</a><a href="/docs/pricing.html">Plans and trial details</a><a href="/docs/terms.html">Draft subscription terms</a><a href="/docs/privacy.html">Privacy and data handling</a><a href="/docs/license.html">License statement</a></div></details><details><summary>Project reference</summary><div><a href="/docs/about.html">About ROVER</a><a href="/docs/brand-guidelines.html">Brand guidelines</a><a href="/docs/hosting.html">Hosting plan</a><a href="/docs/admin-portal.html">Admin portal design</a><a href="/docs/store-listing.html">Store listing preparation</a><a href="/docs/store-policy-review.html">Store policy review</a><a href="/docs/site-development.html">Website maintenance</a><a href="/docs/project-overview.html">Project overview</a></div></details></nav></aside><article class="doc-article"><div class="doc-breadcrumb"><a href="/docs.html">Documentation</a><span aria-hidden="true">/</span><span>Using ROVER</span></div><h1 id="rover-workspaces-user-guide">ROVER Workspaces user guide</h1>
-<p class="doc-description">Start here: save, arrange, restore, and protect your workspaces.</p><details class="doc-contents"><summary>On this page</summary><nav aria-label="On this page"><a class="toc-level-2" href="#install-and-update-the-beta">Install and update the beta</a><a class="toc-level-2" href="#save-a-workspace">Save a workspace</a><a class="toc-level-2" href="#arrange-your-library">Arrange your library</a><a class="toc-level-2" href="#open-all-or-part-of-a-workspace">Open all or part of a workspace</a><a class="toc-level-2" href="#templates-organization-and-the-trial">Templates, organization, and the trial</a><a class="toc-level-2" href="#back-up-or-move-your-data">Back up or move your data</a><a class="toc-level-2" href="#appearance-and-scheduling">Appearance and scheduling</a><a class="toc-level-2" href="#get-help">Get help</a></nav></details><div class="prose"><p>ROVER means <strong>R</strong>estore, <strong>O</strong>rganize, <strong>V</strong>iew, <strong>E</strong>xplore, <strong>R</strong>epeat.
+<p class="doc-description">Start here: save, arrange, restore, and protect your workspaces.</p><details class="doc-contents"><summary>On this page</summary><nav aria-label="On this page"><a class="toc-level-2" href="#install-and-update-the-beta">Install and update the beta</a><a class="toc-level-2" href="#save-a-workspace">Save a workspace</a><a class="toc-level-3" href="#update-an-existing-workspace-from-current-tabs">Update an existing workspace from current tabs</a><a class="toc-level-2" href="#arrange-your-library">Arrange your library</a><a class="toc-level-2" href="#open-all-or-part-of-a-workspace">Open all or part of a workspace</a><a class="toc-level-2" href="#templates-organization-and-the-trial">Templates, organization, and the trial</a><a class="toc-level-2" href="#back-up-or-move-your-data">Back up or move your data</a><a class="toc-level-2" href="#appearance-and-scheduling">Appearance and scheduling</a><a class="toc-level-2" href="#get-help">Get help</a></nav></details><div class="prose"><p>ROVER means <strong>R</strong>estore, <strong>O</strong>rganize, <strong>V</strong>iew, <strong>E</strong>xplore, <strong>R</strong>epeat.
 Save browser windows, tabs, and groups so you can return to them later.
 The development build supports Chrome and Edge and keeps data in the current
 browser profile. Check <a href="/docs/status.html">feature status</a> for what is ready and what
@@ -36,6 +36,20 @@ pinned tabs as needed.</li>
 <li>Open ROVER from its toolbar action and choose <strong>Capture workspace</strong>.</li>
 <li>Choose the capture scope, name the workspace, review its tabs, and save.</li>
 </ol>
+<h3 id="update-an-existing-workspace-from-current-tabs">Update an existing workspace from current tabs</h3>
+<p>Arrange tabs and groups in the browser, then choose the workspace card&#39;s
+<strong>More actions → Update from current tabs</strong>. Review the saved/replacement
+counts and expand <strong>Review captured tabs and groups</strong> to inspect the captured
+URLs. Choose <strong>Replace saved tabs</strong> to replace all saved windows with the
+current window&#39;s supported tabs, or <strong>Cancel</strong> to keep the existing workspace.</p>
+<p>The preview is a snapshot: cancel and reopen it after further browser changes.
+ROVER keeps the workspace name, description, collection, favorite and card
+position. It leaves open tabs alone and excludes private, internal and extension
+pages. An empty capture or a concurrent edit cannot overwrite your workspace.
+<strong>Undo update</strong> reverses the replacement while the saved result remains
+unchanged. The standard local revision is also retained; History access follows
+your plan. This action updates an existing workspace and does not use another
+workspace slot.</p>
 <p>Private windows, browser-internal pages, and unsupported URLs are excluded.
 ROVER does not copy a website&#39;s cookies, passwords, forms, or sign-in session.</p>
 <h2 id="arrange-your-library">Arrange your library</h2>

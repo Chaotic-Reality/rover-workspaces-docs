@@ -4,6 +4,11 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Add **Update from current tabs** to workspace cards: review a current-window
+  capture before replacing saved tabs and groups, preserve workspace identity
+  and organization, and undo the update. Empty captures and concurrent edits
+  are rejected. Installed Chrome/Edge acceptance remains required.
+
 - Connect extension approval and exchange to the beta host behind separate
   disabled configuration. Isolated runtime tests verify signed tester access,
   protected approval, one-time redemption, independent session revocation,
