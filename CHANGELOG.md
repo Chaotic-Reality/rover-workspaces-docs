@@ -6,6 +6,8 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## 0.3.6 — development testing build
 
+- Show the installed release version directly in the sidebar's About link.
+
 Version 0.3.6 includes the reviewed **Update from current tabs** workspace
 action described below. The app's About page and browser extension details
 show this version after updating and reloading the existing installation.

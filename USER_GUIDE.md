@@ -18,6 +18,10 @@ loaded folder and use the browser's extension **Reload** button. Moving or
 uninstalling an unpacked extension can change its identity or remove local data.
 Different browser profiles have separate local libraries.
 
+The bottom-left **About ROVER Workspaces** link includes the installed app
+version, for example **About ROVER Workspaces 0.3.6**. Its label updates with
+each build's release version, so you can identify the loaded version at a glance.
+
 ## Save a workspace
 
 1. Open the HTTP/HTTPS pages you want to keep. Arrange browser tab groups and
