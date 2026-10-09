@@ -4,6 +4,12 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Add server-side Google and Microsoft identity verification with real signed
+  tokens, tenant restrictions, browser-bound one-time sign-in transactions,
+  and race-safe account creation. Isolated tests verify replay rejection and
+  account separation. Live callbacks and account sync remain unavailable while
+  hosted cookies, revocable sessions, extension handoff, and consent are completed.
+
 - Add branded Report a bug and Issue updates pages with status filters,
   pagination, descriptions, and comments. The extension's About page links to
   them. The server submission flow verifies tester sign-in, publication consent,
@@ -17,8 +23,8 @@ ROVER Workspaces is in development. These notes describe development builds, not
 - Harden the beta website with HTTPS redirects, TLS 1.2 minimum, per-response
   security nonces for bot detection, stronger indexing exclusions, and an
   approved-tester sign-in gate. Keep administration unavailable and remove
-  public preview/alternate website entry points. Email-code acceptance remains
-  an owner check; this gate is separate from future ROVER account sign-in.
+  public preview/alternate website entry points. Owner email-code acceptance
+  passed October 8; this gate is separate from future ROVER account sign-in.
 
 - Use `beta.roverworkspaces.com` for the beta website and extension documentation
   links. Centralize the public origin, generate matching canonical page URLs,

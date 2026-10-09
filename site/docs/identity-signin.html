@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Account sign-in design.">
-<meta name="rover-doc-source-sha256" content="f5cb214ea1448a52b8a78f372ff6c9e9dc02e222bf9aa0d7bca45532adcd0c0e">
+<meta name="rover-doc-source-sha256" content="65119220e76035257f265768b690d3fba8f1f2a43d6eb7a9137afcc9f862af3f">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/identity-signin.html">
 <title>Account sign-in design · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -14,7 +14,7 @@
 <a href="/privacy.html">Privacy</a>
 <a href="/support.html">Support</a></nav></div></header>
 <main id="main" class="shell documentation"><aside class="docs-sidebar"><a class="docs-home" href="/docs.html">Documentation</a><nav aria-label="Documentation navigation"><details><summary>Using ROVER</summary><div><a href="/docs/user-guide.html">User guide</a><a href="/docs/how-it-works.html">How ROVER works</a><a href="/docs/importing.html">Import and export</a><a href="/docs/local-backup.html">Full local backup</a><a href="/docs/appearance.html">Appearance</a><a href="/docs/support.html">Support guidance</a></div></details><details><summary>Development and beta</summary><div><a href="/docs/status.html">Feature status</a><a href="/docs/roadmap.html">Roadmap</a><a href="/docs/changelog.html">Change history</a><a href="/docs/releasing.html">Release process</a><a href="/docs/beta-setup.html">Beta setup checklist</a></div></details><details open><summary>Plans and policies</summary><div><a href="/docs/identity-signin.html" aria-current="page">Account sign-in design</a><a href="/docs/hosted-sync.html">Hosted sync design</a><a href="/docs/pricing.html">Plans and trial details</a><a href="/docs/terms.html">Draft subscription terms</a><a href="/docs/privacy.html">Privacy and data handling</a><a href="/docs/license.html">License statement</a></div></details><details><summary>Project reference</summary><div><a href="/docs/about.html">About ROVER</a><a href="/docs/brand-guidelines.html">Brand guidelines</a><a href="/docs/hosting.html">Hosting plan</a><a href="/docs/admin-portal.html">Admin portal design</a><a href="/docs/store-listing.html">Store listing preparation</a><a href="/docs/store-policy-review.html">Store policy review</a><a href="/docs/site-development.html">Website maintenance</a><a href="/docs/project-overview.html">Project overview</a></div></details></nav></aside><article class="doc-article"><div class="doc-breadcrumb"><a href="/docs.html">Documentation</a><span aria-hidden="true">/</span><span>Plans and policies</span></div><h1 id="rover-account-sign-in">ROVER account sign-in</h1>
-<p class="doc-description">Planned Google and Microsoft identity and profile separation.</p><details class="doc-contents"><summary>On this page</summary><nav aria-label="On this page"><a class="toc-level-2" href="#account-model">Account model</a><a class="toc-level-2" href="#browser-profile-behavior">Browser-profile behavior</a><a class="toc-level-2" href="#planned-flow">Planned flow</a><a class="toc-level-2" href="#manual-setup-checklist">Manual setup checklist</a><a class="toc-level-2" href="#setup-references">Setup references</a></nav></details><div class="prose"><p>ROVER Workspaces will support <strong>Google sign-in</strong> and <strong>Microsoft sign-in</strong> for
+<p class="doc-description">Planned Google and Microsoft identity and profile separation.</p><details class="doc-contents"><summary>On this page</summary><nav aria-label="On this page"><a class="toc-level-2" href="#account-model">Account model</a><a class="toc-level-2" href="#browser-profile-behavior">Browser-profile behavior</a><a class="toc-level-2" href="#planned-flow">Planned flow</a><a class="toc-level-2" href="#current-preparation">Current preparation</a><a class="toc-level-2" href="#manual-setup-checklist">Manual setup checklist</a><a class="toc-level-2" href="#setup-references">Setup references</a></nav></details><div class="prose"><p>ROVER Workspaces will support <strong>Google sign-in</strong> and <strong>Microsoft sign-in</strong> for
 the ROVER account. These identity providers authenticate the person; they are
 separate from Google Drive and OneDrive backup connections, payment, and
 Cloudflare hosting.</p>
@@ -47,6 +47,18 @@ current Pro entitlement.</li>
 <p>No provider credentials or client secrets belong in the extension bundle. The
 provider registrations, callback URLs, and Worker secrets will be configured
 before hosted sign-in is enabled.</p>
+<h2 id="current-preparation">Current preparation</h2>
+<p>The server adapters now exchange Google and Microsoft authorization codes and
+verify real signed identity tokens. Tests cover the intended application,
+issuer, expiry, nonce, and Microsoft tenant restrictions. Browser-bound sign-in
+transactions expire after ten minutes and can be redeemed only once, including
+when callbacks arrive at the same time. Account creation uses provider, issuer,
+and subject rather than merging matching email addresses.</p>
+<p>This preparation is verified locally and in isolated server/database tests.
+Hosted callback routes, secure browser cookies, revocable sessions, and the
+extension handoff remain to complete before configuring credentials and testing
+live consent. Google Drive and OneDrive permissions will be separate opt-in
+connections. Account sign-in and account sync are not enabled for testers yet.</p>
 <h2 id="manual-setup-checklist">Manual setup checklist</h2>
 <p>When hosted sign-in is ready to configure:</p>
 <ul>
