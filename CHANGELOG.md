@@ -4,6 +4,11 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Improve automated-check reliability by running browser-interface tests in
+  separate processes while retaining automatic discovery and failure reporting.
+  All 222 application tests and the production build passed the full check.
+  Account sign-in remains disabled; this changes development tooling only.
+
 - Add and verify the private one-time extension handoff core using isolated
   database tests for proof/installation binding, concurrent redemption, replay,
   expiry and source-session revocation. HTTP and extension integration remain

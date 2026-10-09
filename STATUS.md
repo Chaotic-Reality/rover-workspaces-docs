@@ -2,6 +2,11 @@
 
 Updated October 9, 2026. This describes engineering evidence, not a store release.
 
+The application check passed all 222 tests and the build after a test-runner
+process workaround for intermittent Windows startup failures. Tests remain
+automatically discovered and failures stop the check. This tooling milestone
+does not enable any additional live capability.
+
 | Area                                                       | Current evidence                                                    | Remaining gate                                                       |
 | ---------------------------------------------------------- | ------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | Local workspace capture, edit, restore, collections, theme | Implemented with automated tests                                    | Installed Chrome/Edge upgrade and visual acceptance                  |
