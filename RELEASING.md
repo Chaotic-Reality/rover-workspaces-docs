@@ -67,6 +67,13 @@ Use two identifiers with different jobs:
 - **Release version:** the semantic version in `package.json` and `manifest.json`. This is the user-facing/store-facing version. Use patch versions for fixes and small compatible additions, minor versions for substantial feature milestones, and reserve `1.0.0` for the first accepted stable release.
 - **Build ID:** the internal identifier in `release/rover-workspaces-build.json`. CI builds use the GitHub Actions run number (`ci-123`); local packages use the source commit (`local-a1b2c3d`). It identifies the exact artifact without changing the store release version.
 
+The current personal testing version is **0.3.6**. Continue compatible fixes
+and testing milestones as 0.3.7, 0.3.8, and so on; patch numbers can exceed 9.
+Use 0.4.0 for the next substantial feature milestone. Version 0.3.51 means
+patch 51 and sorts after 0.3.6; it is not an intermediate version between
+0.3.5 and 0.3.6. Verify the installed release in the app's About page or the
+browser's extension details after reloading.
+
 Keep the application package, lockfile, manifest, and release notes aligned. Export format and local storage schema versions are separate from both the release version and build ID. A store submission increments the release version; a rebuild of the same source release creates a new build ID and must retain its own checksum record.
 
 Test upgrades with existing local workspaces, favorites, collections, and preferences. Exported workspace backups do not include favorites, collections, or appearance preferences. Do not uninstall the user's extension as an upgrade step: local extension data may be removed. Keep the extension identity unchanged.

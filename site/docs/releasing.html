@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Release process.">
-<meta name="rover-doc-source-sha256" content="0238c596b2efb348c82b767d7db92bd15390ca40efef1ec5a23937f87ddb8a94">
+<meta name="rover-doc-source-sha256" content="47ad7bb0deda9321a252d4c3a90c8660affa8aa4a5f2bff2116f08572dafafbb">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/releasing.html">
 <title>Release process · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -67,6 +67,12 @@ ready, and the beta Cloudflare environment is isolated from development.</p>
 <li><strong>Release version:</strong> the semantic version in <code>package.json</code> and <code>manifest.json</code>. This is the user-facing/store-facing version. Use patch versions for fixes and small compatible additions, minor versions for substantial feature milestones, and reserve <code>1.0.0</code> for the first accepted stable release.</li>
 <li><strong>Build ID:</strong> the internal identifier in <code>release/rover-workspaces-build.json</code>. CI builds use the GitHub Actions run number (<code>ci-123</code>); local packages use the source commit (<code>local-a1b2c3d</code>). It identifies the exact artifact without changing the store release version.</li>
 </ul>
+<p>The current personal testing version is <strong>0.3.6</strong>. Continue compatible fixes
+and testing milestones as 0.3.7, 0.3.8, and so on; patch numbers can exceed 9.
+Use 0.4.0 for the next substantial feature milestone. Version 0.3.51 means
+patch 51 and sorts after 0.3.6; it is not an intermediate version between
+0.3.5 and 0.3.6. Verify the installed release in the app&#39;s About page or the
+browser&#39;s extension details after reloading.</p>
 <p>Keep the application package, lockfile, manifest, and release notes aligned. Export format and local storage schema versions are separate from both the release version and build ID. A store submission increments the release version; a rebuild of the same source release creates a new build ID and must retain its own checksum record.</p>
 <p>Test upgrades with existing local workspaces, favorites, collections, and preferences. Exported workspace backups do not include favorites, collections, or appearance preferences. Do not uninstall the user&#39;s extension as an upgrade step: local extension data may be removed. Keep the extension identity unchanged.</p>
 <h2 id="chrome-submission">Chrome submission</h2>

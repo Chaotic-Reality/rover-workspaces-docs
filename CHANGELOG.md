@@ -4,6 +4,14 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+## 0.3.6 — development testing build
+
+Version 0.3.6 includes the reviewed **Update from current tabs** workspace
+action described below. The app's About page and browser extension details
+show this version after updating and reloading the existing installation.
+This is a personal testing build, not a browser-store release. Account sign-in
+remains disabled pending extension integration and live provider acceptance.
+
 - Add **Update from current tabs** to workspace cards: review a current-window
   capture before replacing saved tabs and groups, preserve workspace identity
   and organization, and undo the update. Empty captures and concurrent edits

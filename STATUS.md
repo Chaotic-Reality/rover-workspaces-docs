@@ -2,6 +2,10 @@
 
 Updated October 9, 2026. This describes engineering evidence, not a store release.
 
+The current local personal testing version is **0.3.6**, including Update from
+current tabs. Installed Chrome/Edge acceptance remains pending. Reload the
+existing unpacked installation and check About or extension details for its version.
+
 An earlier application check passed all 222 tests and the build after a
 test-runner process workaround. A later check still encountered an intermittent
 Windows worker startup failure before a browser test ran; the underlying runner
