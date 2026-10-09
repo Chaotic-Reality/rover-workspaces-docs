@@ -4,6 +4,11 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Add hashed server session registration with immediate revocation, expiry
+  enforcement, and isolation between sessions and accounts. Unit and isolated
+  database runtime checks verify sign-out without retaining bearer tokens.
+  Hosted sign-out and live account sign-in remain to integrate.
+
 - Update the pinned development/deployment tools and source-map dependency to
   address reported dependency vulnerabilities. Existing Cloudflare resources,
   compatibility settings, and extension permissions remain unchanged.

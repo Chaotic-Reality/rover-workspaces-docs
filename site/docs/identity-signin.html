@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Account sign-in design.">
-<meta name="rover-doc-source-sha256" content="65119220e76035257f265768b690d3fba8f1f2a43d6eb7a9137afcc9f862af3f">
+<meta name="rover-doc-source-sha256" content="03b24522648477c96876512b39b90b59d6cf46ae975697c2e85a598e4f4219f4">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/identity-signin.html">
 <title>Account sign-in design · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -55,7 +55,9 @@ transactions expire after ten minutes and can be redeemed only once, including
 when callbacks arrive at the same time. Account creation uses provider, issuer,
 and subject rather than merging matching email addresses.</p>
 <p>This preparation is verified locally and in isolated server/database tests.
-Hosted callback routes, secure browser cookies, revocable sessions, and the
+Revocable session storage also passes isolated tests: signing out invalidates
+that session without ending other sessions or affecting another account.
+Hosted callback routes, secure browser cookies, sign-out integration, and the
 extension handoff remain to complete before configuring credentials and testing
 live consent. Google Drive and OneDrive permissions will be separate opt-in
 connections. Account sign-in and account sync are not enabled for testers yet.</p>

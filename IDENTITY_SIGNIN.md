@@ -50,7 +50,9 @@ when callbacks arrive at the same time. Account creation uses provider, issuer,
 and subject rather than merging matching email addresses.
 
 This preparation is verified locally and in isolated server/database tests.
-Hosted callback routes, secure browser cookies, revocable sessions, and the
+Revocable session storage also passes isolated tests: signing out invalidates
+that session without ending other sessions or affecting another account.
+Hosted callback routes, secure browser cookies, sign-out integration, and the
 extension handoff remain to complete before configuring credentials and testing
 live consent. Google Drive and OneDrive permissions will be separate opt-in
 connections. Account sign-in and account sync are not enabled for testers yet.
