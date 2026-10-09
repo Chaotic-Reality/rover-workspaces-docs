@@ -4,6 +4,12 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Prepare beta-host account routing behind a disabled feature flag and add an
+  explanatory Account page to shared navigation. Verify tester authentication
+  and disabled-route behavior in the server runtime, keep provider buttons
+  disabled, and suppress callback query strings in stored invocation logs.
+  No live provider connection or account database is enabled by this change.
+
 - Add a tested private account HTTP adapter with protected host cookies,
   same-origin CSRF checks, tester-bound callbacks, session registration, and
   sign-out. The isolated server/database flow passes with signed provider tokens;

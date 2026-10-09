@@ -59,8 +59,11 @@ connections. Account sign-in and account sync are not enabled for testers yet.
 
 The HTTP adapter also passes isolated tests for protected cookies, explicit
 same-origin actions, one-time callbacks tied to the approved tester, and sign-out.
-It has not been connected to the beta host. Provider buttons and callback routes
-must stay unavailable until host configuration and live acceptance are complete.
+The beta host now includes the routes behind a disabled feature flag. The
+[account page](/account.html) explains the distinction between tester access
+and ROVER account sign-in; provider buttons remain disabled. Account database
+configuration, enabled-host tests, extension handoff, and live consent remain
+before activation. Visiting the page does not connect an account or upload data.
 
 ## Manual setup checklist
 

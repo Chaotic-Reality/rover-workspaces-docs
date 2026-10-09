@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Account sign-in design.">
-<meta name="rover-doc-source-sha256" content="12030edb997bf32a3788b4de3584c627e7f383f011f1fdaa5e92ea05d5224e1e">
+<meta name="rover-doc-source-sha256" content="763aabedb2fa2801326562a147237a89b6fc3392af8559fbc8b0ca4d9f9f4e8c">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/identity-signin.html">
 <title>Account sign-in design · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -11,6 +11,7 @@
 <a href="/docs.html" aria-current="page">Documentation</a>
 <a href="/beta-install.html">Beta setup</a>
 <a href="/pricing.html">Plans</a>
+<a href="/account.html">Account</a>
 <a href="/privacy.html">Privacy</a>
 <a href="/support.html">Support</a></nav></div></header>
 <main id="main" class="shell documentation"><aside class="docs-sidebar"><a class="docs-home" href="/docs.html">Documentation</a><nav aria-label="Documentation navigation"><details><summary>Using ROVER</summary><div><a href="/docs/user-guide.html">User guide</a><a href="/docs/how-it-works.html">How ROVER works</a><a href="/docs/importing.html">Import and export</a><a href="/docs/local-backup.html">Full local backup</a><a href="/docs/appearance.html">Appearance</a><a href="/docs/support.html">Support guidance</a></div></details><details><summary>Development and beta</summary><div><a href="/docs/status.html">Feature status</a><a href="/docs/roadmap.html">Roadmap</a><a href="/docs/changelog.html">Change history</a><a href="/docs/releasing.html">Release process</a><a href="/docs/beta-setup.html">Beta setup checklist</a></div></details><details open><summary>Plans and policies</summary><div><a href="/docs/identity-signin.html" aria-current="page">Account sign-in design</a><a href="/docs/hosted-sync.html">Hosted sync design</a><a href="/docs/pricing.html">Plans and trial details</a><a href="/docs/terms.html">Draft subscription terms</a><a href="/docs/privacy.html">Privacy and data handling</a><a href="/docs/license.html">License statement</a></div></details><details><summary>Project reference</summary><div><a href="/docs/about.html">About ROVER</a><a href="/docs/brand-guidelines.html">Brand guidelines</a><a href="/docs/hosting.html">Hosting plan</a><a href="/docs/admin-portal.html">Admin portal design</a><a href="/docs/store-listing.html">Store listing preparation</a><a href="/docs/store-policy-review.html">Store policy review</a><a href="/docs/site-development.html">Website maintenance</a><a href="/docs/project-overview.html">Project overview</a></div></details></nav></aside><article class="doc-article"><div class="doc-breadcrumb"><a href="/docs.html">Documentation</a><span aria-hidden="true">/</span><span>Plans and policies</span></div><h1 id="rover-account-sign-in">ROVER account sign-in</h1>
@@ -63,8 +64,11 @@ live consent. Google Drive and OneDrive permissions will be separate opt-in
 connections. Account sign-in and account sync are not enabled for testers yet.</p>
 <p>The HTTP adapter also passes isolated tests for protected cookies, explicit
 same-origin actions, one-time callbacks tied to the approved tester, and sign-out.
-It has not been connected to the beta host. Provider buttons and callback routes
-must stay unavailable until host configuration and live acceptance are complete.</p>
+The beta host now includes the routes behind a disabled feature flag. The
+<a href="/account.html">account page</a> explains the distinction between tester access
+and ROVER account sign-in; provider buttons remain disabled. Account database
+configuration, enabled-host tests, extension handoff, and live consent remain
+before activation. Visiting the page does not connect an account or upload data.</p>
 <h2 id="manual-setup-checklist">Manual setup checklist</h2>
 <p>When hosted sign-in is ready to configure:</p>
 <ul>
@@ -91,5 +95,6 @@ sessions, and a second Chrome profile before enabling hosted activation.</li>
 <a href="/docs.html" aria-current="page">Documentation</a>
 <a href="/beta-install.html">Beta setup</a>
 <a href="/pricing.html">Plans</a>
+<a href="/account.html">Account</a>
 <a href="/privacy.html">Privacy</a>
 <a href="/support.html">Support</a></nav></div></footer></body></html>

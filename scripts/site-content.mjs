@@ -5,6 +5,7 @@ export const pages = [
   ["docs", "Documentation"],
   ["beta-install", "Beta setup"],
   ["pricing", "Plans"],
+  ["account", "Account"],
   ["privacy", "Privacy"],
   ["support", "Support"],
   ["report-bug", "Report a bug"],
