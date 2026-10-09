@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Account sign-in design.">
-<meta name="rover-doc-source-sha256" content="03b24522648477c96876512b39b90b59d6cf46ae975697c2e85a598e4f4219f4">
+<meta name="rover-doc-source-sha256" content="12030edb997bf32a3788b4de3584c627e7f383f011f1fdaa5e92ea05d5224e1e">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/identity-signin.html">
 <title>Account sign-in design · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -61,6 +61,10 @@ Hosted callback routes, secure browser cookies, sign-out integration, and the
 extension handoff remain to complete before configuring credentials and testing
 live consent. Google Drive and OneDrive permissions will be separate opt-in
 connections. Account sign-in and account sync are not enabled for testers yet.</p>
+<p>The HTTP adapter also passes isolated tests for protected cookies, explicit
+same-origin actions, one-time callbacks tied to the approved tester, and sign-out.
+It has not been connected to the beta host. Provider buttons and callback routes
+must stay unavailable until host configuration and live acceptance are complete.</p>
 <h2 id="manual-setup-checklist">Manual setup checklist</h2>
 <p>When hosted sign-in is ready to configure:</p>
 <ul>

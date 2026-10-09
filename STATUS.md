@@ -1,13 +1,13 @@
 # ROVER capability status
 
-Updated October 8, 2026. This describes engineering evidence, not a store release.
+Updated October 9, 2026. This describes engineering evidence, not a store release.
 
 | Area                                                       | Current evidence                                                    | Remaining gate                                                       |
 | ---------------------------------------------------------- | ------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | Local workspace capture, edit, restore, collections, theme | Implemented with automated tests                                    | Installed Chrome/Edge upgrade and visual acceptance                  |
 | Custom Templates, organization, history, scheduled capture | Implemented; local entitlement simulation and manual 15-day trial   | Pilot usefulness and installed-browser behavior                      |
 | Free and paid plans                                        | Free limit of two workspaces; planned Pro Local and Pro Sync        | Actual purchase/renewal/provider sandbox and legal terms             |
-| Google/Microsoft sign-in                                   | Signed-token adapters, one-time transactions, and revocable session storage tested in isolation | Hosted callbacks, cookies, sign-out integration, extension handoff, and live consent |
+| Google/Microsoft sign-in                                   | Signed tokens, one-time transactions, revocable storage and cookie/CSRF HTTP adapter tested in isolation | Beta host mounting, account page, extension handoff, and live consent |
 | Google Drive/OneDrive backups                              | Narrow-scope adapter and encrypted transfer contracts tested        | OAuth consent, token handling, live rate-limit/revocation testing    |
 | ROVER-hosted sync                                          | Free staging Worker/D1 deployed; entitlement/consent enforced        | Live identity, key recovery, profile sync and conflict acceptance    |
 | Cross-browser portability                                  | Named profiles, mappings, consent, transfer plans implemented       | Hosted UI retrieval and live Chrome↔Edge/profile round trip          |

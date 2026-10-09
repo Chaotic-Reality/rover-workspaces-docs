@@ -4,6 +4,11 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Add a tested private account HTTP adapter with protected host cookies,
+  same-origin CSRF checks, tester-bound callbacks, session registration, and
+  sign-out. The isolated server/database flow passes with signed provider tokens;
+  host mounting and live provider consent remain pending.
+
 - Add hashed server session registration with immediate revocation, expiry
   enforcement, and isolation between sessions and accounts. Unit and isolated
   database runtime checks verify sign-out without retaining bearer tokens.

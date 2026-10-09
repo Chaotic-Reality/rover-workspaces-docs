@@ -57,6 +57,11 @@ extension handoff remain to complete before configuring credentials and testing
 live consent. Google Drive and OneDrive permissions will be separate opt-in
 connections. Account sign-in and account sync are not enabled for testers yet.
 
+The HTTP adapter also passes isolated tests for protected cookies, explicit
+same-origin actions, one-time callbacks tied to the approved tester, and sign-out.
+It has not been connected to the beta host. Provider buttons and callback routes
+must stay unavailable until host configuration and live acceptance are complete.
+
 ## Manual setup checklist
 
 When hosted sign-in is ready to configure:
