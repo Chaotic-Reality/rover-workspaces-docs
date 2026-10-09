@@ -4,6 +4,11 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Add and verify the private one-time extension handoff core using isolated
+  database tests for proof/installation binding, concurrent redemption, replay,
+  expiry and source-session revocation. HTTP and extension integration remain
+  pending; deployed account sign-in is still disabled.
+
 - Prepare a separate beta account database with empty identity and session
   tables. Keep account migrations separate from workspace sync migrations and
   retain disabled sign-in until the handoff and provider consent are verified.

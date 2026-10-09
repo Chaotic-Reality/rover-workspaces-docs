@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Account sign-in design.">
-<meta name="rover-doc-source-sha256" content="fc93c8f01d0dd5fc883883f572bfd30f2c56865031f79274c52a8fbb562ef761">
+<meta name="rover-doc-source-sha256" content="4bbaf3de4a96fca587ef425c53fd80fdb9cd8d35ef3bd040918ff5707a4af045">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/identity-signin.html">
 <title>Account sign-in design · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -71,6 +71,12 @@ and ROVER account sign-in; provider buttons remain disabled. Account database
 is prepared separately from workspace sync storage. The extension handoff,
 installed-browser acceptance and live consent remain
 before activation. Visiting the page does not connect an account or upload data.</p>
+<p>The one-time extension handoff core also passes isolated database tests. Codes
+expire quickly, require a private proof from the requesting installation, and
+can be redeemed only once. A revoked website session cannot authorize redemption,
+and a new extension session cannot outlast the source session. This core is not
+yet connected to public HTTP routes or the extension sign-in UI; live browser
+acceptance and provider consent remain required.</p>
 <h2 id="manual-setup-checklist">Manual setup checklist</h2>
 <p>When hosted sign-in is ready to configure:</p>
 <ul>

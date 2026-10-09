@@ -67,6 +67,13 @@ is prepared separately from workspace sync storage. The extension handoff,
 installed-browser acceptance and live consent remain
 before activation. Visiting the page does not connect an account or upload data.
 
+The one-time extension handoff core also passes isolated database tests. Codes
+expire quickly, require a private proof from the requesting installation, and
+can be redeemed only once. A revoked website session cannot authorize redemption,
+and a new extension session cannot outlast the source session. This core is not
+yet connected to public HTTP routes or the extension sign-in UI; live browser
+acceptance and provider consent remain required.
+
 ## Manual setup checklist
 
 When hosted sign-in is ready to configure:
