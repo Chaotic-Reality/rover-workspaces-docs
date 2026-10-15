@@ -4,6 +4,10 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Fix the protected Account and connection approval pages' referrer policy so
+  native browser forms preserve their origin. Exact origin and CSRF checks stay
+  enforced; callback responses retain their no-referrer protection.
+
 - Enable the protected website's Google sign-in for approved-tester acceptance.
   Extension connection remains disabled; live Google consent/sign-out acceptance
   is still pending. No Drive permission, backup, sync or billing is enabled.

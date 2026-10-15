@@ -3,6 +3,8 @@
 Updated October 15, 2026. This describes engineering evidence, not a store release.
 
 Website-only Google sign-in is enabled for an approved-tester acceptance test.
+The first browser attempt exposed a form-page referrer-policy conflict; its
+correction has runtime coverage, with owner retry still pending.
 The first live Google consent/sign-out result is still pending. Extension
 connection stays disabled, and Microsoft, Drive backup and sync remain unavailable.
 

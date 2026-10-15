@@ -10,6 +10,11 @@ You choose when to capture, import, export, or open a workspace. Capture can als
 
 ## Account connection preparation
 
+Account and connection-approval form pages send only the HTTPS website origin
+as referrer information, never their paths or query strings. This preserves
+the browser origin needed for the server's form checks. OAuth callback and
+credential-bearing API responses continue to suppress referrer information.
+
 The protected beta Account page offers Google sign-in for approved testers
 during live acceptance. This website account test is optional; the extension's
 connection remains disabled. It requests only openid, email and profile, not

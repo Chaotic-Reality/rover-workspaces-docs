@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Privacy and data handling.">
-<meta name="rover-doc-source-sha256" content="b7cb37748116422725435913e81d1216b79703bf9d042927254e590b9bcd79b2">
+<meta name="rover-doc-source-sha256" content="e361b46401f9e186cbb0eee7c9876d4e9f34d729995c876d7cc39d5a7fc4d50f">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/privacy.html">
 <title>Privacy and data handling · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -20,6 +20,10 @@
 <p>ROVER Workspaces helps you organize your tabs without sending your saved workspaces to us. The current extension keeps workspace information and preferences on your device. We do not receive, sell, or use that locally stored workspace data for advertising. No ROVER Workspaces account is required.</p>
 <p>You choose when to capture, import, export, or open a workspace. Capture can also be started from the extension context menu. If you explicitly enable daily scheduled capture in settings, the browser alarm runs at the chosen local time and saves a local workspace while the browser is available; Free limits and paid-feature checks still apply. Scheduling is off by default. Exporting creates a file you control; opening a workspace connects your browser to the saved websites. Information you voluntarily post in public support issues is separate from the extension&#39;s local data and is publicly visible on GitHub. The details below explain these boundaries and how to remove your local data.</p>
 <h2 id="account-connection-preparation">Account connection preparation</h2>
+<p>Account and connection-approval form pages send only the HTTPS website origin
+as referrer information, never their paths or query strings. This preserves
+the browser origin needed for the server&#39;s form checks. OAuth callback and
+credential-bearing API responses continue to suppress referrer information.</p>
 <p>The protected beta Account page offers Google sign-in for approved testers
 during live acceptance. This website account test is optional; the extension&#39;s
 connection remains disabled. It requests only openid, email and profile, not

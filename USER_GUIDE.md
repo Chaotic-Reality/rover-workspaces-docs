@@ -17,6 +17,11 @@ connect the extension or upload workspaces. Microsoft remains unavailable.
 
 ## Account connection preparation
 
+If an earlier website sign-in attempt showed “Reload the page and try again,”
+open a fresh [Account page](https://beta.roverworkspaces.com/account) and choose
+Continue with Google again. Do not reload or resubmit the old /auth/google/start
+error page. Website fixes do not require reinstalling the extension.
+
 The sidebar's **Account** button opens the account dialog. Sign-in remains disabled in this build. Opening the app or dialog makes no account request or website permission request. Local workspace features need no account.
 
 After future activation, Sign in will request optional access to the beta website and open the browser's sign-in window. Explicit website approval is required before exchanging a one-time code. This connects an account session only; it does not enable Drive backup or workspace sync. Close the dialog to cancel. **Sign out of this browser** revokes its server session and clears the local record. It does not sign out the website. If the server is unreachable, the local record is still cleared and the dialog reports that revocation was not confirmed; the server session expires within 15 minutes. Installed-browser acceptance remains an activation gate.
