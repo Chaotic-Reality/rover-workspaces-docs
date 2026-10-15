@@ -4,6 +4,10 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Prepare browser-side one-time sign-in proof and callback validation, with
+  isolated tests for destination/state tampering, expiry, cancellation and replay.
+  This adds no live login control, network request or extension permission.
+
 - Prepare protected Account-page sign-in and sign-out forms with isolated
   runtime coverage. Controls remain disabled on the beta while extension
   connection and live Google consent are unfinished; Microsoft setup is pending.

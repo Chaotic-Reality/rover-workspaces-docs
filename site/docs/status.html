@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Feature status.">
-<meta name="rover-doc-source-sha256" content="a17e78e43fc99d9df8b906d0e4f09f30c0da5adda8fdb922e202a6fc02ec7753">
+<meta name="rover-doc-source-sha256" content="e85a0f1648284f748655b473177093f0947e2e4987c33afbe6cb918c284f79a2">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/status.html">
 <title>Feature status · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -21,7 +21,11 @@ configuration and the encrypted session secret are prepared on the existing
 beta Worker. Native Account-page sign-in/sign-out forms pass isolated runtime
 checks, including signed tester access, CSRF and session cookies. Account and
 extension handoff activation remain disabled; live Google consent and installed
-extension connection remain to test. No Drive connection is enabled.</p>
+extension connection remain to test. No Drive connection is enabled.
+The owner-supplied Chrome testing extension ID is registered for the pending
+handoff. This does not enable sign-in or approve other browser installations.
+Browser-side proof/state lifecycle tests cover exact callback targets, one-time
+use, expiry and cancellation. Browser launch and exchange transport are not wired yet.</p>
 <p>The current local personal testing version is <strong>0.3.7</strong>, including Update from
 current tabs and update notices. Installed Chrome/Edge acceptance remains pending. Reload the
 existing unpacked installation and check About or extension details for its version.</p>

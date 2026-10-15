@@ -8,6 +8,10 @@ beta Worker. Native Account-page sign-in/sign-out forms pass isolated runtime
 checks, including signed tester access, CSRF and session cookies. Account and
 extension handoff activation remain disabled; live Google consent and installed
 extension connection remain to test. No Drive connection is enabled.
+The owner-supplied Chrome testing extension ID is registered for the pending
+handoff. This does not enable sign-in or approve other browser installations.
+Browser-side proof/state lifecycle tests cover exact callback targets, one-time
+use, expiry and cancellation. Browser launch and exchange transport are not wired yet.
 
 The current local personal testing version is **0.3.7**, including Update from
 current tabs and update notices. Installed Chrome/Edge acceptance remains pending. Reload the
