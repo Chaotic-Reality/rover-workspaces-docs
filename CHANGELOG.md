@@ -4,6 +4,10 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Enable the protected website's Google sign-in for approved-tester acceptance.
+  Extension connection remains disabled; live Google consent/sign-out acceptance
+  is still pending. No Drive permission, backup, sync or billing is enabled.
+
 - Prepare browser-side one-time sign-in proof and callback validation, with
   isolated tests for destination/state tampering, expiry, cancellation and replay.
   This adds no live login control, network request or extension permission.

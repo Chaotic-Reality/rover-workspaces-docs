@@ -2,11 +2,14 @@
 
 Updated October 15, 2026. This describes engineering evidence, not a store release.
 
+Website-only Google sign-in is enabled for an approved-tester acceptance test.
+The first live Google consent/sign-out result is still pending. Extension
+connection stays disabled, and Microsoft, Drive backup and sync remain unavailable.
+
 Google beta callback registration was confirmed by the owner. Google client
 configuration and the encrypted session secret are prepared on the existing
 beta Worker. Native Account-page sign-in/sign-out forms pass isolated runtime
-checks, including signed tester access, CSRF and session cookies. Account and
-extension handoff activation remain disabled; live Google consent and installed
+checks, including signed tester access, CSRF and session cookies. Extension handoff activation remains disabled; live Google consent and installed
 extension connection remain to test. No Drive connection is enabled.
 The owner-supplied Chrome testing extension ID is registered for the pending
 handoff. This does not enable sign-in or approve other browser installations.
@@ -31,7 +34,7 @@ stop the check. This tooling work enables no additional live capability.
 | Update saved workspace from current tabs | Replacement preview, revision storage and stale-edit rejection implemented; UI coverage added | Installed Chrome/Edge preview, cancel, update and undo acceptance |
 | Custom Templates, organization, history, scheduled capture | Implemented; local entitlement simulation and manual 15-day trial   | Pilot usefulness and installed-browser behavior                      |
 | Free and paid plans                                        | Free limit of two workspaces; planned Pro Local and Pro Sync        | Actual purchase/renewal/provider sandbox and legal terms             |
-| Google/Microsoft sign-in                                   | Beta host composition, including protected extension approval/exchange, passes isolated runtime tests; empty account database prepared; deployed sign-in and handoff stay disabled | Extension UI and transport acceptance, installed-browser acceptance and live consent |
+| Google/Microsoft sign-in                                   | Beta host composition, including protected extension approval/exchange, passes isolated runtime tests; empty account database prepared; website Google sign-in enabled for acceptance, extension handoff stays disabled | Extension UI and transport acceptance, installed-browser acceptance and live consent |
 | Google Drive/OneDrive backups                              | Narrow-scope adapter and encrypted transfer contracts tested        | OAuth consent, token handling, live rate-limit/revocation testing    |
 | ROVER-hosted sync                                          | Free staging Worker/D1 deployed; entitlement/consent enforced        | Live identity, key recovery, profile sync and conflict acceptance    |
 | Cross-browser portability                                  | Named profiles, mappings, consent, transfer plans implemented       | Hosted UI retrieval and live Chrome↔Edge/profile round trip          |

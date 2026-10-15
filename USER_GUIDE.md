@@ -6,6 +6,15 @@ The development build supports Chrome and Edge and keeps data in the current
 browser profile. Check [feature status](STATUS.md) for what is ready and what
 still needs setup; live cloud connections are not enabled.
 
+## Website Google sign-in test
+
+Open [Account](https://beta.roverworkspaces.com/account) and complete the tester
+email-code gate if prompted. Choose **Continue with Google**, select an account
+registered as a Google test user, and complete consent. On return, check for
+**Signed in to ROVER**. Choose **Sign out of ROVER**, reload, and confirm that
+Continue with Google returns. This tests the website account only; it does not
+connect the extension or upload workspaces. Microsoft remains unavailable.
+
 ## Account connection preparation
 
 The sidebar's **Account** button opens the account dialog. Sign-in remains disabled in this build. Opening the app or dialog makes no account request or website permission request. Local workspace features need no account.

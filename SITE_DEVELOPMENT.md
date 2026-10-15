@@ -107,7 +107,9 @@ Cloudflare Access has been configured and independently tested.
 The Account page has a static explanation with disabled provider controls.
 The private beta entry can replace its designated controls section with native
 sign-in/sign-out forms after verifying the tester, account configuration and
-session. This rendering and account routes remain behind a disabled feature
-flag. Do not enable that flag as part of routine documentation deployment.
+session. Rendering and account routes are controlled by the website account
+feature flag, now enabled for the owner's approved-tester Google acceptance
+test. The separate extension handoff flag remains disabled. Do not change
+either switch as part of routine documentation deployment.
 Account storage, credentials, enabled-host acceptance and live provider consent
 have separate gates. Public previews retain the disabled explanation.

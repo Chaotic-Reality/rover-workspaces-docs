@@ -10,7 +10,27 @@ You choose when to capture, import, export, or open a workspace. Capture can als
 
 ## Account connection preparation
 
-Account sign-in remains disabled. The prepared connection uses a random installation ID separately from workspace data, with one-time state and proof in memory. Short-lived connection tokens will be kept only in browser-session storage, outside Full local backups and exports; restarting the browser clears that storage. Browser sign-out attempts to revoke that exact server session and always clears its local record. If revocation cannot be confirmed, the dialog reports this and the server session expires within 15 minutes. Website sign-out is separate.
+The protected beta Account page offers Google sign-in for approved testers
+during live acceptance. This website account test is optional; the extension's
+connection remains disabled. It requests only openid, email and profile, not
+Google Drive access. Google processes the sign-in under its own policies.
+
+After successful sign-in, ROVER stores Google's provider/issuer/subject binding
+and an opaque ROVER account ID in its existing Cloudflare database. It does not
+store your Google password, access token, refresh token, name or email in that
+identity table. A temporary transaction stores hashed state/browser bindings,
+nonce and proof material, usable for up to ten minutes. Expired transactions
+are cleaned when another sign-in starts.
+
+The website session uses a Secure, HttpOnly host cookie and expires after
+15 minutes. The database keeps its token hash, account ID and expiry, never the
+bearer token. Website Sign out of ROVER revokes that session and clears its
+cookies. Expired session records are cleaned when another session is created;
+identity records remain until deletion. Ask the maintainer through your private
+tester contact to delete a beta account. Account sign-out/deletion does not
+delete workspaces stored in your extension. No workspace data is uploaded.
+
+Extension account sign-in remains disabled. The prepared connection uses a random installation ID separately from workspace data, with one-time state and proof in memory. Short-lived connection tokens will be kept only in browser-session storage, outside Full local backups and exports; restarting the browser clears that storage. Browser sign-out attempts to revoke that exact server session and always clears its local record. If revocation cannot be confirmed, the dialog reports this and the server session expires within 15 minutes. Website sign-out is separate.
 
 After activation, explicit sign-in will send the installation ID, extension ID, random state and public proof challenge to the protected beta website. The verifier and one-time code are sent only in a bounded exchange to that website. No workspace content is sent. A short-lived HttpOnly connection cookie lets the website resume explicit approval after Google login. Google sign-in, Drive backup and workspace sync are separate choices.
 
@@ -31,7 +51,7 @@ These records use extension-local storage in the current browser profile. ROVER 
 
 ## What the extension does not collect
 
-The current implementation has no ROVER Workspaces account, analytics, advertising, crash-report upload, cloud synchronization, or server that receives saved workspaces. It does not read page content, cookies, passwords, form entries, or the browser's history database. It excludes private windows and browser-internal, file, and unsupported tab URLs when capturing.
+The extension account connection remains disabled, while the protected website offers the optional Google account test described above. The extension has no analytics, advertising, crash-report upload, cloud synchronization, or server that receives saved workspaces. It does not read page content, cookies, passwords, form entries, or the browser's history database. It excludes private windows and browser-internal, file, and unsupported tab URLs when capturing.
 
 URLs and titles can still contain personal information, search terms, private document names, or access tokens in query strings. Capture does not remove that information. Review saved data and exports before sharing them.
 

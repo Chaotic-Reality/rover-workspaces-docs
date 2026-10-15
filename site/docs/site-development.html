@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Website maintenance.">
-<meta name="rover-doc-source-sha256" content="b9f67dac3c8120bf369445138fa797789dbf5668742acd9377886a858fa83771">
+<meta name="rover-doc-source-sha256" content="397faa8f873bd1ee97008dcc986f8e5366f6c4829ee1d455ea3fc33a230dfc93">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/site-development.html">
 <title>Website maintenance · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -142,8 +142,10 @@ Cloudflare Access has been configured and independently tested.</p>
 <p>The Account page has a static explanation with disabled provider controls.
 The private beta entry can replace its designated controls section with native
 sign-in/sign-out forms after verifying the tester, account configuration and
-session. This rendering and account routes remain behind a disabled feature
-flag. Do not enable that flag as part of routine documentation deployment.
+session. Rendering and account routes are controlled by the website account
+feature flag, now enabled for the owner&#39;s approved-tester Google acceptance
+test. The separate extension handoff flag remains disabled. Do not change
+either switch as part of routine documentation deployment.
 Account storage, credentials, enabled-host acceptance and live provider consent
 have separate gates. Public previews retain the disabled explanation.</p>
 </div><p class="doc-source">This page is generated from the maintained documentation. <a href="https://github.com/Chaotic-Reality/rover-workspaces-docs/blob/main/SITE_DEVELOPMENT.md">View its source and revision history on GitHub</a>.</p></article></main>

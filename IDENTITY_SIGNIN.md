@@ -40,6 +40,17 @@ No provider credentials or client secrets belong in the extension bundle. The
 provider registrations, callback URLs, and Worker secrets will be configured
 before hosted sign-in is enabled.
 
+## Website Google acceptance test
+
+The protected beta Account page offers **Continue with Google** to approved
+website testers. This is the first live acceptance stage, not a verified account
+sync service. Complete Google consent to return to the Account page, where
+**Signed in to ROVER** and **Sign out of ROVER** should appear. Sign out, reload,
+and verify the sign-in control returns. The website session lasts 15 minutes.
+Microsoft remains unavailable. The extension sign-in button stays disabled;
+Drive backup and workspace sync are separate future steps. See the privacy
+policy for account records and cookies used by this optional test.
+
 ## Current preparation
 
 The extension Account dialog and explicit connection approval page are now
