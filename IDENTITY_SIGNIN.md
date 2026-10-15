@@ -54,8 +54,11 @@ Revocable session storage also passes isolated tests: signing out invalidates
 that session without ending other sessions or affecting another account.
 Hosted callback routes, secure browser cookies and sign-out integration also
 pass an enabled-host isolated runtime test. Remote account storage and the
-extension handoff remain before configuring credentials and testing live
-consent. Google Drive and OneDrive permissions will be separate opt-in
+extension connection remain before testing live consent. Google credentials
+are prepared for the beta, and native Account-page forms pass isolated host
+tests. When activation is ready, configured providers offer Continue with
+Google or Microsoft; an active session offers Sign out of ROVER. These controls
+remain disabled in the live beta. Google Drive and OneDrive permissions will be separate opt-in
 connections. Account sign-in and account sync are not enabled for testers yet.
 
 The HTTP adapter also passes isolated tests for protected cookies, explicit

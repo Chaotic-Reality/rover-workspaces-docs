@@ -104,8 +104,10 @@ Administration files stay outside `site/`. The smoke check requires public
 `/admin/` and unknown paths to return 404. Do not deploy the admin shell until
 Cloudflare Access has been configured and independently tested.
 
-The Account page is a static explanation with disabled provider controls. The
-private beta entry verifies tester assertions and keeps account routes behind
-a disabled feature flag. Do not enable that flag or add browser sign-in forms
-as part of routine documentation deployment. Account storage, credentials,
-enabled-host acceptance and live provider consent have separate gates.
+The Account page has a static explanation with disabled provider controls.
+The private beta entry can replace its designated controls section with native
+sign-in/sign-out forms after verifying the tester, account configuration and
+session. This rendering and account routes remain behind a disabled feature
+flag. Do not enable that flag as part of routine documentation deployment.
+Account storage, credentials, enabled-host acceptance and live provider consent
+have separate gates. Public previews retain the disabled explanation.

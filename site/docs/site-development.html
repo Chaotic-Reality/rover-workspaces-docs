@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Website maintenance.">
-<meta name="rover-doc-source-sha256" content="d0d64d29289d6cd5ee30773b32eb6560861d494abbd9e11ec35680e438522770">
+<meta name="rover-doc-source-sha256" content="b9f67dac3c8120bf369445138fa797789dbf5668742acd9377886a858fa83771">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/site-development.html">
 <title>Website maintenance · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -139,11 +139,13 @@ public surface later; do not quietly exempt beta privacy/terms pages.</p>
 <p>Administration files stay outside <code>site/</code>. The smoke check requires public
 <code>/admin/</code> and unknown paths to return 404. Do not deploy the admin shell until
 Cloudflare Access has been configured and independently tested.</p>
-<p>The Account page is a static explanation with disabled provider controls. The
-private beta entry verifies tester assertions and keeps account routes behind
-a disabled feature flag. Do not enable that flag or add browser sign-in forms
-as part of routine documentation deployment. Account storage, credentials,
-enabled-host acceptance and live provider consent have separate gates.</p>
+<p>The Account page has a static explanation with disabled provider controls.
+The private beta entry can replace its designated controls section with native
+sign-in/sign-out forms after verifying the tester, account configuration and
+session. This rendering and account routes remain behind a disabled feature
+flag. Do not enable that flag as part of routine documentation deployment.
+Account storage, credentials, enabled-host acceptance and live provider consent
+have separate gates. Public previews retain the disabled explanation.</p>
 </div><p class="doc-source">This page is generated from the maintained documentation. <a href="https://github.com/Chaotic-Reality/rover-workspaces-docs/blob/main/SITE_DEVELOPMENT.md">View its source and revision history on GitHub</a>.</p></article></main>
 <footer><div class="shell"><p class="brand-meaning">ROVER means <strong>R</strong>estore, <strong>O</strong>rganize, <strong>V</strong>iew, <strong>E</strong>xplore, <strong>R</strong>epeat.</p><p>Make room for focus. This is a development beta; store availability and cloud services have not been announced.</p><nav aria-label="Footer navigation"><a href="/">Home</a>
 <a href="/how-it-works.html">How it works</a>

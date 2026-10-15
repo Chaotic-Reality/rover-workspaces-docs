@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Account sign-in design.">
-<meta name="rover-doc-source-sha256" content="c3fca87dc1282558ed11a5d18aa9e9d1f3d06240e91f82aa34f07eaec5987416">
+<meta name="rover-doc-source-sha256" content="9703f19da7b3fa39976dea33f051aebcf63d73604a6fbdf419b56d1f9e42db92">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/identity-signin.html">
 <title>Account sign-in design · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -60,8 +60,11 @@ Revocable session storage also passes isolated tests: signing out invalidates
 that session without ending other sessions or affecting another account.
 Hosted callback routes, secure browser cookies and sign-out integration also
 pass an enabled-host isolated runtime test. Remote account storage and the
-extension handoff remain before configuring credentials and testing live
-consent. Google Drive and OneDrive permissions will be separate opt-in
+extension connection remain before testing live consent. Google credentials
+are prepared for the beta, and native Account-page forms pass isolated host
+tests. When activation is ready, configured providers offer Continue with
+Google or Microsoft; an active session offers Sign out of ROVER. These controls
+remain disabled in the live beta. Google Drive and OneDrive permissions will be separate opt-in
 connections. Account sign-in and account sync are not enabled for testers yet.</p>
 <p>The HTTP adapter also passes isolated tests for protected cookies, explicit
 same-origin actions, one-time callbacks tied to the approved tester, and sign-out.

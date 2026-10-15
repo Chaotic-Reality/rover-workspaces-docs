@@ -1,6 +1,13 @@
 # ROVER capability status
 
-Updated October 9, 2026. This describes engineering evidence, not a store release.
+Updated October 14, 2026. This describes engineering evidence, not a store release.
+
+Google beta callback registration was confirmed by the owner. Google client
+configuration and the encrypted session secret are prepared on the existing
+beta Worker. Native Account-page sign-in/sign-out forms pass isolated runtime
+checks, including signed tester access, CSRF and session cookies. Account and
+extension handoff activation remain disabled; live Google consent and installed
+extension connection remain to test. No Drive connection is enabled.
 
 The current local personal testing version is **0.3.7**, including Update from
 current tabs and update notices. Installed Chrome/Edge acceptance remains pending. Reload the

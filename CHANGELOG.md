@@ -4,6 +4,10 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Prepare protected Account-page sign-in and sign-out forms with isolated
+  runtime coverage. Controls remain disabled on the beta while extension
+  connection and live Google consent are unfinished; Microsoft setup is pending.
+
 ## 0.3.7 — development testing build
 
 - Add Check for updates beside the sidebar version. Manual testing builds open
