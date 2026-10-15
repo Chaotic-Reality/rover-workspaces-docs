@@ -2,20 +2,19 @@
 
 Updated October 15, 2026. This describes engineering evidence, not a store release.
 
-Website-only Google sign-in is enabled for an approved-tester acceptance test.
-The first browser attempt exposed a form-page referrer-policy conflict; its
-correction has runtime coverage, with owner retry still pending.
-The first live Google consent/sign-out result is still pending.
-Inspection after the follow-up attempt found a restrictive OAuth form-redirect policy;
-configured provider/callback destinations now have runtime coverage. Browser
-retry remains pending.
+The owner confirmed successful website Google sign-in and sign-out on October
+15. The first landing after sign-in still displayed signed-out controls until
+Account was opened again. The session-cookie correction and shared top-right
+account menu are deployed on the existing protected beta after isolated runtime
+checks; fresh installed-browser landing, avatar, keyboard and responsive-menu
+acceptance remain to verify.
 Extension connection stays disabled, and Microsoft, Drive backup and sync remain unavailable.
 
 Google beta callback registration was confirmed by the owner. Google client
 configuration and the encrypted session secret are prepared on the existing
 beta Worker. Native Account-page sign-in/sign-out forms pass isolated runtime
-checks, including signed tester access, CSRF and session cookies. Extension handoff activation remains disabled; live Google consent and installed
-extension connection remain to test. No Drive connection is enabled.
+checks, including signed tester access, CSRF and session cookies. Extension handoff activation remains disabled; installed
+extension connection remains to test. No Drive connection is enabled.
 The owner-supplied Chrome testing extension ID is registered for the pending
 handoff. This does not enable sign-in or approve other browser installations.
 Browser-side proof/state lifecycle tests cover exact callback targets, one-time
@@ -39,7 +38,7 @@ stop the check. This tooling work enables no additional live capability.
 | Update saved workspace from current tabs | Replacement preview, revision storage and stale-edit rejection implemented; UI coverage added | Installed Chrome/Edge preview, cancel, update and undo acceptance |
 | Custom Templates, organization, history, scheduled capture | Implemented; local entitlement simulation and manual 15-day trial   | Pilot usefulness and installed-browser behavior                      |
 | Free and paid plans                                        | Free limit of two workspaces; planned Pro Local and Pro Sync        | Actual purchase/renewal/provider sandbox and legal terms             |
-| Google/Microsoft sign-in                                   | Beta host composition, including protected extension approval/exchange, passes isolated runtime tests; empty account database prepared; website Google sign-in enabled for acceptance, extension handoff stays disabled | Extension UI and transport acceptance, installed-browser acceptance and live consent |
+| Google/Microsoft sign-in                                   | Owner verified website Google consent and sign-out; shared account menu and first-landing cookie fix have isolated runtime coverage; extension handoff stays disabled | Fresh landing/menu browser acceptance, Microsoft setup and installed extension connection |
 | Google Drive/OneDrive backups                              | Narrow-scope adapter and encrypted transfer contracts tested        | OAuth consent, token handling, live rate-limit/revocation testing    |
 | ROVER-hosted sync                                          | Free staging Worker/D1 deployed; entitlement/consent enforced        | Live identity, key recovery, profile sync and conflict acceptance    |
 | Cross-browser portability                                  | Named profiles, mappings, consent, transfer plans implemented       | Hosted UI retrieval and live Chrome↔Edge/profile round trip          |

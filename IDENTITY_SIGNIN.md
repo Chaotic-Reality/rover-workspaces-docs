@@ -47,6 +47,9 @@ website testers. This is the first live acceptance stage, not a verified account
 sync service. Complete Google consent to return to the Account page, where
 **Signed in to ROVER** and **Sign out of ROVER** should appear. Sign out, reload,
 and verify the sign-in control returns. The website session lasts 15 minutes.
+The shared top-right Account menu shows sign-in or sign-out controls on every
+page, with the verified Google name and picture when available. Click outside
+or press Escape to close it. License details are not yet connected.
 Microsoft remains unavailable. The extension sign-in button stays disabled;
 Drive backup and workspace sync are separate future steps. See the privacy
 policy for account records and cookies used by this optional test.

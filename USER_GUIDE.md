@@ -14,6 +14,11 @@ registered as a Google test user, and complete consent. On return, check for
 **Signed in to ROVER**. Choose **Sign out of ROVER**, reload, and confirm that
 Continue with Google returns. This tests the website account only; it does not
 connect the extension or upload workspaces. Microsoft remains unavailable.
+The shared **Account** menu is at the top right of every website page. After
+a fresh Google sign-in it shows your name and picture if Google supplies them;
+otherwise it uses a neutral icon. Open it to sign out or visit Account overview.
+Click outside or press Escape to close it. License details are coming later.
+If you signed in before this change, sign out and sign in again for the picture.
 
 ## Account connection preparation
 

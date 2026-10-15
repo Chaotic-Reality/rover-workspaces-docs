@@ -64,9 +64,20 @@ const contents = new Map(
 );
 for (const [file, html] of contents) {
   if (["report-bug.html", "issues.html"].includes(file)) {
-    assert.equal((html.match(/<!-- SUPPORT_START -->/g) || []).length, 1, `${file}: support rendering slot missing or duplicated`);
-    assert.equal((html.match(/<!-- SUPPORT_END -->/g) || []).length, 1, `${file}: support rendering slot missing or duplicated`);
-    assert(html.includes('aria-label="Support navigation"'), `${file}: support navigation missing`);
+    assert.equal(
+      (html.match(/<!-- SUPPORT_START -->/g) || []).length,
+      1,
+      `${file}: support rendering slot missing or duplicated`,
+    );
+    assert.equal(
+      (html.match(/<!-- SUPPORT_END -->/g) || []).length,
+      1,
+      `${file}: support rendering slot missing or duplicated`,
+    );
+    assert(
+      html.includes('aria-label="Support navigation"'),
+      `${file}: support navigation missing`,
+    );
   }
   assert(
     html.includes('aria-label="Main navigation"') &&
@@ -74,9 +85,27 @@ for (const [file, html] of contents) {
     `${file}: missing shared layout`,
   );
   assert(html.includes("noindex,nofollow"), `${file}: missing beta noindex`);
+  assert.equal(
+    (html.match(/<!-- ROVER_ACCOUNT_START -->/g) || []).length,
+    1,
+    `${file}: shared account menu missing or duplicated`,
+  );
+  assert(
+    html.includes('popover="auto"') &&
+      html.includes('popovertarget="account-popover"'),
+    `${file}: account menu must support native light dismissal`,
+  );
+  assert(
+    !html
+      .match(/<nav aria-label="Main navigation">[\s\S]*?<\/nav>/)?.[0]
+      .includes("/account.html"),
+    `${file}: Account belongs in the top-right menu`,
+  );
   const route = file === "index.html" ? "/" : `/${file}`;
   assert(
-    html.includes(`<link rel="canonical" href="${new URL(route, siteUrl).href}">`),
+    html.includes(
+      `<link rel="canonical" href="${new URL(route, siteUrl).href}">`,
+    ),
     `${file}: wrong canonical site URL`,
   );
   assert.equal(

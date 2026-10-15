@@ -4,6 +4,13 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Move website Account into a shared top-right dropdown with optional verified
+  Google name and picture, sign-in/sign-out controls, outside-click and Escape
+  dismissal. Microsoft and future license details remain clearly unavailable.
+- Correct the website session cookie for the immediate return from Google;
+  exact-origin, CSRF, Access and revocation checks remain enforced. Owner
+  confirmed Google consent and sign-out; fresh landing/menu acceptance remains.
+
 - Permit configured OAuth provider redirects in the Account page's form policy.
   Connection approval permits only its exact allowlisted extension callback;
   unconfigured providers and arbitrary redirect destinations stay excluded.

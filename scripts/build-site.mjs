@@ -24,6 +24,10 @@ function layout(id, title, content, sourceHash = "", route = pageUrl(id)) {
         `<a href="${pageUrl(key)}"${key === id || (key === "support" && ["report-bug", "issues"].includes(id)) ? ' aria-current="page"' : ""}>${label}</a>`,
     )
     .join("\n");
+  const mainLinks = links.replace(
+    /<a href="\/account\.html"[^>]*>Account<\/a>\n?/,
+    "",
+  );
   return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. ${escapeHtml(title)}.">
@@ -32,7 +36,8 @@ ${sourceHash ? `<meta name="rover-doc-source-sha256" content="${sourceHash}">` :
 <title>${escapeHtml(title)} · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
 <a class="brand" href="/" aria-label="ROVER Workspaces home"><img src="/branding/rover-mark.png" width="78" height="78" alt=""><span class="wordmark"><strong>ROVER</strong><span>Workspaces</span></span></a>
-<nav aria-label="Main navigation">${links}</nav></div></header>
+<!-- ROVER_ACCOUNT_START --><div class="account-menu"><button class="account-trigger" type="button" popovertarget="account-popover" aria-label="Open account menu"><span class="account-avatar account-avatar-fallback" aria-hidden="true">●</span><span class="account-name">Account</span><span aria-hidden="true">▾</span></button><div id="account-popover" class="account-popover" popover="auto" aria-label="Account"><a href="/account.html">Account overview and sign-in</a><p>Sign-in availability is shown on the protected beta website.</p></div></div><!-- ROVER_ACCOUNT_END -->
+<nav aria-label="Main navigation">${mainLinks}</nav></div></header>
 <main id="main" class="shell${sourceHash ? " documentation" : ""}">${content}</main>
 <footer><div class="shell"><p class="brand-meaning">ROVER means ${acronym}.</p><p>Make room for focus. This is a development beta; store availability and cloud services have not been announced.</p><nav aria-label="Footer navigation">${links}</nav></div></footer></body></html>\n`;
 }

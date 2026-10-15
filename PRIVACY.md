@@ -10,7 +10,7 @@ You choose when to capture, import, export, or open a workspace. Capture can als
 
 ## Account connection preparation
 
-Account and connection-approval form pages send only the HTTPS website origin
+Website pages with account controls send only the HTTPS website origin
 as referrer information, never their paths or query strings. This preserves
 the browser origin needed for the server's form checks. OAuth callback and
 credential-bearing API responses continue to suppress referrer information.
@@ -26,6 +26,15 @@ store your Google password, access token, refresh token, name or email in that
 identity table. A temporary transaction stores hashed state/browser bindings,
 nonce and proof material, usable for up to ten minutes. Expired transactions
 are cleaned when another sign-in starts.
+
+The optional verified display name and Google profile-picture URL are retained
+only inside the signed, secure, HttpOnly website session cookie, for up to 15
+minutes, and displayed in your private account menu. They are not saved to the
+identity database, local workspace backups or public website assets. The menu
+uses a neutral fallback when these claims are absent or unusable. Displaying a
+Google-hosted picture makes a browser request to Google, which receives normal
+connection information such as your IP address; ROVER sends no page referrer
+with that image request. Account pages and menus are not cached by ROVER.
 
 The website session uses a Secure, HttpOnly host cookie and expires after
 15 minutes. The database keeps its token hash, account ID and expiry, never the

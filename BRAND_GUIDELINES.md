@@ -59,6 +59,11 @@ On this page contents menu, and readable headings, tables, lists, and code.
 Product links lead to the branded guides; GitHub links are reserved for source
 history, editing, and issue reporting.
 Admin pages remain separate and must be protected before deployment.
+Account lives in a separate top-right menu, above the main navigation on small
+screens. Use the verified provider name and Google picture when supplied, with
+a neutral fallback otherwise. Native popovers close on outside click or Escape.
+Keep Microsoft unavailable until configured, and label future license details
+explicitly; a website sign-in is not proof of a paid plan or active sync.
 Support has shared local navigation for Support home, Report a bug, and Issue
 updates. Forms use persistent labels, clear focus, a visible public-report
 disclosure, and explicit consent. Issues use both text and color for state.

@@ -12,3 +12,15 @@ export function normalizeLiveHtml(html) {
           : script,
     );
 }
+
+// Account state is private and rendered per request. Compare the static shell
+// around this single reviewed slot; its behavior is checked in Worker tests.
+export function normalizeAccountMenu(html) {
+  return html.replace(
+    /<!-- ROVER_ACCOUNT_START -->([\s\S]*?)<!-- ROVER_ACCOUNT_END -->/g,
+    (slot, body) =>
+      /<(?:script|iframe|object|embed)\b|\son\w+=/i.test(body)
+        ? slot
+        : "<!-- ROVER_ACCOUNT_START --><!-- ROVER_ACCOUNT_END -->",
+  );
+}

@@ -1,17 +1,17 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Website maintenance.">
-<meta name="rover-doc-source-sha256" content="397faa8f873bd1ee97008dcc986f8e5366f6c4829ee1d455ea3fc33a230dfc93">
+<meta name="rover-doc-source-sha256" content="b07d0a87d41c1326d220d60214d9b4002d997e858203b06000e86a0f62541762">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/site-development.html">
 <title>Website maintenance · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
 <a class="brand" href="/" aria-label="ROVER Workspaces home"><img src="/branding/rover-mark.png" width="78" height="78" alt=""><span class="wordmark"><strong>ROVER</strong><span>Workspaces</span></span></a>
+<!-- ROVER_ACCOUNT_START --><div class="account-menu"><button class="account-trigger" type="button" popovertarget="account-popover" aria-label="Open account menu"><span class="account-avatar account-avatar-fallback" aria-hidden="true">●</span><span class="account-name">Account</span><span aria-hidden="true">▾</span></button><div id="account-popover" class="account-popover" popover="auto" aria-label="Account"><a href="/account.html">Account overview and sign-in</a><p>Sign-in availability is shown on the protected beta website.</p></div></div><!-- ROVER_ACCOUNT_END -->
 <nav aria-label="Main navigation"><a href="/">Home</a>
 <a href="/how-it-works.html">How it works</a>
 <a href="/docs.html" aria-current="page">Documentation</a>
 <a href="/beta-install.html">Beta setup</a>
 <a href="/pricing.html">Plans</a>
-<a href="/account.html">Account</a>
 <a href="/privacy.html">Privacy</a>
 <a href="/support.html">Support</a></nav></div></header>
 <main id="main" class="shell documentation"><aside class="docs-sidebar"><a class="docs-home" href="/docs.html">Documentation</a><nav aria-label="Documentation navigation"><details><summary>Using ROVER</summary><div><a href="/docs/user-guide.html">User guide</a><a href="/docs/how-it-works.html">How ROVER works</a><a href="/docs/importing.html">Import and export</a><a href="/docs/local-backup.html">Full local backup</a><a href="/docs/appearance.html">Appearance</a><a href="/docs/support.html">Support guidance</a></div></details><details><summary>Development and beta</summary><div><a href="/docs/status.html">Feature status</a><a href="/docs/roadmap.html">Roadmap</a><a href="/docs/changelog.html">Change history</a><a href="/docs/releasing.html">Release process</a><a href="/docs/beta-setup.html">Beta setup checklist</a></div></details><details><summary>Plans and policies</summary><div><a href="/docs/identity-signin.html">Account sign-in design</a><a href="/docs/hosted-sync.html">Hosted sync design</a><a href="/docs/pricing.html">Plans and trial details</a><a href="/docs/terms.html">Draft subscription terms</a><a href="/docs/privacy.html">Privacy and data handling</a><a href="/docs/license.html">License statement</a></div></details><details open><summary>Project reference</summary><div><a href="/docs/about.html">About ROVER</a><a href="/docs/brand-guidelines.html">Brand guidelines</a><a href="/docs/hosting.html">Hosting plan</a><a href="/docs/admin-portal.html">Admin portal design</a><a href="/docs/store-listing.html">Store listing preparation</a><a href="/docs/store-policy-review.html">Store policy review</a><a href="/docs/site-development.html" aria-current="page">Website maintenance</a><a href="/docs/project-overview.html">Project overview</a></div></details></nav></aside><article class="doc-article"><div class="doc-breadcrumb"><a href="/docs.html">Documentation</a><span aria-hidden="true">/</span><span>Project reference</span></div><h1 id="website-development-and-deployment">Website development and deployment</h1>
@@ -24,7 +24,15 @@ Edit documents once in Markdown rather than maintaining a separate HTML copy.</p
 <code>web/assets/</code>, and the common layout in <code>scripts/build-site.mjs</code>. The build
 writes reviewed HTML into <code>site/</code>, with shared navigation, contents links,
 responsive tables, and source-history links. Markdown rendering is build-time
-only; no browser JavaScript or remote fonts/icons are required.</p>
+only; no browser JavaScript or remote fonts/icons are required.
+The top-right account menu uses native HTML popovers, including outside-click
+and Escape dismissal. On the protected beta, the private server replaces its
+static slot with uncached account state. Optional Google avatars are the sole
+remote account imagery and are disclosed in PRIVACY.md; no arbitrary image
+URLs or provider credentials belong in the public layout.
+Static-shell smoke comparison excludes only the reviewed account-menu slot;
+unexpected executable markup there remains visible to comparison. The Account
+body and support bodies are dynamic and use the private runtime suites instead.</p>
 <p>CI checks rendering behavior, local links and anchors, assets, headings, shared
 layout, beta noindex, and the complete public deployment inventory. Each
 document records a normalized source fingerprint; checks reject stale pages

@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { pages, documents, pageUrl, documentUrl } from "./site-content.mjs";
 import { siteUrl } from "./site-config.mjs";
-import { normalizeLiveHtml } from "./smoke-content.mjs";
+import { normalizeLiveHtml, normalizeAccountMenu } from "./smoke-content.mjs";
 const args = process.argv.slice(2);
 const gated = args.includes("--access-gate");
 const base = new URL(args.find((arg) => !arg.startsWith("--")) || siteUrl);
@@ -18,6 +18,11 @@ if (gated) {
     "/admin/",
     "/AGENTS.md",
     "/api/bug-report",
+    "/auth/session",
+    "/auth/csrf",
+    "/auth/google/start",
+    "/auth/google/callback",
+    "/connect",
   ]) {
     const response = await fetch(new URL(route, base), { redirect: "manual" });
     assert.equal(
@@ -44,7 +49,10 @@ if (gated) {
 // Small batches avoid needlessly flooding the free staging site.
 // Dynamic support routes need authenticated runtime acceptance, not comparison
 // to their static shells. Gate mode above still checks that they are protected.
-const staticRoutes = routes.filter((route) => !["/report-bug.html", "/issues.html"].includes(route));
+const staticRoutes = routes.filter(
+  (route) =>
+    !["/report-bug.html", "/issues.html", "/account.html"].includes(route),
+);
 for (let offset = 0; offset < staticRoutes.length; offset += 4) {
   await Promise.all(
     staticRoutes.slice(offset, offset + 4).map(async (route) => {
@@ -63,8 +71,8 @@ for (let offset = 0; offset < staticRoutes.length; offset += 4) {
         "utf8",
       );
       assert.equal(
-        normalizeLiveHtml(html),
-        local.replace(/\r\n/g, "\n"),
+        normalizeAccountMenu(normalizeLiveHtml(html)),
+        normalizeAccountMenu(local.replace(/\r\n/g, "\n")),
         `${route}: deployed content differs from build`,
       );
     }),
@@ -73,5 +81,5 @@ for (let offset = 0; offset < staticRoutes.length; offset += 4) {
 for (const route of ["/admin/", "/AGENTS.md", "/not-a-rover-page"])
   assert.equal((await fetch(new URL(route, base))).status, 404, route);
 console.log(
-  `Website smoke passed: ${staticRoutes.length} static pages match the build; nonpublic paths remain unavailable at ${base.origin}. Dynamic support acceptance is separate.`,
+  `Website smoke passed: ${staticRoutes.length} page shells match the build; nonpublic paths remain unavailable at ${base.origin}. Dynamic support/account acceptance is separate.`,
 );

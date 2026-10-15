@@ -11,6 +11,14 @@ Edit product-page summaries in `web/pages/`, shared styles/logo assets in
 writes reviewed HTML into `site/`, with shared navigation, contents links,
 responsive tables, and source-history links. Markdown rendering is build-time
 only; no browser JavaScript or remote fonts/icons are required.
+The top-right account menu uses native HTML popovers, including outside-click
+and Escape dismissal. On the protected beta, the private server replaces its
+static slot with uncached account state. Optional Google avatars are the sole
+remote account imagery and are disclosed in PRIVACY.md; no arbitrary image
+URLs or provider credentials belong in the public layout.
+Static-shell smoke comparison excludes only the reviewed account-menu slot;
+unexpected executable markup there remains visible to comparison. The Account
+body and support bodies are dynamic and use the private runtime suites instead.
 
 CI checks rendering behavior, local links and anchors, assets, headings, shared
 layout, beta noindex, and the complete public deployment inventory. Each

@@ -1,34 +1,33 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Feature status.">
-<meta name="rover-doc-source-sha256" content="0fa56279682b4464bd0b30a4737ffb321f2dcb09a18028fe3630534edfbc4805">
+<meta name="rover-doc-source-sha256" content="c14010aff9af067e4892908d20ebb4e073f920877e2331822cb6c1b0b0ec2e0e">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/status.html">
 <title>Feature status · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
 <a class="brand" href="/" aria-label="ROVER Workspaces home"><img src="/branding/rover-mark.png" width="78" height="78" alt=""><span class="wordmark"><strong>ROVER</strong><span>Workspaces</span></span></a>
+<!-- ROVER_ACCOUNT_START --><div class="account-menu"><button class="account-trigger" type="button" popovertarget="account-popover" aria-label="Open account menu"><span class="account-avatar account-avatar-fallback" aria-hidden="true">●</span><span class="account-name">Account</span><span aria-hidden="true">▾</span></button><div id="account-popover" class="account-popover" popover="auto" aria-label="Account"><a href="/account.html">Account overview and sign-in</a><p>Sign-in availability is shown on the protected beta website.</p></div></div><!-- ROVER_ACCOUNT_END -->
 <nav aria-label="Main navigation"><a href="/">Home</a>
 <a href="/how-it-works.html">How it works</a>
 <a href="/docs.html" aria-current="page">Documentation</a>
 <a href="/beta-install.html">Beta setup</a>
 <a href="/pricing.html">Plans</a>
-<a href="/account.html">Account</a>
 <a href="/privacy.html">Privacy</a>
 <a href="/support.html">Support</a></nav></div></header>
 <main id="main" class="shell documentation"><aside class="docs-sidebar"><a class="docs-home" href="/docs.html">Documentation</a><nav aria-label="Documentation navigation"><details><summary>Using ROVER</summary><div><a href="/docs/user-guide.html">User guide</a><a href="/docs/how-it-works.html">How ROVER works</a><a href="/docs/importing.html">Import and export</a><a href="/docs/local-backup.html">Full local backup</a><a href="/docs/appearance.html">Appearance</a><a href="/docs/support.html">Support guidance</a></div></details><details open><summary>Development and beta</summary><div><a href="/docs/status.html" aria-current="page">Feature status</a><a href="/docs/roadmap.html">Roadmap</a><a href="/docs/changelog.html">Change history</a><a href="/docs/releasing.html">Release process</a><a href="/docs/beta-setup.html">Beta setup checklist</a></div></details><details><summary>Plans and policies</summary><div><a href="/docs/identity-signin.html">Account sign-in design</a><a href="/docs/hosted-sync.html">Hosted sync design</a><a href="/docs/pricing.html">Plans and trial details</a><a href="/docs/terms.html">Draft subscription terms</a><a href="/docs/privacy.html">Privacy and data handling</a><a href="/docs/license.html">License statement</a></div></details><details><summary>Project reference</summary><div><a href="/docs/about.html">About ROVER</a><a href="/docs/brand-guidelines.html">Brand guidelines</a><a href="/docs/hosting.html">Hosting plan</a><a href="/docs/admin-portal.html">Admin portal design</a><a href="/docs/store-listing.html">Store listing preparation</a><a href="/docs/store-policy-review.html">Store policy review</a><a href="/docs/site-development.html">Website maintenance</a><a href="/docs/project-overview.html">Project overview</a></div></details></nav></aside><article class="doc-article"><div class="doc-breadcrumb"><a href="/docs.html">Documentation</a><span aria-hidden="true">/</span><span>Development and beta</span></div><h1 id="rover-capability-status">ROVER capability status</h1>
 <p class="doc-description">See what is local, tested, staged, or still waiting for setup.</p><div class="prose"><p>Updated October 15, 2026. This describes engineering evidence, not a store release.</p>
-<p>Website-only Google sign-in is enabled for an approved-tester acceptance test.
-The first browser attempt exposed a form-page referrer-policy conflict; its
-correction has runtime coverage, with owner retry still pending.
-The first live Google consent/sign-out result is still pending.
-Inspection after the follow-up attempt found a restrictive OAuth form-redirect policy;
-configured provider/callback destinations now have runtime coverage. Browser
-retry remains pending.
+<p>The owner confirmed successful website Google sign-in and sign-out on October
+15. The first landing after sign-in still displayed signed-out controls until
+Account was opened again. The session-cookie correction and shared top-right
+account menu are deployed on the existing protected beta after isolated runtime
+checks; fresh installed-browser landing, avatar, keyboard and responsive-menu
+acceptance remain to verify.
 Extension connection stays disabled, and Microsoft, Drive backup and sync remain unavailable.</p>
 <p>Google beta callback registration was confirmed by the owner. Google client
 configuration and the encrypted session secret are prepared on the existing
 beta Worker. Native Account-page sign-in/sign-out forms pass isolated runtime
-checks, including signed tester access, CSRF and session cookies. Extension handoff activation remains disabled; live Google consent and installed
-extension connection remain to test. No Drive connection is enabled.
+checks, including signed tester access, CSRF and session cookies. Extension handoff activation remains disabled; installed
+extension connection remains to test. No Drive connection is enabled.
 The owner-supplied Chrome testing extension ID is registered for the pending
 handoff. This does not enable sign-in or approve other browser installations.
 Browser-side proof/state lifecycle tests cover exact callback targets, one-time
@@ -73,8 +72,8 @@ stop the check. This tooling work enables no additional live capability.</p>
 </tr>
 <tr>
 <td>Google/Microsoft sign-in</td>
-<td>Beta host composition, including protected extension approval/exchange, passes isolated runtime tests; empty account database prepared; website Google sign-in enabled for acceptance, extension handoff stays disabled</td>
-<td>Extension UI and transport acceptance, installed-browser acceptance and live consent</td>
+<td>Owner verified website Google consent and sign-out; shared account menu and first-landing cookie fix have isolated runtime coverage; extension handoff stays disabled</td>
+<td>Fresh landing/menu browser acceptance, Microsoft setup and installed extension connection</td>
 </tr>
 <tr>
 <td>Google Drive/OneDrive backups</td>

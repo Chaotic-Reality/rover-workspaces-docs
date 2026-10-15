@@ -19,6 +19,8 @@ These items make the local product ready for a public release and prepare paid f
 
 - [ ] Mount hosted callback routes with secure browser cookies, revocable sessions, and a one-time extension handoff; verify the complete flow before enabling sign-in.
 - [ ] Complete Google and Microsoft app registrations, final callback/domain setup, and live sign-in with account-bound sessions.
+  Google website consent and sign-out are owner-verified; fresh account-menu
+  and landing-page acceptance, Microsoft and extension connection remain.
 - [ ] Connect an approved payment-provider sandbox and verify purchase, renewal, cancellation, revocation, and complimentary Pro grants before enabling billing.
 - [ ] Re-run the lifecycle matrix against a hosted provider sandbox after billing and Worker deployment are approved.
 
