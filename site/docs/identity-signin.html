@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Account sign-in design.">
-<meta name="rover-doc-source-sha256" content="9703f19da7b3fa39976dea33f051aebcf63d73604a6fbdf419b56d1f9e42db92">
+<meta name="rover-doc-source-sha256" content="679fd1d7b492c3fce945f5dd0ca70c7a44255c7fcf05aab0fb0cbe0e7674a393">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/identity-signin.html">
 <title>Account sign-in design · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -49,6 +49,15 @@ current Pro entitlement.</li>
 provider registrations, callback URLs, and Worker secrets will be configured
 before hosted sign-in is enabled.</p>
 <h2 id="current-preparation">Current preparation</h2>
+<p>The extension Account dialog and explicit connection approval page are now
+implemented behind disabled activation. The browser client requests optional
+beta-site permission after an activated sign-in click, launches the interactive
+sign-in window, checks its exact callback, and exchanges the one-time code with
+redirects and automatic retries disabled. Isolated tests cover blocked/invalid
+responses and cancellation; installed browser cookie/CORS acceptance is pending.
+Connections use browser-session storage outside backups. Browser sign-out revokes only its registered server session and clears its local
+record. If Access or the network blocks revocation, it clears locally and reports
+that revocation was not confirmed. Installed-browser acceptance remains pending.</p>
 <p>The server adapters now exchange Google and Microsoft authorization codes and
 verify real signed identity tokens. Tests cover the intended application,
 issuer, expiry, nonce, and Microsoft tenant restrictions. Browser-bound sign-in

@@ -12,6 +12,12 @@ ROVER Workspaces is in development. These notes describe development builds, not
   runtime coverage. Controls remain disabled on the beta while extension
   connection and live Google consent are unfinished; Microsoft setup is pending.
 
+## 0.3.8 — development testing build
+
+- Add an Account dialog with sign-in disabled pending installed-browser transport acceptance and live Google consent.
+- Prepare explicit browser connection approval and a one-time exchange client. Add browser identity permission and optional access only to the beta website, requested after an activated sign-in click.
+- Keep short-lived connections in browser-session storage outside backups. Sign-out revokes its server registration and clears the local record; offline failures clear locally and report that revocation was not confirmed. No workspace sync or provider backup is enabled.
+
 ## 0.3.7 — development testing build
 
 - Add Check for updates beside the sidebar version. Manual testing builds open

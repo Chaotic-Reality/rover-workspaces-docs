@@ -1,6 +1,6 @@
 # Store listing preparation
 
-Draft for ROVER Workspaces 0.3.5, prepared October 5, 2026. This is preparation material, not an announcement or a submitted listing. Validate the final candidate in installed Chrome and Edge before using this copy. Check each store's current form requirements when submitting.
+Draft for ROVER Workspaces 0.3.8, prepared October 15, 2026. This is preparation material, not an announcement or a submitted listing. Validate the final candidate in installed Chrome and Edge before using this copy. Check each store's current form requirements when submitting.
 
 ## Product name and short description
 
@@ -49,7 +49,7 @@ Save, organize, and restore user-selected browser workspaces consisting of windo
 | contextMenus | Add user-invoked commands to save the current tab or tab group as a local workspace.                                                                       |
 | alarms | Run optional daily workspace captures only after the user enables scheduling; scheduling is off by default. |
 
-The current manifest has no host permissions, content scripts, or remote-code loader. All executable extension code is bundled. Opening a saved website is a normal browser navigation, not a background upload of the workspace to a ROVER Workspaces server.
+The prepared account flow adds the identity permission for the interactive sign-in window, without identity.email. Optional host access is limited to https://beta.roverworkspaces.com/* and is requested only after an activated sign-in click. Account controls remain disabled; installed-browser permission acceptance remains pending. The current manifest has no required host permissions, content scripts, or remote-code loader. All executable extension code is bundled. Opening a saved website is a normal browser navigation, not a background upload of the workspace to a ROVER Workspaces server.
 
 These explanations are source-checked drafting inputs, not completed store data-use declarations. ROVER Workspaces **does access and store URLs and titles locally**. Do not describe it as accessing no user data merely because it has no backend. Review the actual data categories and wording in each store's form against [Privacy and data handling](PRIVACY.md) before submission.
 

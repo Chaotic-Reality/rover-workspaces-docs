@@ -1,6 +1,6 @@
 # ROVER capability status
 
-Updated October 14, 2026. This describes engineering evidence, not a store release.
+Updated October 15, 2026. This describes engineering evidence, not a store release.
 
 Google beta callback registration was confirmed by the owner. Google client
 configuration and the encrypted session secret are prepared on the existing
@@ -11,9 +11,11 @@ extension connection remain to test. No Drive connection is enabled.
 The owner-supplied Chrome testing extension ID is registered for the pending
 handoff. This does not enable sign-in or approve other browser installations.
 Browser-side proof/state lifecycle tests cover exact callback targets, one-time
-use, expiry and cancellation. Browser launch and exchange transport are not wired yet.
+use, expiry and cancellation. Browser launch/exchange and explicit website
+approval are implemented behind disabled activation. Isolated tests do not prove
+installed Chrome/Edge Access-cookie transport or live Google consent.
 
-The current local personal testing version is **0.3.7**, including Update from
+The current local personal testing version is **0.3.8**, including the disabled Account dialog, Update from
 current tabs and update notices. Installed Chrome/Edge acceptance remains pending. Reload the
 existing unpacked installation and check About or extension details for its version.
 

@@ -1,12 +1,18 @@
 # Privacy and data handling
 
-Last updated: October 9, 2026. Applies to the current local-only ROVER Workspaces development builds and the protected beta website, owned by Chaotic-Reality. Store availability has not been announced.
+Last updated: October 15, 2026. Applies to the current local-only ROVER Workspaces development builds and the protected beta website, owned by Chaotic-Reality. Store availability has not been announced.
 
 ## Our privacy statement
 
 ROVER Workspaces helps you organize your tabs without sending your saved workspaces to us. The current extension keeps workspace information and preferences on your device. We do not receive, sell, or use that locally stored workspace data for advertising. No ROVER Workspaces account is required.
 
 You choose when to capture, import, export, or open a workspace. Capture can also be started from the extension context menu. If you explicitly enable daily scheduled capture in settings, the browser alarm runs at the chosen local time and saves a local workspace while the browser is available; Free limits and paid-feature checks still apply. Scheduling is off by default. Exporting creates a file you control; opening a workspace connects your browser to the saved websites. Information you voluntarily post in public support issues is separate from the extension's local data and is publicly visible on GitHub. The details below explain these boundaries and how to remove your local data.
+
+## Account connection preparation
+
+Account sign-in remains disabled. The prepared connection uses a random installation ID separately from workspace data, with one-time state and proof in memory. Short-lived connection tokens will be kept only in browser-session storage, outside Full local backups and exports; restarting the browser clears that storage. Browser sign-out attempts to revoke that exact server session and always clears its local record. If revocation cannot be confirmed, the dialog reports this and the server session expires within 15 minutes. Website sign-out is separate.
+
+After activation, explicit sign-in will send the installation ID, extension ID, random state and public proof challenge to the protected beta website. The verifier and one-time code are sent only in a bounded exchange to that website. No workspace content is sent. A short-lived HttpOnly connection cookie lets the website resume explicit approval after Google login. Google sign-in, Drive backup and workspace sync are separate choices.
 
 ## Data kept on your device
 
@@ -39,7 +45,7 @@ URLs and titles can still contain personal information, search terms, private do
 | contextMenus | Offer the explicit capture action in the browser extension context menu.                     |
 | alarms       | Run opt-in daily local capture; scheduling is off by default.                                |
 
-The manifest requests no host permissions and installs no content scripts. Capture is manually initiated unless you enable scheduled capture. Restoring opens saved websites in new windows or the current window as selected; Reload current window closes current tabs except the extension page before restoring; those sites receive normal browser requests and follow their own privacy practices. Documentation links open the Cloudflare-hosted beta site; source and public support links open GitHub. Their respective policies apply. Browser and store services may have their own update or diagnostic behavior independent of ROVER Workspaces.
+The identity permission prepares the browser sign-in window without requesting browser-account email access. Optional host access is limited to https://beta.roverworkspaces.com/* and will be requested only after an activated sign-in click. The manifest requests no required host permissions and installs no content scripts. Capture is manually initiated unless you enable scheduled capture. Restoring opens saved websites in new windows or the current window as selected; Reload current window closes current tabs except the extension page before restoring; those sites receive normal browser requests and follow their own privacy practices. Documentation links open the Cloudflare-hosted beta site; source and public support links open GitHub. Their respective policies apply. Browser and store services may have their own update or diagnostic behavior independent of ROVER Workspaces.
 
 ## Protected beta website
 

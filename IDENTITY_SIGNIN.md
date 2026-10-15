@@ -42,6 +42,16 @@ before hosted sign-in is enabled.
 
 ## Current preparation
 
+The extension Account dialog and explicit connection approval page are now
+implemented behind disabled activation. The browser client requests optional
+beta-site permission after an activated sign-in click, launches the interactive
+sign-in window, checks its exact callback, and exchanges the one-time code with
+redirects and automatic retries disabled. Isolated tests cover blocked/invalid
+responses and cancellation; installed browser cookie/CORS acceptance is pending.
+Connections use browser-session storage outside backups. Browser sign-out revokes only its registered server session and clears its local
+record. If Access or the network blocks revocation, it clears locally and reports
+that revocation was not confirmed. Installed-browser acceptance remains pending.
+
 The server adapters now exchange Google and Microsoft authorization codes and
 verify real signed identity tokens. Tests cover the intended application,
 issuer, expiry, nonce, and Microsoft tenant restrictions. Browser-bound sign-in
