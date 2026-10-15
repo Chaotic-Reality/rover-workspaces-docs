@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Feature status.">
-<meta name="rover-doc-source-sha256" content="eba71c4e5d7bf7fa782c5a7d99d2d1a0dfccd383e6d988b64ff90fcdfb707572">
+<meta name="rover-doc-source-sha256" content="0fa56279682b4464bd0b30a4737ffb321f2dcb09a18028fe3630534edfbc4805">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/status.html">
 <title>Feature status · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -19,8 +19,11 @@
 <p>Website-only Google sign-in is enabled for an approved-tester acceptance test.
 The first browser attempt exposed a form-page referrer-policy conflict; its
 correction has runtime coverage, with owner retry still pending.
-The first live Google consent/sign-out result is still pending. Extension
-connection stays disabled, and Microsoft, Drive backup and sync remain unavailable.</p>
+The first live Google consent/sign-out result is still pending.
+Inspection after the follow-up attempt found a restrictive OAuth form-redirect policy;
+configured provider/callback destinations now have runtime coverage. Browser
+retry remains pending.
+Extension connection stays disabled, and Microsoft, Drive backup and sync remain unavailable.</p>
 <p>Google beta callback registration was confirmed by the owner. Google client
 configuration and the encrypted session secret are prepared on the existing
 beta Worker. Native Account-page sign-in/sign-out forms pass isolated runtime

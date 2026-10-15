@@ -4,6 +4,10 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Permit configured OAuth provider redirects in the Account page's form policy.
+  Connection approval permits only its exact allowlisted extension callback;
+  unconfigured providers and arbitrary redirect destinations stay excluded.
+
 - Fix the protected Account and connection approval pages' referrer policy so
   native browser forms preserve their origin. Exact origin and CSRF checks stay
   enforced; callback responses retain their no-referrer protection.

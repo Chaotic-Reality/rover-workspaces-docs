@@ -5,8 +5,11 @@ Updated October 15, 2026. This describes engineering evidence, not a store relea
 Website-only Google sign-in is enabled for an approved-tester acceptance test.
 The first browser attempt exposed a form-page referrer-policy conflict; its
 correction has runtime coverage, with owner retry still pending.
-The first live Google consent/sign-out result is still pending. Extension
-connection stays disabled, and Microsoft, Drive backup and sync remain unavailable.
+The first live Google consent/sign-out result is still pending.
+Inspection after the follow-up attempt found a restrictive OAuth form-redirect policy;
+configured provider/callback destinations now have runtime coverage. Browser
+retry remains pending.
+Extension connection stays disabled, and Microsoft, Drive backup and sync remain unavailable.
 
 Google beta callback registration was confirmed by the owner. Google client
 configuration and the encrypted session secret are prepared on the existing
