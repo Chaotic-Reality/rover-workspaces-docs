@@ -141,9 +141,9 @@ See [Chrome private distribution](https://developer.chrome.com/docs/webstore/cws
 
 ## 8. Operational and release gates
 
-- [ ] Confirm the Windows isolated-thread mitigation remains reliable on fresh
-  runs/hosts. Its first complete check passed all 254 tests and the build; the
-  underlying variable startup delay remains under observation. Do not skip
+- [ ] Resolve Windows test-worker startup: the isolated-thread mitigation passed
+  one full run but failed at the next page-worker startup. Both forks and threads
+  are affected, and the underlying variable delay is unresolved. Do not skip
   files, suppress failures or relax timeouts to make the pipeline look green.
 - [ ] Run the complete app, identity/grant, Worker, website and release checks.
 - [ ] Retain source commit, package checksum, passing CI and browser acceptance

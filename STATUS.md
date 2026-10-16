@@ -16,6 +16,11 @@ License-source combination is also prepared in isolation: independent paid and
 complimentary access can fall back safely when one source ends. This is not yet
 connected to live accounts or the app; no tester license or cloud access changed.
 
+An account-derived license read is prepared in isolated runtime tests: it
+requires a registered session, reads only that account and returns a minimal
+uncached summary. Storage failures remain unavailable rather than a Free
+downgrade. The live host does not expose this read yet.
+
 The owner confirmed successful website Google sign-in and sign-out on October
 15. The first landing after sign-in still displayed signed-out controls until
 Account was opened again. The session-cookie correction and shared top-right
@@ -42,14 +47,15 @@ The current local personal testing candidate is **0.3.10**, including the regist
 current tabs and simplified update controls inside About. Installed Chrome/Edge acceptance remains pending. Reload the
 existing unpacked installation and check About or extension details for its version.
 
-The latest application check passed all 254 tests across 57 discovered files
-and the production build after switching Windows simulated-page tests to
-isolated thread workers. Earlier runs encountered intermittent fork-worker
-startup failures before page tests executed; a fresh-process-only workaround
-was insufficient. No tests were skipped or retried and timeouts were unchanged.
-The underlying variable startup delay is not fully explained; retain fresh-host
-reliability checks. This tooling work enables no additional live capability and
-does not replace installed-browser acceptance or create a new extension release.
+A previous application check passed all 254 tests across 57 discovered files
+and the build after switching Windows page tests to isolated thread workers.
+The next changed-code aggregate passed lint, formatting and all 211 Node tests,
+then again timed out before the first page tests ran, now with threads. The
+startup issue affects both pools and remains unresolved; the earlier green run
+is historical, not the latest aggregate result. No tests were skipped or blindly
+retried and timeouts remain unchanged. Identity/grant/license-read and staging
+Worker runtime suites passed separately. No new extension release is approved
+by these preparations, and installed-browser acceptance remains required.
 
 | Area                                                       | Current evidence                                                    | Remaining gate                                                       |
 | ---------------------------------------------------------- | ------------------------------------------------------------------- | -------------------------------------------------------------------- |

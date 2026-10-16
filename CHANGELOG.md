@@ -4,6 +4,14 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Follow-up checks show the Windows startup issue also recurs with thread
+  workers. The earlier complete passing run remains historical evidence; the
+  latest aggregate is incomplete and the release gate remains open.
+
+- Prepared and isolated-tested a session-authorized account license read,
+  including account isolation, expiry/revocation, private-data exclusion and
+  storage-failure handling. Live account/app integration remains disabled.
+
 - Mitigated Windows simulated-page worker startup failures by using isolated
   thread workers for those tests. The complete application check passed all 254
   tests across 57 files and the production build, without retries, skipped tests

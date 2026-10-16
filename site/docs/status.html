@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Feature status.">
-<meta name="rover-doc-source-sha256" content="516677f25614cc4c3521626f109c232c8388281a6b6e5ac6c7722a23715f36f9">
+<meta name="rover-doc-source-sha256" content="9b856a4e73b12c9b6b08e8068670030d918fb779723bcd11a8a7f3d030e1447a">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/status.html">
 <title>Feature status · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -27,6 +27,10 @@ account license reads, app integration and Test Free Mode remain unfinished.</p>
 <p>License-source combination is also prepared in isolation: independent paid and
 complimentary access can fall back safely when one source ends. This is not yet
 connected to live accounts or the app; no tester license or cloud access changed.</p>
+<p>An account-derived license read is prepared in isolated runtime tests: it
+requires a registered session, reads only that account and returns a minimal
+uncached summary. Storage failures remain unavailable rather than a Free
+downgrade. The live host does not expose this read yet.</p>
 <p>The owner confirmed successful website Google sign-in and sign-out on October
 15. The first landing after sign-in still displayed signed-out controls until
 Account was opened again. The session-cookie correction and shared top-right
@@ -50,14 +54,15 @@ Chrome/Edge Access-cookie transport; website Google consent is owner-verified.</
 <p>The current local personal testing candidate is <strong>0.3.10</strong>, including the registered-installation Account connection, Update from
 current tabs and simplified update controls inside About. Installed Chrome/Edge acceptance remains pending. Reload the
 existing unpacked installation and check About or extension details for its version.</p>
-<p>The latest application check passed all 254 tests across 57 discovered files
-and the production build after switching Windows simulated-page tests to
-isolated thread workers. Earlier runs encountered intermittent fork-worker
-startup failures before page tests executed; a fresh-process-only workaround
-was insufficient. No tests were skipped or retried and timeouts were unchanged.
-The underlying variable startup delay is not fully explained; retain fresh-host
-reliability checks. This tooling work enables no additional live capability and
-does not replace installed-browser acceptance or create a new extension release.</p>
+<p>A previous application check passed all 254 tests across 57 discovered files
+and the build after switching Windows page tests to isolated thread workers.
+The next changed-code aggregate passed lint, formatting and all 211 Node tests,
+then again timed out before the first page tests ran, now with threads. The
+startup issue affects both pools and remains unresolved; the earlier green run
+is historical, not the latest aggregate result. No tests were skipped or blindly
+retried and timeouts remain unchanged. Identity/grant/license-read and staging
+Worker runtime suites passed separately. No new extension release is approved
+by these preparations, and installed-browser acceptance remains required.</p>
 <div class="table-scroll" role="region" aria-label="Scrollable table" tabindex="0"><table>
 <thead>
 <tr>
