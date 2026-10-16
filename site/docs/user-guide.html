@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. User guide.">
-<meta name="rover-doc-source-sha256" content="a86fc34a90f5359d321a35900457914696a601d66487a51b5ee8fb30be3eae46">
+<meta name="rover-doc-source-sha256" content="18a6fb2e58d6f7c8e8a78a50230e04ff4770b6f084f0b71bf4f3f434eec536b2">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/user-guide.html">
 <title>User guide · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -37,7 +37,19 @@ If you signed in before this change, sign out and sign in again for the picture.
 open a fresh <a href="https://beta.roverworkspaces.com/account">Account page</a> and choose
 Continue with Google again. Do not reload or resubmit the old /auth/google/start
 error page. Website fixes do not require reinstalling the extension.</p>
-<p>The sidebar&#39;s <strong>Account</strong> button opens the account dialog. Sign-in remains disabled in this build. Opening the app or dialog makes no account request or website permission request. Local workspace features need no account.</p>
+<p>The sidebar&#39;s <strong>Account</strong> button opens the account dialog. The 0.3.9 testing
+candidate enables <strong>Sign in with Google</strong> only for the registered Chrome
+installation. Click it to request access to the beta website, finish website
+sign-in if needed, continue connecting and explicitly approve <strong>Connect this
+browser</strong>. The extension should report connected. <strong>Check connection</strong> verifies
+the server session and its expiry; opening Account with a saved session also
+checks it. It does not trust a stored token alone as proof of sign-in.</p>
+<p><strong>Sign out of this browser</strong> clears its local connection and attempts server
+revocation; website sign-in remains separate. Offline failures are reported,
+and local workspaces remain available. Sessions currently last up to 15 minutes;
+sign in again after expiry. Other installations show their extension ID for
+registration rather than opening an unapproved flow. This is pending installed
+browser acceptance and does not enable Pro grants, Microsoft, backup or sync.</p>
 <p>After future activation, Sign in will request optional access to the beta website and open the browser&#39;s sign-in window. Explicit website approval is required before exchanging a one-time code. This connects an account session only; it does not enable Drive backup or workspace sync. Close the dialog to cancel. <strong>Sign out of this browser</strong> revokes its server session and clears the local record. It does not sign out the website. If the server is unreachable, the local record is still cleared and the dialog reports that revocation was not confirmed; the server session expires within 15 minutes. Installed-browser acceptance remains an activation gate.</p>
 <h2 id="install-and-update-the-beta">Install and update the beta</h2>
 <p>Use the <a href="https://beta.roverworkspaces.com/beta-install.html">beta installation page</a> for the complete procedure.

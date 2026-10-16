@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Release process.">
-<meta name="rover-doc-source-sha256" content="fad5f0e2f234e068508371ac1f57d3840d16f04e6729c4813c8c9f1ef5bcacc0">
+<meta name="rover-doc-source-sha256" content="efa3ce4dec80500c12bd49302d659b9ab9cf1e0edd04070b4c4a6b82847c623d">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/releasing.html">
 <title>Release process · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -23,6 +23,13 @@ extension identity or remove profile-local data. Match every browser acceptance
 run to the package build record and checksum.</p>
 <p>ROVER Workspaces currently automates verification and packaging. Browser-store publication is not connected to the pipeline. A successful build is a development candidate until Chrome and Edge acceptance is complete.</p>
 <h2 id="beta-release-track">Beta release track</h2>
+<p>The 0.3.9 personal candidate begins registered-installation account connection
+testing. Keep the loaded unpacked folder stable and export a Full local backup
+before upgrading. Only explicitly registered extension IDs can connect; do not
+share it as an unrestricted sign-in beta. Record approval, connection check,
+expiry, cancellation and independent website/browser sign-out results before
+calling that transport accepted. No Pro grant or automated update check is
+included yet.</p>
 <p>The first external release should be a closed beta. Use a numeric release version
 such as <code>0.4.0</code> and identify the build as <code>ROVER Workspaces BETA</code> in the store
 name and description. Chrome can restrict a private testing listing to trusted

@@ -2,6 +2,33 @@
 
 This roadmap lists planned work only. Completed work is recorded in the [change history](CHANGELOG.md). ROVER Workspaces is currently in development; Chrome and Edge are the supported release targets, and live browser acceptance remains a release gate. Plans may change and do not promise delivery dates.
 
+## Current work path — account-connected tester beta
+
+Website Google sign-in and sign-out are owner-verified. Implement and accept
+these milestones in order before enabling provider backups or hosted sync:
+
+1. [ ] Connect extension sign-in through explicit website approval and the
+   installation-bound one-time handoff; verify installed Chrome, then Edge.
+2. [ ] Show verified account/session status, license level and applicable expiry
+   in the app, with independent browser sign-out and clear offline/expired states.
+3. [ ] Connect owner-managed complimentary Pro grants for invited testers, with
+   optional expiration, revocation and an audit trail. No payment is required
+   for these grants; paid subscriptions remain a separate integration.
+4. [ ] Add beta **Test Free Mode** and **Use Pro access** controls. Free mode
+   preserves saved data and the real grant; returning to Pro requires a valid
+   grant. Testing controls must not enable cloud access or create a license.
+5. [ ] Publish a small machine-readable release manifest on the existing website
+   containing version, release channel, date, release notes and a safe details
+   link. Verify extension access through the beta gate without weakening it.
+6. [ ] Add an **Update available** indicator and release-details popup using
+   that manifest, with infrequent checks, a reminder cooldown and dismissal.
+   Preserve manual checking and offline use; never download or execute remote
+   extension code. Store updates and unpacked beta updates have different steps.
+
+These milestones use existing free resources where possible. Testers receive
+complimentary Pro when the live account/grant path is ready; website admission
+alone does not grant Pro or enable sync.
+
 ## Priority 1 — release gate and local Pro foundation
 
 These items make the local product ready for a public release and prepare paid features without connecting a payment provider yet.

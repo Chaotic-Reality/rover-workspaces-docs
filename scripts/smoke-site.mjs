@@ -22,6 +22,9 @@ if (gated) {
     "/auth/csrf",
     "/auth/google/start",
     "/auth/google/callback",
+    "/auth/extension/session",
+    "/auth/extension/exchange",
+    "/auth/extension/sign-out",
     "/connect",
   ]) {
     const response = await fetch(new URL(route, base), { redirect: "manual" });

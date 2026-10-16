@@ -44,9 +44,25 @@ identity records remain until deletion. Ask the maintainer through your private
 tester contact to delete a beta account. Account sign-out/deletion does not
 delete workspaces stored in your extension. No workspace data is uploaded.
 
-Extension account sign-in remains disabled. The prepared connection uses a random installation ID separately from workspace data, with one-time state and proof in memory. Short-lived connection tokens will be kept only in browser-session storage, outside Full local backups and exports; restarting the browser clears that storage. Browser sign-out attempts to revoke that exact server session and always clears its local record. If revocation cannot be confirmed, the dialog reports this and the server session expires within 15 minutes. Website sign-out is separate.
+The 0.3.9 candidate enables optional account connection only for the registered
+personal Chrome testing installation. Connection uses a random installation ID
+separately from workspace data, with one-time state and proof in memory. Tokens
+stay only in extension session storage, outside backups; browser restart clears
+that storage. Opening Account with a saved session, or choosing Check connection,
+sends that session to the protected server to verify its registration and expiry.
+No workspace content is sent. Browser sign-out attempts to revoke that exact
+session and clears its local record even if confirmation fails. Sessions expire
+within 15 minutes and do not yet auto-renew. Website sign-out is separate.
 
-After activation, explicit sign-in will send the installation ID, extension ID, random state and public proof challenge to the protected beta website. The verifier and one-time code are sent only in a bounded exchange to that website. No workspace content is sent. A short-lived HttpOnly connection cookie lets the website resume explicit approval after Google login. Google sign-in, Drive backup and workspace sync are separate choices.
+Explicit sign-in sends the installation ID, extension ID, random state and
+public proof challenge to the protected beta website. The verifier and one-time
+code are sent only in a bounded exchange to that website. The server briefly
+retains hashed code and installation identifiers, proof challenge and opaque
+source account/session references, never the raw proof verifier or session
+token. Codes are usable for up to two minutes; expired handoff rows are cleaned
+when another handoff starts. A short-lived HttpOnly connection cookie resumes
+explicit approval after Google login. Google sign-in, Drive backup and workspace
+sync remain separate choices.
 
 ## Data kept on your device
 
@@ -65,7 +81,12 @@ These records use extension-local storage in the current browser profile. ROVER 
 
 ## What the extension does not collect
 
-The extension account connection remains disabled, while the protected website offers the optional Google account test described above. The extension has no analytics, advertising, crash-report upload, cloud synchronization, or server that receives saved workspaces. It does not read page content, cookies, passwords, form entries, or the browser's history database. It excludes private windows and browser-internal, file, and unsupported tab URLs when capturing.
+The optional beta account connection described above does not upload workspaces.
+The extension has no analytics, advertising, crash-report upload, cloud
+synchronization, or server that receives saved workspaces. It does not read page
+content, cookies, passwords, form entries, or the browser's history database.
+It excludes private windows and browser-internal, file, and unsupported tab URLs
+when capturing.
 
 URLs and titles can still contain personal information, search terms, private document names, or access tokens in query strings. Capture does not remove that information. Review saved data and exports before sharing them.
 

@@ -50,74 +50,43 @@ and verify the sign-in control returns. The website session lasts 15 minutes.
 The shared top-right Account menu shows sign-in or sign-out controls on every
 page, with the verified Google name and picture when available. Click outside
 or press Escape to close it. License details are not yet connected.
-Microsoft remains unavailable. The extension sign-in button stays disabled;
+Microsoft remains unavailable. The 0.3.9 candidate enables extension sign-in
+only for the registered personal testing installation, through explicit
+connection approval; its installed-browser transport remains to verify.
 Drive backup and workspace sync are separate future steps. See the privacy
 policy for account records and cookies used by this optional test.
 
-## Current preparation
+## Current implementation and acceptance
 
-The extension Account dialog and explicit connection approval page are now
-implemented behind disabled activation. The browser client requests optional
-beta-site permission after an activated sign-in click, launches the interactive
-sign-in window, checks its exact callback, and exchanges the one-time code with
-redirects and automatic retries disabled. Isolated tests cover blocked/invalid
-responses and cancellation; installed browser cookie/CORS acceptance is pending.
-Connections use browser-session storage outside backups. Browser sign-out revokes only its registered server session and clears its local
-record. If Access or the network blocks revocation, it clears locally and reports
-that revocation was not confirmed. Installed-browser acceptance remains pending.
+The website Google flow is owner-verified. The 0.3.9 candidate enables extension
+connection for the explicitly registered personal Chrome testing installation.
+The user clicks Sign in with Google, permits access to the beta origin, completes
+the protected website flow and explicitly approves Connect this browser.
+The browser validates the exact callback and exchanges its one-time code using
+an installation-held proof, with redirects and retries disabled.
 
-The server adapters now exchange Google and Microsoft authorization codes and
-verify real signed identity tokens. Tests cover the intended application,
-issuer, expiry, nonce, and Microsoft tenant restrictions. Browser-bound sign-in
-transactions expire after ten minutes and can be redeemed only once, including
-when callbacks arrive at the same time. Account creation uses provider, issuer,
-and subject rather than merging matching email addresses.
+The server verifies signed tester access, exact extension origin and registration,
+short-lived source-session validity, one-time consumption and proof possession.
+A revoked source session cannot authorize redemption. The extension session
+cannot outlast its source session and currently expires within 15 minutes.
+Tokens remain in extension session storage outside backups and exports.
 
-This preparation is verified locally and in isolated server/database tests.
-Revocable session storage also passes isolated tests: signing out invalidates
-that session without ending other sessions or affecting another account.
-Hosted callback routes, secure browser cookies and sign-out integration also
-pass an enabled-host isolated runtime test. Remote account storage and the
-extension connection remain before testing live consent. Google credentials
-are prepared for the beta, and native Account-page forms pass isolated host
-tests. When activation is ready, configured providers offer Continue with
-Google or Microsoft; an active session offers Sign out of ROVER. These controls
-remain disabled in the live beta. Google Drive and OneDrive permissions will be separate opt-in
-connections. Account sign-in and account sync are not enabled for testers yet.
+Check connection verifies registration and expiry with the server. Offline,
+Access or rate-limit failures show an unverified state rather than claiming a
+valid session. Browser sign-out revokes only that session and clears locally
+even when the server cannot be reached. Website sign-out is separate.
 
-The HTTP adapter also passes isolated tests for protected cookies, explicit
-same-origin actions, one-time callbacks tied to the approved tester, and sign-out.
-The beta host now includes the routes behind a disabled feature flag. The
-[account page](/account.html) explains the distinction between tester access
-and ROVER account sign-in; provider buttons remain disabled. Account database
-is prepared separately from workspace sync storage. The extension handoff,
-installed-browser acceptance and live consent remain
-before activation. Visiting the page does not connect an account or upload data.
+Automated tests cover provider signature/audience/nonce checks, atomic code
+redemption, real isolated database operations, trusted-origin CORS, expiry,
+revocation, blocked responses and cancellation. Installed Chrome/Edge transport,
+website-cookie availability and the exact testing package still require owner
+acceptance. No Access bypass is introduced for extension requests.
 
-The one-time extension handoff core also passes isolated database tests. Codes
-expire quickly, require a private proof from the requesting installation, and
-can be redeemed only once. A revoked website session cannot authorize redemption,
-and a new extension session cannot outlast the source session. This core is not
-yet connected to the extension sign-in UI; live browser
-acceptance and provider consent remain required.
-
-The private extension approval adapter now passes isolated tests for explicit
-consent, protected same-origin actions, approved extension IDs and fixed return
-addresses. Codes are also bound to the approved extension ID; a different ID
-cannot consume the rightful code. This adapter is mounted behind disabled configuration.
-The exchange transport, extension UI and installed-browser acceptance remain
-before activation. No live account connection is available from this preparation.
-
-The private exchange adapter also passes isolated database tests for tester
-authentication, exact approved extension origins, request limits, concurrent
-redemption and replay rejection. A valid exchange returns a distinct registered
-session without a token-bearing redirect. The beta host now includes approval
-and exchange behind a separate disabled switch and an explicit extension
-allowlist. Isolated host tests verify the signed tester boundary, real database
-operations, native rate limits and rejection of missing or malformed configuration.
-The deployed controls remain unavailable:
-browser transport and website access must work together before it can be enabled.
-
+Microsoft registration, account linking, renewable browser sessions and hosted
+Pro grants remain future work. Testers will receive complimentary Pro through
+the account grant path when implemented. Test Free Mode will apply Free limits
+without removing their actual grant or saved workspaces. Signing in currently
+does not grant Pro, connect Drive/OneDrive or upload workspaces.
 ## Manual setup checklist
 
 When hosted sign-in is ready to configure:

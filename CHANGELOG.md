@@ -4,6 +4,18 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+## 0.3.9 — account connection testing candidate
+
+- Enable the explicit Google connection control for the registered Chrome beta
+  installation, with website approval, independent browser sign-out and a
+  server-verified Check connection action. Show session expiry and clear
+  offline/unverified states. Installed-browser acceptance remains pending.
+- Record the six-step tester path: app sign-in, account/license display,
+  complimentary Pro grants, Test Free Mode, release manifest and update notices.
+  Pro grants and automatic update checks are not enabled in this candidate.
+
+## Earlier unreleased website changes
+
 - Move website Account into a shared top-right dropdown with optional verified
   Google name and picture, sign-in/sign-out controls, outside-click and Escape
   dismissal. Microsoft and future license details remain clearly unavailable.

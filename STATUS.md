@@ -6,27 +6,30 @@ The owner confirmed successful website Google sign-in and sign-out on October
 15. The first landing after sign-in still displayed signed-out controls until
 Account was opened again. The session-cookie correction and shared top-right
 account menu are deployed on the existing protected beta after isolated runtime
-checks; fresh installed-browser landing, avatar, keyboard and responsive-menu
-acceptance remain to verify.
-Extension connection stays disabled, and Microsoft, Drive backup and sync remain unavailable.
+checks. The owner has since confirmed website sign-in behaves correctly.
+Extension connection is prepared in 0.3.9 for the registered personal testing
+installation; installed-browser approval/exchange and sign-out acceptance remain.
+Microsoft, account-based Pro grants, Drive backup and sync remain unavailable.
 
 Google beta callback registration was confirmed by the owner. Google client
 configuration and the encrypted session secret are prepared on the existing
 beta Worker. Native Account-page sign-in/sign-out forms pass isolated runtime
-checks, including signed tester access, CSRF and session cookies. Extension handoff activation remains disabled; installed
-extension connection remains to test. No Drive connection is enabled.
-The owner-supplied Chrome testing extension ID is registered for the pending
-handoff. This does not enable sign-in or approve other browser installations.
+checks, including signed tester access, CSRF and session cookies. Extension
+handoff is enabled for the registered personal 0.3.9 testing installation;
+installed extension connection remains to test. No Drive connection is enabled.
+The owner-supplied Chrome testing extension ID is registered for this handoff;
+other browser installations are not implicitly approved.
 Browser-side proof/state lifecycle tests cover exact callback targets, one-time
 use, expiry and cancellation. Browser launch/exchange and explicit website
-approval are implemented behind disabled activation. Isolated tests do not prove
-installed Chrome/Edge Access-cookie transport or live Google consent.
+approval pass isolated runtime tests. Those tests do not prove installed
+Chrome/Edge Access-cookie transport; website Google consent is owner-verified.
 
-The current local personal testing version is **0.3.8**, including the disabled Account dialog, Update from
+The current local personal testing candidate is **0.3.9**, including the registered-installation Account connection, Update from
 current tabs and update notices. Installed Chrome/Edge acceptance remains pending. Reload the
 existing unpacked installation and check About or extension details for its version.
 
-An earlier application check passed all 222 tests and the build after a
+The current 0.3.9 application check passed all 244 tests and the build. This does
+not replace installed-browser acceptance. An earlier application check passed all 222 tests and the build after a
 test-runner process workaround. A later check still encountered an intermittent
 Windows worker startup failure before a browser test ran; the underlying runner
 issue remains unresolved. Tests remain automatically discovered and failures
@@ -38,7 +41,7 @@ stop the check. This tooling work enables no additional live capability.
 | Update saved workspace from current tabs | Replacement preview, revision storage and stale-edit rejection implemented; UI coverage added | Installed Chrome/Edge preview, cancel, update and undo acceptance |
 | Custom Templates, organization, history, scheduled capture | Implemented; local entitlement simulation and manual 15-day trial   | Pilot usefulness and installed-browser behavior                      |
 | Free and paid plans                                        | Free limit of two workspaces; planned Pro Local and Pro Sync        | Actual purchase/renewal/provider sandbox and legal terms             |
-| Google/Microsoft sign-in                                   | Owner verified website Google consent and sign-out; shared account menu and first-landing cookie fix have isolated runtime coverage; extension handoff stays disabled | Fresh landing/menu browser acceptance, Microsoft setup and installed extension connection |
+| Google/Microsoft sign-in                                   | Owner verified website Google consent and sign-out; 0.3.9 registered-installation handoff and session check pass isolated runtime tests | Installed extension approval/exchange and sign-out, Microsoft setup and session renewal |
 | Google Drive/OneDrive backups                              | Narrow-scope adapter and encrypted transfer contracts tested        | OAuth consent, token handling, live rate-limit/revocation testing    |
 | ROVER-hosted sync                                          | Free staging Worker/D1 deployed; entitlement/consent enforced        | Live identity, key recovery, profile sync and conflict acceptance    |
 | Cross-browser portability                                  | Named profiles, mappings, consent, transfer plans implemented       | Hosted UI retrieval and live Chrome↔Edge/profile round trip          |

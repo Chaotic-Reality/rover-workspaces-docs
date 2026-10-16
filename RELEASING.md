@@ -11,6 +11,14 @@ ROVER Workspaces currently automates verification and packaging. Browser-store p
 
 ## Beta release track
 
+The 0.3.9 personal candidate begins registered-installation account connection
+testing. Keep the loaded unpacked folder stable and export a Full local backup
+before upgrading. Only explicitly registered extension IDs can connect; do not
+share it as an unrestricted sign-in beta. Record approval, connection check,
+expiry, cancellation and independent website/browser sign-out results before
+calling that transport accepted. No Pro grant or automated update check is
+included yet.
+
 The first external release should be a closed beta. Use a numeric release version
 such as `0.4.0` and identify the build as `ROVER Workspaces BETA` in the store
 name and description. Chrome can restrict a private testing listing to trusted

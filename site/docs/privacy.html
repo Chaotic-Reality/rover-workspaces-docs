@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Privacy and data handling.">
-<meta name="rover-doc-source-sha256" content="58b386206f1b6a1b6f5cc8164250db23f1863780f57a4e4977a3be09736b8330">
+<meta name="rover-doc-source-sha256" content="bc78f8499ac15ad01a8be2e7674d32dfce3d2b777c4f51146f0b6a47e97462c4">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/privacy.html">
 <title>Privacy and data handling · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -49,8 +49,24 @@ cookies. Expired session records are cleaned when another session is created;
 identity records remain until deletion. Ask the maintainer through your private
 tester contact to delete a beta account. Account sign-out/deletion does not
 delete workspaces stored in your extension. No workspace data is uploaded.</p>
-<p>Extension account sign-in remains disabled. The prepared connection uses a random installation ID separately from workspace data, with one-time state and proof in memory. Short-lived connection tokens will be kept only in browser-session storage, outside Full local backups and exports; restarting the browser clears that storage. Browser sign-out attempts to revoke that exact server session and always clears its local record. If revocation cannot be confirmed, the dialog reports this and the server session expires within 15 minutes. Website sign-out is separate.</p>
-<p>After activation, explicit sign-in will send the installation ID, extension ID, random state and public proof challenge to the protected beta website. The verifier and one-time code are sent only in a bounded exchange to that website. No workspace content is sent. A short-lived HttpOnly connection cookie lets the website resume explicit approval after Google login. Google sign-in, Drive backup and workspace sync are separate choices.</p>
+<p>The 0.3.9 candidate enables optional account connection only for the registered
+personal Chrome testing installation. Connection uses a random installation ID
+separately from workspace data, with one-time state and proof in memory. Tokens
+stay only in extension session storage, outside backups; browser restart clears
+that storage. Opening Account with a saved session, or choosing Check connection,
+sends that session to the protected server to verify its registration and expiry.
+No workspace content is sent. Browser sign-out attempts to revoke that exact
+session and clears its local record even if confirmation fails. Sessions expire
+within 15 minutes and do not yet auto-renew. Website sign-out is separate.</p>
+<p>Explicit sign-in sends the installation ID, extension ID, random state and
+public proof challenge to the protected beta website. The verifier and one-time
+code are sent only in a bounded exchange to that website. The server briefly
+retains hashed code and installation identifiers, proof challenge and opaque
+source account/session references, never the raw proof verifier or session
+token. Codes are usable for up to two minutes; expired handoff rows are cleaned
+when another handoff starts. A short-lived HttpOnly connection cookie resumes
+explicit approval after Google login. Google sign-in, Drive backup and workspace
+sync remain separate choices.</p>
 <h2 id="data-kept-on-your-device">Data kept on your device</h2>
 <p>Update notices store pending/installed version information and dismissal state
 locally, separately from portable backups. <strong>Check for updates</strong> opens the
@@ -62,7 +78,12 @@ Browser-store update delivery is handled by the browser and its store.</p>
 <p>Favorites, collection names and assignments, and the last time a workspace was successfully opened are also stored locally. This recent-workspace record is not a record of every website you visit. Appearance preferences, Custom Templates, saved workspace revisions, trial/entitlement status, and explicit local profile/link records are stored separately. Saved revisions follow the configured per-workspace retention (5–50), subject to a 500-revision total limit. Local previews are drawn from saved group names and colors; ROVER Workspaces does not fetch screenshots or remote favicons for them.</p>
 <p>These records use extension-local storage in the current browser profile. ROVER Workspaces does not provide its own encryption or a cloud backup. Other users or software with access to your device or profile may be able to access that data. Device backup software may also copy it.</p>
 <h2 id="what-the-extension-does-not-collect">What the extension does not collect</h2>
-<p>The extension account connection remains disabled, while the protected website offers the optional Google account test described above. The extension has no analytics, advertising, crash-report upload, cloud synchronization, or server that receives saved workspaces. It does not read page content, cookies, passwords, form entries, or the browser&#39;s history database. It excludes private windows and browser-internal, file, and unsupported tab URLs when capturing.</p>
+<p>The optional beta account connection described above does not upload workspaces.
+The extension has no analytics, advertising, crash-report upload, cloud
+synchronization, or server that receives saved workspaces. It does not read page
+content, cookies, passwords, form entries, or the browser&#39;s history database.
+It excludes private windows and browser-internal, file, and unsupported tab URLs
+when capturing.</p>
 <p>URLs and titles can still contain personal information, search terms, private document names, or access tokens in query strings. Capture does not remove that information. Review saved data and exports before sharing them.</p>
 <h2 id="permissions-and-connections">Permissions and connections</h2>
 <div class="table-scroll" role="region" aria-label="Scrollable table" tabindex="0"><table>

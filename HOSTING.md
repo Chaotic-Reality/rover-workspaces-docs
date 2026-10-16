@@ -16,6 +16,12 @@ The future admin console is kept separately in `admin/` and is not deployed with
 
 See the private repository's hosting plan for implementation details and the manual Cloudflare setup steps. Keep payment secrets, workspace exports, and administrator credentials out of this public repository.
 
+The 0.3.9 personal account-connection test reuses the existing beta Worker and
+account database with an additive short-lived handoff table. Website and
+extension authentication remain behind the tester Access gate; only registered
+extension IDs can connect. This activates no paid resource, provider backup,
+subscription or sync service. Installed-browser transport remains to verify.
+
 Bug reporting and issue updates reuse the existing beta Worker. Static hosting
 alone cannot securely hold a GitHub write credential; the private server handles
 that part, with no extra database, email service, or paid plan added. Dynamic

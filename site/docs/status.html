@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Feature status.">
-<meta name="rover-doc-source-sha256" content="c14010aff9af067e4892908d20ebb4e073f920877e2331822cb6c1b0b0ec2e0e">
+<meta name="rover-doc-source-sha256" content="75009848575d0c808042698f2000f1d9f1cdee9fe55c978777e013a2a8a20097">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/status.html">
 <title>Feature status · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -20,24 +20,27 @@
 15. The first landing after sign-in still displayed signed-out controls until
 Account was opened again. The session-cookie correction and shared top-right
 account menu are deployed on the existing protected beta after isolated runtime
-checks; fresh installed-browser landing, avatar, keyboard and responsive-menu
-acceptance remain to verify.
-Extension connection stays disabled, and Microsoft, Drive backup and sync remain unavailable.</p>
+checks. The owner has since confirmed website sign-in behaves correctly.
+Extension connection is prepared in 0.3.9 for the registered personal testing
+installation; installed-browser approval/exchange and sign-out acceptance remain.
+Microsoft, account-based Pro grants, Drive backup and sync remain unavailable.</p>
 <p>Google beta callback registration was confirmed by the owner. Google client
 configuration and the encrypted session secret are prepared on the existing
 beta Worker. Native Account-page sign-in/sign-out forms pass isolated runtime
-checks, including signed tester access, CSRF and session cookies. Extension handoff activation remains disabled; installed
-extension connection remains to test. No Drive connection is enabled.
-The owner-supplied Chrome testing extension ID is registered for the pending
-handoff. This does not enable sign-in or approve other browser installations.
+checks, including signed tester access, CSRF and session cookies. Extension
+handoff is enabled for the registered personal 0.3.9 testing installation;
+installed extension connection remains to test. No Drive connection is enabled.
+The owner-supplied Chrome testing extension ID is registered for this handoff;
+other browser installations are not implicitly approved.
 Browser-side proof/state lifecycle tests cover exact callback targets, one-time
 use, expiry and cancellation. Browser launch/exchange and explicit website
-approval are implemented behind disabled activation. Isolated tests do not prove
-installed Chrome/Edge Access-cookie transport or live Google consent.</p>
-<p>The current local personal testing version is <strong>0.3.8</strong>, including the disabled Account dialog, Update from
+approval pass isolated runtime tests. Those tests do not prove installed
+Chrome/Edge Access-cookie transport; website Google consent is owner-verified.</p>
+<p>The current local personal testing candidate is <strong>0.3.9</strong>, including the registered-installation Account connection, Update from
 current tabs and update notices. Installed Chrome/Edge acceptance remains pending. Reload the
 existing unpacked installation and check About or extension details for its version.</p>
-<p>An earlier application check passed all 222 tests and the build after a
+<p>The current 0.3.9 application check passed all 244 tests and the build. This does
+not replace installed-browser acceptance. An earlier application check passed all 222 tests and the build after a
 test-runner process workaround. A later check still encountered an intermittent
 Windows worker startup failure before a browser test ran; the underlying runner
 issue remains unresolved. Tests remain automatically discovered and failures
@@ -72,8 +75,8 @@ stop the check. This tooling work enables no additional live capability.</p>
 </tr>
 <tr>
 <td>Google/Microsoft sign-in</td>
-<td>Owner verified website Google consent and sign-out; shared account menu and first-landing cookie fix have isolated runtime coverage; extension handoff stays disabled</td>
-<td>Fresh landing/menu browser acceptance, Microsoft setup and installed extension connection</td>
+<td>Owner verified website Google consent and sign-out; 0.3.9 registered-installation handoff and session check pass isolated runtime tests</td>
+<td>Installed extension approval/exchange and sign-out, Microsoft setup and session renewal</td>
 </tr>
 <tr>
 <td>Google Drive/OneDrive backups</td>

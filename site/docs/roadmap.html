@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Roadmap.">
-<meta name="rover-doc-source-sha256" content="0264a668eacfdf95491682b8d027e349481bfe9887b2af923f54d09e00c66491">
+<meta name="rover-doc-source-sha256" content="30e77f5e18555e16d273b24aad0613de703c9254be9f3e838d2ef906eab6626b">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/roadmap.html">
 <title>Roadmap · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -15,7 +15,32 @@
 <a href="/privacy.html">Privacy</a>
 <a href="/support.html">Support</a></nav></div></header>
 <main id="main" class="shell documentation"><aside class="docs-sidebar"><a class="docs-home" href="/docs.html">Documentation</a><nav aria-label="Documentation navigation"><details><summary>Using ROVER</summary><div><a href="/docs/user-guide.html">User guide</a><a href="/docs/how-it-works.html">How ROVER works</a><a href="/docs/importing.html">Import and export</a><a href="/docs/local-backup.html">Full local backup</a><a href="/docs/appearance.html">Appearance</a><a href="/docs/support.html">Support guidance</a></div></details><details open><summary>Development and beta</summary><div><a href="/docs/status.html">Feature status</a><a href="/docs/roadmap.html" aria-current="page">Roadmap</a><a href="/docs/changelog.html">Change history</a><a href="/docs/releasing.html">Release process</a><a href="/docs/beta-setup.html">Beta setup checklist</a></div></details><details><summary>Plans and policies</summary><div><a href="/docs/identity-signin.html">Account sign-in design</a><a href="/docs/hosted-sync.html">Hosted sync design</a><a href="/docs/pricing.html">Plans and trial details</a><a href="/docs/terms.html">Draft subscription terms</a><a href="/docs/privacy.html">Privacy and data handling</a><a href="/docs/license.html">License statement</a></div></details><details><summary>Project reference</summary><div><a href="/docs/about.html">About ROVER</a><a href="/docs/brand-guidelines.html">Brand guidelines</a><a href="/docs/hosting.html">Hosting plan</a><a href="/docs/admin-portal.html">Admin portal design</a><a href="/docs/store-listing.html">Store listing preparation</a><a href="/docs/store-policy-review.html">Store policy review</a><a href="/docs/site-development.html">Website maintenance</a><a href="/docs/project-overview.html">Project overview</a></div></details></nav></aside><article class="doc-article"><div class="doc-breadcrumb"><a href="/docs.html">Documentation</a><span aria-hidden="true">/</span><span>Development and beta</span></div><h1 id="rover-workspaces-roadmap">ROVER Workspaces roadmap</h1>
-<p class="doc-description">Future improvements and release gates.</p><details class="doc-contents"><summary>On this page</summary><nav aria-label="On this page"><a class="toc-level-2" href="#priority-1--release-gate-and-local-pro-foundation">Priority 1 — release gate and local Pro foundation</a><a class="toc-level-2" href="#priority-2--first-paid-value">Priority 2 — first paid value</a><a class="toc-level-2" href="#priority-3--licensing-and-subscriptions">Priority 3 — licensing and subscriptions</a><a class="toc-level-2" href="#priority-4--user-owned-backups">Priority 4 — user-owned backups</a><a class="toc-level-2" href="#priority-5--named-profiles-and-portability">Priority 5 — named profiles and portability</a><a class="toc-level-2" href="#priority-6--rover-hosted-sync-and-later-capabilities">Priority 6 — ROVER-hosted sync and later capabilities</a><a class="toc-level-2" href="#launch-learning">Launch learning</a><a class="toc-level-2" href="#working-approach">Working approach</a></nav></details><div class="prose"><p>This roadmap lists planned work only. Completed work is recorded in the <a href="/docs/changelog.html">change history</a>. ROVER Workspaces is currently in development; Chrome and Edge are the supported release targets, and live browser acceptance remains a release gate. Plans may change and do not promise delivery dates.</p>
+<p class="doc-description">Future improvements and release gates.</p><details class="doc-contents"><summary>On this page</summary><nav aria-label="On this page"><a class="toc-level-2" href="#current-work-path--account-connected-tester-beta">Current work path — account-connected tester beta</a><a class="toc-level-2" href="#priority-1--release-gate-and-local-pro-foundation">Priority 1 — release gate and local Pro foundation</a><a class="toc-level-2" href="#priority-2--first-paid-value">Priority 2 — first paid value</a><a class="toc-level-2" href="#priority-3--licensing-and-subscriptions">Priority 3 — licensing and subscriptions</a><a class="toc-level-2" href="#priority-4--user-owned-backups">Priority 4 — user-owned backups</a><a class="toc-level-2" href="#priority-5--named-profiles-and-portability">Priority 5 — named profiles and portability</a><a class="toc-level-2" href="#priority-6--rover-hosted-sync-and-later-capabilities">Priority 6 — ROVER-hosted sync and later capabilities</a><a class="toc-level-2" href="#launch-learning">Launch learning</a><a class="toc-level-2" href="#working-approach">Working approach</a></nav></details><div class="prose"><p>This roadmap lists planned work only. Completed work is recorded in the <a href="/docs/changelog.html">change history</a>. ROVER Workspaces is currently in development; Chrome and Edge are the supported release targets, and live browser acceptance remains a release gate. Plans may change and do not promise delivery dates.</p>
+<h2 id="current-work-path--account-connected-tester-beta">Current work path — account-connected tester beta</h2>
+<p>Website Google sign-in and sign-out are owner-verified. Implement and accept
+these milestones in order before enabling provider backups or hosted sync:</p>
+<ol>
+<li><input disabled="" type="checkbox"> Connect extension sign-in through explicit website approval and the
+installation-bound one-time handoff; verify installed Chrome, then Edge.</li>
+<li><input disabled="" type="checkbox"> Show verified account/session status, license level and applicable expiry
+in the app, with independent browser sign-out and clear offline/expired states.</li>
+<li><input disabled="" type="checkbox"> Connect owner-managed complimentary Pro grants for invited testers, with
+optional expiration, revocation and an audit trail. No payment is required
+for these grants; paid subscriptions remain a separate integration.</li>
+<li><input disabled="" type="checkbox"> Add beta <strong>Test Free Mode</strong> and <strong>Use Pro access</strong> controls. Free mode
+preserves saved data and the real grant; returning to Pro requires a valid
+grant. Testing controls must not enable cloud access or create a license.</li>
+<li><input disabled="" type="checkbox"> Publish a small machine-readable release manifest on the existing website
+containing version, release channel, date, release notes and a safe details
+link. Verify extension access through the beta gate without weakening it.</li>
+<li><input disabled="" type="checkbox"> Add an <strong>Update available</strong> indicator and release-details popup using
+that manifest, with infrequent checks, a reminder cooldown and dismissal.
+Preserve manual checking and offline use; never download or execute remote
+extension code. Store updates and unpacked beta updates have different steps.</li>
+</ol>
+<p>These milestones use existing free resources where possible. Testers receive
+complimentary Pro when the live account/grant path is ready; website admission
+alone does not grant Pro or enable sync.</p>
 <h2 id="priority-1--release-gate-and-local-pro-foundation">Priority 1 — release gate and local Pro foundation</h2>
 <p>These items make the local product ready for a public release and prepare paid features without connecting a payment provider yet.</p>
 <ul>
