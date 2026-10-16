@@ -4,6 +4,11 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Prepare server-side complimentary Pro grant storage with account binding,
+  optional expiry, targeted revocation, audit records, duplicate protection and
+  transactional rollback tests. This is isolated preparation; no live grant,
+  admin route or application license activation is enabled.
+
 ## 0.3.10 — update-control cleanup
 
 - Keep the installed version in About. Move manual Check for updates into the

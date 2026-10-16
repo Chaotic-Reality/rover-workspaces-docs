@@ -14,6 +14,8 @@ these milestones in order before enabling provider backups or hosted sync:
 3. [ ] Connect owner-managed complimentary Pro grants for invited testers, with
    optional expiration, revocation and an audit trail. No payment is required
    for these grants; paid subscriptions remain a separate integration.
+   Grant persistence and lifecycle tests are prepared in isolation; owner
+   authorization, live activation and application license reads remain.
 4. [ ] Add beta **Test Free Mode** and **Use Pro access** controls. Free mode
    preserves saved data and the real grant; returning to Pro requires a valid
    grant. Testing controls must not enable cloud access or create a license.

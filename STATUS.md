@@ -1,6 +1,11 @@
 # ROVER capability status
 
-Updated October 15, 2026. This describes engineering evidence, not a store release.
+Updated October 16, 2026. This describes engineering evidence, not a store release.
+
+October 16 preparation: complimentary Pro grant persistence now passes isolated
+database/runtime tests for expiry, revocation, audit, concurrent requests and
+rollback. The live account database is unchanged. Owner-management protection,
+account license reads, app integration and Test Free Mode remain unfinished.
 
 The owner confirmed successful website Google sign-in and sign-out on October
 15. The first landing after sign-in still displayed signed-out controls until
