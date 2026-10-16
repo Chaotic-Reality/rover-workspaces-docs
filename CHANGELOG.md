@@ -4,6 +4,13 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+## 0.3.10 — update-control cleanup
+
+- Keep the installed version in About. Move manual Check for updates into the
+  About dialog beside Release notes. Remove the redundant Updated to, What's
+  new and Dismiss update notice block from navigation. Pending browser updates
+  still show their guarded reload action; automatic beta polling remains future work.
+
 ## 0.3.9 — account connection testing candidate
 
 - Enable the explicit Google connection control for the registered Chrome beta

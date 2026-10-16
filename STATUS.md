@@ -24,8 +24,8 @@ use, expiry and cancellation. Browser launch/exchange and explicit website
 approval pass isolated runtime tests. Those tests do not prove installed
 Chrome/Edge Access-cookie transport; website Google consent is owner-verified.
 
-The current local personal testing candidate is **0.3.9**, including the registered-installation Account connection, Update from
-current tabs and update notices. Installed Chrome/Edge acceptance remains pending. Reload the
+The current local personal testing candidate is **0.3.10**, including the registered-installation Account connection, Update from
+current tabs and simplified update controls inside About. Installed Chrome/Edge acceptance remains pending. Reload the
 existing unpacked installation and check About or extension details for its version.
 
 The current 0.3.9 application check passed all 244 tests and the build. This does
