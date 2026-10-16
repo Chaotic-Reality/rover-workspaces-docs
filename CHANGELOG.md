@@ -4,6 +4,10 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Adopt a Google-first beta work path covering Chrome delivery, account sessions,
+  owner provisioning, Pro/Free testing, payments, Drive backup and profile sync.
+  Microsoft and OneDrive are deferred; the existing Cloudflare backend remains.
+
 - Prepare server-side complimentary Pro grant storage with account binding,
   optional expiry, targeted revocation, audit records, duplicate protection and
   transactional rollback tests. This is isolated preparation; no live grant,

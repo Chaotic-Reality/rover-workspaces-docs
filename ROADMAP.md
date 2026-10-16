@@ -4,11 +4,16 @@ This roadmap lists planned work only. Completed work is recorded in the [change 
 
 ## Current work path — account-connected tester beta
 
+Phase one is Google sign-in, Google Drive and Chrome distribution, with the
+existing Cloudflare backend retained. Microsoft sign-in, OneDrive and Edge-store
+setup are phase two and must not block Chrome readiness. The complete
+[Google beta readiness checklist](GOOGLE_BETA_READINESS.md) governs this work.
+
 Website Google sign-in and sign-out are owner-verified. Implement and accept
 these milestones in order before enabling provider backups or hosted sync:
 
 1. [ ] Connect extension sign-in through explicit website approval and the
-   installation-bound one-time handoff; verify installed Chrome, then Edge.
+   installation-bound one-time handoff; verify installed Chrome first.
 2. [ ] Show verified account/session status, license level and applicable expiry
    in the app, with independent browser sign-out and clear offline/expired states.
 3. [ ] Connect owner-managed complimentary Pro grants for invited testers, with
@@ -47,7 +52,7 @@ These items make the local product ready for a public release and prepare paid f
 ## Priority 3 — licensing and subscriptions
 
 - [ ] Mount hosted callback routes with secure browser cookies, revocable sessions, and a one-time extension handoff; verify the complete flow before enabling sign-in.
-- [ ] Complete Google and Microsoft app registrations, final callback/domain setup, and live sign-in with account-bound sessions.
+- [ ] Complete Google callback/domain setup and live app sign-in with account-bound sessions; defer Microsoft registration to phase two.
   Google website consent and sign-out are owner-verified; fresh account-menu
   and landing-page acceptance, Microsoft and extension connection remain.
 - [ ] Connect an approved payment-provider sandbox and verify purchase, renewal, cancellation, revocation, and complimentary Pro grants before enabling billing.
@@ -58,7 +63,7 @@ These items make the local product ready for a public release and prepare paid f
 Implement one provider at a time so users own the storage and ROVER's initial operating cost stays low.
 
 - [ ] Add Google Drive backup using the hidden `appDataFolder` and minimum required permissions.
-- [ ] Add OneDrive backup using the dedicated application folder and minimum Microsoft Graph permissions.
+- [ ] Phase two: add OneDrive backup using the dedicated application folder and minimum Microsoft Graph permissions.
 - [ ] Use OAuth 2.0 authorization code flow with PKCE, `S256`, state validation, account switching, token revocation, and no client secrets in the extension.
 - [ ] Enable live provider controls after OAuth registration and account consent.
 - [ ] Test provider rate limits, revoked access, expired tokens, partial failures, and interrupted uploads.

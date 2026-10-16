@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Google beta readiness.">
+<meta name="rover-doc-source-sha256" content="dc6a0c046e2b628c5549391c9d0faa1809a4904476ce41590821a5b967c43ea2">
+<link rel="canonical" href="https://beta.roverworkspaces.com/docs/google-beta-readiness.html">
+<title>Google beta readiness · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
+<body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
+<a class="brand" href="/" aria-label="ROVER Workspaces home"><img src="/branding/rover-mark.png" width="78" height="78" alt=""><span class="wordmark"><strong>ROVER</strong><span>Workspaces</span></span></a>
+<!-- ROVER_ACCOUNT_START --><div class="account-menu"><button class="account-trigger" type="button" popovertarget="account-popover" aria-label="Open account menu"><span class="account-avatar account-avatar-fallback" aria-hidden="true">●</span><span class="account-name">Account</span><span aria-hidden="true">▾</span></button><div id="account-popover" class="account-popover" popover="auto" aria-label="Account"><a href="/account.html">Account overview and sign-in</a><p>Sign-in availability is shown on the protected beta website.</p></div></div><!-- ROVER_ACCOUNT_END -->
+<nav aria-label="Main navigation"><a href="/">Home</a>
+<a href="/how-it-works.html">How it works</a>
+<a href="/docs.html" aria-current="page">Documentation</a>
+<a href="/beta-install.html">Beta setup</a>
+<a href="/pricing.html">Plans</a>
+<a href="/privacy.html">Privacy</a>
+<a href="/support.html">Support</a></nav></div></header>
+<main id="main" class="shell documentation"><aside class="docs-sidebar"><a class="docs-home" href="/docs.html">Documentation</a><nav aria-label="Documentation navigation"><details><summary>Using ROVER</summary><div><a href="/docs/user-guide.html">User guide</a><a href="/docs/how-it-works.html">How ROVER works</a><a href="/docs/importing.html">Import and export</a><a href="/docs/local-backup.html">Full local backup</a><a href="/docs/appearance.html">Appearance</a><a href="/docs/support.html">Support guidance</a></div></details><details open><summary>Development and beta</summary><div><a href="/docs/status.html">Feature status</a><a href="/docs/roadmap.html">Roadmap</a><a href="/docs/google-beta-readiness.html" aria-current="page">Google beta readiness</a><a href="/docs/changelog.html">Change history</a><a href="/docs/releasing.html">Release process</a><a href="/docs/beta-setup.html">Beta setup checklist</a></div></details><details><summary>Plans and policies</summary><div><a href="/docs/identity-signin.html">Account sign-in design</a><a href="/docs/hosted-sync.html">Hosted sync design</a><a href="/docs/pricing.html">Plans and trial details</a><a href="/docs/terms.html">Draft subscription terms</a><a href="/docs/privacy.html">Privacy and data handling</a><a href="/docs/license.html">License statement</a></div></details><details><summary>Project reference</summary><div><a href="/docs/about.html">About ROVER</a><a href="/docs/brand-guidelines.html">Brand guidelines</a><a href="/docs/hosting.html">Hosting plan</a><a href="/docs/admin-portal.html">Admin portal design</a><a href="/docs/store-listing.html">Store listing preparation</a><a href="/docs/store-policy-review.html">Store policy review</a><a href="/docs/site-development.html">Website maintenance</a><a href="/docs/project-overview.html">Project overview</a></div></details></nav></aside><article class="doc-article"><div class="doc-breadcrumb"><a href="/docs.html">Documentation</a><span aria-hidden="true">/</span><span>Development and beta</span></div><h1 id="google-first-beta-readiness">Google-first beta readiness</h1>
+<p class="doc-description">Google-first account, Pro, Drive, sync and Chrome delivery checklist.</p><details class="doc-contents"><summary>On this page</summary><nav aria-label="On this page"><a class="toc-level-2" href="#scope-and-current-starting-point">Scope and current starting point</a><a class="toc-level-2" href="#1-reliable-account-connection">1. Reliable account connection</a><a class="toc-level-2" href="#2-protected-owner-management">2. Protected owner management</a><a class="toc-level-2" href="#3-authoritative-pro-and-free-behavior">3. Authoritative Pro and Free behavior</a><a class="toc-level-2" href="#4-payment-and-subscription-provisioning">4. Payment and subscription provisioning</a><a class="toc-level-2" href="#5-google-drive-backup">5. Google Drive backup</a><a class="toc-level-2" href="#6-named-profiles-and-continuous-sync">6. Named profiles and continuous sync</a><a class="toc-level-2" href="#7-updates-and-chrome-tester-delivery">7. Updates and Chrome tester delivery</a><a class="toc-level-2" href="#8-operational-and-release-gates">8. Operational and release gates</a><a class="toc-level-2" href="#delivery-order-and-owner-decisions">Delivery order and owner decisions</a></nav></details><div class="prose"><p>Updated October 16, 2026. This is the execution checklist for a fully functional
+invited beta, not a declaration that cloud services or subscriptions are live.
+Use <a href="/docs/status.html">feature status</a> for verified evidence and <a href="/docs/roadmap.html">roadmap</a>
+for remaining work. Completed milestones move into <a href="/docs/changelog.html">change history</a>.</p>
+<h2 id="scope-and-current-starting-point">Scope and current starting point</h2>
+<p>Phase one targets Chrome Web Store distribution, Google account sign-in and
+Google Drive backup. Cloudflare remains the existing ROVER website/API backend;
+this does not move hosting to Google Cloud. Google sign-in authenticates the
+person, Drive permission permits backup, ROVER licensing controls Pro access,
+and a separate checkout provider will handle subscriptions.</p>
+<p>Microsoft sign-in and OneDrive are phase two. Keep existing local compatibility
+but do not let Edge-store or Microsoft setup block the Google beta.</p>
+<p>Website Google sign-in/sign-out are owner-verified. The current 0.3.10 extension
+has a registered-installation connection flow, but installed-browser acceptance
+is still pending. Grant persistence and sync/backup contracts have isolated
+tests; live grants, admin management, payments, Drive and account sync are not
+enabled. The current website tester gate is separate from all of those services.</p>
+<h2 id="1-reliable-account-connection">1. Reliable account connection</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Verify installed Chrome sign-in, explicit connection approval, connection
+status, cancellation, expiry and independent website/browser sign-out.</li>
+<li><input disabled="" type="checkbox"> Verify real extension requests through Access, including blocked cookies,
+redirects and expired website access; do not bypass the gate to hide failures.</li>
+<li><input disabled="" type="checkbox"> Add renewable, revocable sessions with rotation/reuse protection and safe
+browser restart behavior. The current 15-minute session is not persistent login.</li>
+<li><input disabled="" type="checkbox"> Show the connected person and verified plan/expiry in the app. Avoid
+presenting cached or offline-unverified state as a freshly verified license.</li>
+<li><input disabled="" type="checkbox"> Define account deletion, device removal, access revocation and recovery.</li>
+</ul>
+<p><strong>Owner:</strong> run the exact packaged-browser acceptance checklist and approve live
+Google consent. Registration and website login alone do not complete app login.</p>
+<h2 id="2-protected-owner-management">2. Protected owner management</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Verify a separate owner-only admin hostname/access policy and MFA before
+deploying the prepared admin shell. A tester allowlist is not admin authority.</li>
+<li><input disabled="" type="checkbox"> Add account lookup and read-only plan/device/connection status first.</li>
+<li><input disabled="" type="checkbox"> Add complimentary Pro Local/Pro Sync grants with optional expiry, reason,
+audited operator identity and targeted revocation; prevent duplicate actions.</li>
+<li><input disabled="" type="checkbox"> Protect mutations with server authorization, CSRF checks, confirmation and
+rate limits. Do not trust posted account/operator names or a browser paid flag.</li>
+<li><input disabled="" type="checkbox"> Apply the prepared grant migration only after management/read-path checks.</li>
+<li><input disabled="" type="checkbox"> Define audit retention/deletion and update privacy before collecting data.</li>
+</ul>
+<p><strong>Owner:</strong> approve the admin identity/hostname and verify protected access. Code
+and isolated lifecycle tests can proceed independently of that live deployment.</p>
+<h2 id="3-authoritative-pro-and-free-behavior">3. Authoritative Pro and Free behavior</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Derive license reads from the authenticated ROVER account; connect those
+results to local feature gates and server-side cloud authorization.</li>
+<li><input disabled="" type="checkbox"> Define how paid subscriptions, complimentary grants and trials combine;
+revoking a gift must not erase a valid paid subscription, or vice versa.</li>
+<li><input disabled="" type="checkbox"> Grant invited testers complimentary Pro without requiring payment.</li>
+<li><input disabled="" type="checkbox"> Add Test Free Mode and Use Pro access for authorized testers. Free mode
+masks capabilities without changing the grant or deleting saved workspaces.</li>
+<li><input disabled="" type="checkbox"> Returning to Pro must require valid access; Test Free Mode is not an unlock.</li>
+<li><input disabled="" type="checkbox"> Define offline grace, stale-license behavior, expiration and revalidation.
+Existing data remains readable/exportable when a plan ends.</li>
+<li><input disabled="" type="checkbox"> Verify upgrade prompts, limits, trial lifecycle and local/remote revocation.</li>
+</ul>
+<h2 id="4-payment-and-subscription-provisioning">4. Payment and subscription provisioning</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Choose and onboard the payment provider; use a sandbox first. Paddle
+remains a planning candidate, not an activated merchant account.</li>
+<li><input disabled="" type="checkbox"> Create monthly/annual products and approved prices, terms and refund rules.</li>
+<li><input disabled="" type="checkbox"> Bind checkout to the signed-in ROVER account on the server. Never activate
+Pro solely from a checkout return URL or client-side success message.</li>
+<li><input disabled="" type="checkbox"> Verify signed webhooks, idempotency, retries, reconciliation and out-of-order
+events for purchase, renewal, payment failure, cancellation, refund and dispute.</li>
+<li><input disabled="" type="checkbox"> Provide customer billing management, invoices and cancellation links.</li>
+<li><input disabled="" type="checkbox"> Keep payment/grant records authoritative and separate from browser profiles.</li>
+<li><input disabled="" type="checkbox"> Test purchase/grant combinations, account recovery and support procedures.</li>
+<li><input disabled="" type="checkbox"> Obtain explicit owner approval before live payment activation or charges.</li>
+</ul>
+<p>Complimentary tester provisioning can ship before paid checkout. Store
+installation does not by itself provision a ROVER subscription. See the
+<a href="https://developer.paddle.com/build/">payment integration documentation</a>.</p>
+<h2 id="5-google-drive-backup">5. Google Drive backup</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Request Drive permission separately from basic sign-in, using the narrow
+application-data scope. Do not request access to the user&#39;s entire Drive.</li>
+<li><input disabled="" type="checkbox"> Implement secure token storage, refresh, account switching, disconnect and
+revoked-consent handling. Review OAuth Testing-mode token lifetime limitations.</li>
+<li><input disabled="" type="checkbox"> Encrypt backup contents before upload and define key recovery, rotation and
+lost-key behavior. Keep authentication credentials out of backups.</li>
+<li><input disabled="" type="checkbox"> Implement backup listing, create/download/delete, retention, integrity and
+restore preview. Explain that the hidden app folder is not visible in Drive UI.</li>
+<li><input disabled="" type="checkbox"> Verify a second Chrome profile can restore an authorized backup without
+silently replacing its existing workspace library.</li>
+<li><input disabled="" type="checkbox"> Test quotas, expired/revoked tokens, partial uploads, cancellation, offline
+recovery and user deletion of app data. Keep ordinary local exports available.</li>
+</ul>
+<p>Google&#39;s <a href="https://developers.google.com/workspace/drive/api/guides/appdata">app-data guide</a>
+describes the hidden app folder and its dedicated scope. Backup is a recovery
+copy; it is not automatically a continuous multi-device sync service.</p>
+<h2 id="6-named-profiles-and-continuous-sync">6. Named profiles and continuous sync</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Keep the person, ROVER Home/Work/Scouts profile, browser installation,
+device and connected Drive account as separate identifiers.</li>
+<li><input disabled="" type="checkbox"> Let users choose exactly which ROVER profile each browser installation
+links to; default to no sync and explicit profile/device consent.</li>
+<li><input disabled="" type="checkbox"> Provide retrieve/copy/merge from another linked profile with a preview.</li>
+<li><input disabled="" type="checkbox"> Wire the live beta sync service to real sessions and Pro Sync entitlement;
+never distribute the fixed development staging credential.</li>
+<li><input disabled="" type="checkbox"> Finish client encryption, key recovery and the encrypted object-storage
+decision within approved costs. Separate beta data from staging/production.</li>
+<li><input disabled="" type="checkbox"> Handle revisions, concurrent edits, conflicts, offline queues, retry/backoff,
+interrupted operations and deletion tombstones without resurrecting old data.</li>
+<li><input disabled="" type="checkbox"> Add storage/size quotas, retention, full deletion and disconnected-device
+recovery. Turning sync off must not delete local workspaces.</li>
+<li><input disabled="" type="checkbox"> Prove an actual two-profile/two-device round trip and account isolation.</li>
+</ul>
+<h2 id="7-updates-and-chrome-tester-delivery">7. Updates and Chrome tester delivery</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Complete publisher registration, verification and the store draft.</li>
+<li><input disabled="" type="checkbox"> Register the store-assigned extension ID in app/server configuration and
+verify account connection using that identity before final submission.</li>
+<li><input disabled="" type="checkbox"> Prepare accurate listing copy, screenshots, promotional assets, permission
+justifications, accessible privacy policy and reviewer access instructions.</li>
+<li><input disabled="" type="checkbox"> Configure Private visibility and trusted testers/Google Group. Keep store,
+website and Google OAuth tester lists separately documented.</li>
+<li><input disabled="" type="checkbox"> Verify backup/migration from the unpacked installation to the store identity.</li>
+<li><input disabled="" type="checkbox"> Publish a version/channel/release-notes manifest and implement infrequent
+checks, Update available, optional reminder cooldown and dismissal.</li>
+<li><input disabled="" type="checkbox"> Keep manual checks/offline use and store-versus-unpacked instructions.
+Never fetch or execute remote extension code as an update mechanism.</li>
+<li><input disabled="" type="checkbox"> Submit/publish only after explicit owner authorization; verify store updates
+on tester installations after review. Private distribution still needs review.</li>
+</ul>
+<p>See <a href="https://developer.chrome.com/docs/webstore/cws-dashboard-distribution">Chrome private distribution</a>.</p>
+<h2 id="8-operational-and-release-gates">8. Operational and release gates</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Resolve the intermittent Windows test-worker startup failure. Do not skip
+files, suppress failures or relax timeouts to make the pipeline look green.</li>
+<li><input disabled="" type="checkbox"> Run the complete app, identity/grant, Worker, website and release checks.</li>
+<li><input disabled="" type="checkbox"> Retain source commit, package checksum, passing CI and browser acceptance
+together; preserve existing storage during upgrades and migrations.</li>
+<li><input disabled="" type="checkbox"> Verify HTTPS, bot/security settings, callbacks, reviewer access and any
+browser dangerous-site warning before inviting broader testing.</li>
+<li><input disabled="" type="checkbox"> Set free-tier quotas, abuse protection and sanitized monitoring; verify
+that operational logs never retain codes, tokens or private workspace content.</li>
+<li><input disabled="" type="checkbox"> Document deployment rollback, database recovery, secret rotation, incident
+response and customer-support ownership. Test recovery rather than assuming it.</li>
+<li><input disabled="" type="checkbox"> Complete privacy, terms, Google data-use disclosures, consent, account
+deletion and retention policies against the exact enabled beta capabilities.</li>
+<li><input disabled="" type="checkbox"> Exercise two real invited testers through installation, login, gifted Pro,
+Free-mode testing, encrypted backup, restore and opt-in profile sync.</li>
+</ul>
+<h2 id="delivery-order-and-owner-decisions">Delivery order and owner decisions</h2>
+<p>Deliver a working complimentary-Pro beta first, then Google Drive backup and
+named-profile sync. Paid checkout preparation can run alongside those features;
+real charges are a separate owner-approved milestone. Microsoft/OneDrive follow
+only after the Google path is accepted.</p>
+<p>Owner tasks are limited to installed-browser acceptance, publisher registration
+and draft ID, protected admin access confirmation, Google consent/verification,
+payment merchant onboarding, final commercial/legal decisions and final store
+submission approval. Engineering should keep a precise current checklist in
+the private owner handoff while working independently on unblocked code/tests.</p>
+<p>Keep existing free Cloudflare resources where possible. This checklist does
+not approve adding paid services, object storage that requires billing, or
+live payment collection. Review real usage and required plans before enabling
+any resource that could incur charges.</p>
+</div><p class="doc-source">This page is generated from the maintained documentation. <a href="https://github.com/Chaotic-Reality/rover-workspaces-docs/blob/main/GOOGLE_BETA_READINESS.md">View its source and revision history on GitHub</a>.</p></article></main>
+<footer><div class="shell"><p class="brand-meaning">ROVER means <strong>R</strong>estore, <strong>O</strong>rganize, <strong>V</strong>iew, <strong>E</strong>xplore, <strong>R</strong>epeat.</p><p>Make room for focus. This is a development beta; store availability and cloud services have not been announced.</p><nav aria-label="Footer navigation"><a href="/">Home</a>
+<a href="/how-it-works.html">How it works</a>
+<a href="/docs.html" aria-current="page">Documentation</a>
+<a href="/beta-install.html">Beta setup</a>
+<a href="/pricing.html">Plans</a>
+<a href="/account.html">Account</a>
+<a href="/privacy.html">Privacy</a>
+<a href="/support.html">Support</a></nav></div></footer></body></html>

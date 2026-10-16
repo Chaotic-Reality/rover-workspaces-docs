@@ -2,6 +2,11 @@
 
 Updated October 16, 2026. This describes engineering evidence, not a store release.
 
+Current scope is Google sign-in, Google Drive and Chrome distribution first,
+with Cloudflare retained as the backend. Microsoft/OneDrive are deferred. See
+the complete [Google beta readiness checklist](GOOGLE_BETA_READINESS.md) for
+account, owner provisioning, licensing, payments, backup, sync and release gates.
+
 October 16 preparation: complimentary Pro grant persistence now passes isolated
 database/runtime tests for expiry, revocation, audit, concurrent requests and
 rollback. The live account database is unchanged. Owner-management protection,

@@ -70,6 +70,13 @@ export const documents = [
     "Future improvements and release gates.",
   ],
   [
+    "GOOGLE_BETA_READINESS.md",
+    "google-beta-readiness",
+    "Google beta readiness",
+    "Development and beta",
+    "Google-first account, Pro, Drive, sync and Chrome delivery checklist.",
+  ],
+  [
     "CHANGELOG.md",
     "changelog",
     "Change history",
