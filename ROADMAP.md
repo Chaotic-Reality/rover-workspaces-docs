@@ -23,8 +23,9 @@ these milestones in order before enabling provider backups or hosted sync:
    authorization, live activation and application license reads remain.
    Independent purchase/grant resolution is prepared in isolation; live source
    persistence, verified reads and application integration still remain.
-   A session-authorized read adapter is now isolated-tested; production source
-   wiring and its protected host mount are still required.
+   The session-authorized adapter and real host/grant-read wiring are now
+   isolated-tested behind a disabled switch. Approved activation, live grant
+   management, payment source persistence and app integration remain required.
 4. [ ] Add beta **Test Free Mode** and **Use Pro access** controls. Free mode
    preserves saved data and the real grant; returning to Pro requires a valid
    grant. Testing controls must not enable cloud access or create a license.

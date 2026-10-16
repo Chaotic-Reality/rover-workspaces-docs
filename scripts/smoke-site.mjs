@@ -23,6 +23,7 @@ if (gated) {
     "/auth/google/start",
     "/auth/google/callback",
     "/auth/extension/session",
+    "/auth/extension/license",
     "/auth/extension/exchange",
     "/auth/extension/sign-out",
     "/connect",

@@ -4,6 +4,11 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Prepared and isolated-tested the real beta-host license wiring with signed
+  tester access, registered sessions, grant reads, revocation, native rate limits
+  and independent disable switches. Live license activation, grant migration and
+  purchase reads remain disabled.
+
 - Follow-up checks show the Windows startup issue also recurs with thread
   workers. The earlier complete passing run remains historical evidence; the
   latest aggregate is incomplete and the release gate remains open.

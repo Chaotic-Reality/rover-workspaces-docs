@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Feature status.">
-<meta name="rover-doc-source-sha256" content="9b856a4e73b12c9b6b08e8068670030d918fb779723bcd11a8a7f3d030e1447a">
+<meta name="rover-doc-source-sha256" content="331a71fee8cd93d15386f0d55f55c81c6e1f1a0364e2b5761a5cb31630241864">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/status.html">
 <title>Feature status · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -30,7 +30,9 @@ connected to live accounts or the app; no tester license or cloud access changed
 <p>An account-derived license read is prepared in isolated runtime tests: it
 requires a registered session, reads only that account and returns a minimal
 uncached summary. Storage failures remain unavailable rather than a Free
-downgrade. The live host does not expose this read yet.</p>
+downgrade. The actual host wiring now passes signed tester/runtime checks behind
+an independent disabled switch, including missing-table and revocation cases.
+License reads remain inactive; no grant migration or payment source is enabled.</p>
 <p>The owner confirmed successful website Google sign-in and sign-out on October
 15. The first landing after sign-in still displayed signed-out controls until
 Account was opened again. The session-cookie correction and shared top-right

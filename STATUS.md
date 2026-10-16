@@ -19,7 +19,9 @@ connected to live accounts or the app; no tester license or cloud access changed
 An account-derived license read is prepared in isolated runtime tests: it
 requires a registered session, reads only that account and returns a minimal
 uncached summary. Storage failures remain unavailable rather than a Free
-downgrade. The live host does not expose this read yet.
+downgrade. The actual host wiring now passes signed tester/runtime checks behind
+an independent disabled switch, including missing-table and revocation cases.
+License reads remain inactive; no grant migration or payment source is enabled.
 
 The owner confirmed successful website Google sign-in and sign-out on October
 15. The first landing after sign-in still displayed signed-out controls until
