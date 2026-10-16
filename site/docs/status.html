@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Feature status.">
-<meta name="rover-doc-source-sha256" content="7642488de72fc570982e6053b8b7bfa6501f630839208f4bcb97f0936a23df92">
+<meta name="rover-doc-source-sha256" content="516677f25614cc4c3521626f109c232c8388281a6b6e5ac6c7722a23715f36f9">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/status.html">
 <title>Feature status · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -50,12 +50,14 @@ Chrome/Edge Access-cookie transport; website Google consent is owner-verified.</
 <p>The current local personal testing candidate is <strong>0.3.10</strong>, including the registered-installation Account connection, Update from
 current tabs and simplified update controls inside About. Installed Chrome/Edge acceptance remains pending. Reload the
 existing unpacked installation and check About or extension details for its version.</p>
-<p>The current 0.3.9 application check passed all 244 tests and the build. This does
-not replace installed-browser acceptance. An earlier application check passed all 222 tests and the build after a
-test-runner process workaround. A later check still encountered an intermittent
-Windows worker startup failure before a browser test ran; the underlying runner
-issue remains unresolved. Tests remain automatically discovered and failures
-stop the check. This tooling work enables no additional live capability.</p>
+<p>The latest application check passed all 254 tests across 57 discovered files
+and the production build after switching Windows simulated-page tests to
+isolated thread workers. Earlier runs encountered intermittent fork-worker
+startup failures before page tests executed; a fresh-process-only workaround
+was insufficient. No tests were skipped or retried and timeouts were unchanged.
+The underlying variable startup delay is not fully explained; retain fresh-host
+reliability checks. This tooling work enables no additional live capability and
+does not replace installed-browser acceptance or create a new extension release.</p>
 <div class="table-scroll" role="region" aria-label="Scrollable table" tabindex="0"><table>
 <thead>
 <tr>

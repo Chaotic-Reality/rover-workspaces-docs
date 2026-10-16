@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><meta name="description" content="ROVER Workspaces: Restore, Organize, View, Explore, Repeat. Google beta readiness.">
-<meta name="rover-doc-source-sha256" content="dc6a0c046e2b628c5549391c9d0faa1809a4904476ce41590821a5b967c43ea2">
+<meta name="rover-doc-source-sha256" content="3996acafd279b721a56fd4b37e771fa9f0116bc5e97925ac98c53cea0b65c4f3">
 <link rel="canonical" href="https://beta.roverworkspaces.com/docs/google-beta-readiness.html">
 <title>Google beta readiness · ROVER Workspaces</title><link rel="icon" href="/branding/favicon.svg"><link rel="stylesheet" href="/styles.css"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header><div class="shell header-content">
@@ -146,7 +146,9 @@ on tester installations after review. Private distribution still needs review.</
 <p>See <a href="https://developer.chrome.com/docs/webstore/cws-dashboard-distribution">Chrome private distribution</a>.</p>
 <h2 id="8-operational-and-release-gates">8. Operational and release gates</h2>
 <ul>
-<li><input disabled="" type="checkbox"> Resolve the intermittent Windows test-worker startup failure. Do not skip
+<li><input disabled="" type="checkbox"> Confirm the Windows isolated-thread mitigation remains reliable on fresh
+runs/hosts. Its first complete check passed all 254 tests and the build; the
+underlying variable startup delay remains under observation. Do not skip
 files, suppress failures or relax timeouts to make the pipeline look green.</li>
 <li><input disabled="" type="checkbox"> Run the complete app, identity/grant, Worker, website and release checks.</li>
 <li><input disabled="" type="checkbox"> Retain source commit, package checksum, passing CI and browser acceptance

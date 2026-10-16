@@ -4,6 +4,11 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Mitigated Windows simulated-page worker startup failures by using isolated
+  thread workers for those tests. The complete application check passed all 254
+  tests across 57 files and the production build, without retries, skipped tests
+  or increased timeouts. Continued fresh-host reliability evidence remains.
+
 - Prepared isolated license-source combination so ending a complimentary grant
   cannot erase valid purchased access, and ending a purchase cannot erase a
   valid grant. Live license reads, owner provisioning and app integration remain.

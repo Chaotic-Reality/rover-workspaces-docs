@@ -42,12 +42,14 @@ The current local personal testing candidate is **0.3.10**, including the regist
 current tabs and simplified update controls inside About. Installed Chrome/Edge acceptance remains pending. Reload the
 existing unpacked installation and check About or extension details for its version.
 
-The current 0.3.9 application check passed all 244 tests and the build. This does
-not replace installed-browser acceptance. An earlier application check passed all 222 tests and the build after a
-test-runner process workaround. A later check still encountered an intermittent
-Windows worker startup failure before a browser test ran; the underlying runner
-issue remains unresolved. Tests remain automatically discovered and failures
-stop the check. This tooling work enables no additional live capability.
+The latest application check passed all 254 tests across 57 discovered files
+and the production build after switching Windows simulated-page tests to
+isolated thread workers. Earlier runs encountered intermittent fork-worker
+startup failures before page tests executed; a fresh-process-only workaround
+was insufficient. No tests were skipped or retried and timeouts were unchanged.
+The underlying variable startup delay is not fully explained; retain fresh-host
+reliability checks. This tooling work enables no additional live capability and
+does not replace installed-browser acceptance or create a new extension release.
 
 | Area                                                       | Current evidence                                                    | Remaining gate                                                       |
 | ---------------------------------------------------------- | ------------------------------------------------------------------- | -------------------------------------------------------------------- |
