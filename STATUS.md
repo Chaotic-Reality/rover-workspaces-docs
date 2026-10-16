@@ -12,6 +12,10 @@ database/runtime tests for expiry, revocation, audit, concurrent requests and
 rollback. The live account database is unchanged. Owner-management protection,
 account license reads, app integration and Test Free Mode remain unfinished.
 
+License-source combination is also prepared in isolation: independent paid and
+complimentary access can fall back safely when one source ends. This is not yet
+connected to live accounts or the app; no tester license or cloud access changed.
+
 The owner confirmed successful website Google sign-in and sign-out on October
 15. The first landing after sign-in still displayed signed-out controls until
 Account was opened again. The session-cookie correction and shared top-right

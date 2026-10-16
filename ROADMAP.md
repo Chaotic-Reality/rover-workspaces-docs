@@ -21,6 +21,8 @@ these milestones in order before enabling provider backups or hosted sync:
    for these grants; paid subscriptions remain a separate integration.
    Grant persistence and lifecycle tests are prepared in isolation; owner
    authorization, live activation and application license reads remain.
+   Independent purchase/grant resolution is prepared in isolation; live source
+   persistence, verified reads and application integration still remain.
 4. [ ] Add beta **Test Free Mode** and **Use Pro access** controls. Free mode
    preserves saved data and the real grant; returning to Pro requires a valid
    grant. Testing controls must not enable cloud access or create a license.

@@ -4,6 +4,10 @@ ROVER Workspaces is in development. These notes describe development builds, not
 
 ## Unreleased
 
+- Prepared isolated license-source combination so ending a complimentary grant
+  cannot erase valid purchased access, and ending a purchase cannot erase a
+  valid grant. Live license reads, owner provisioning and app integration remain.
+
 - Adopt a Google-first beta work path covering Chrome delivery, account sessions,
   owner provisioning, Pro/Free testing, payments, Drive backup and profile sync.
   Microsoft and OneDrive are deferred; the existing Cloudflare backend remains.
